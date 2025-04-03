@@ -1,0 +1,40 @@
+//* -- scss variables colors - - - -
+
+$grey-40: #D3D3D3;
+$grey-45: #BAB9B9;
+$grey-50: #B3B3B3;
+$grey-60: #999999;
+$grey-65: #8791A0;
+$grey-70: #636770;
+$grey-80: #555C68;
+$grey-90: #24272E;
+$grey-100: #101C26;
+
+$absolute-white: #fff;
+$primary-color:  #F0E714;
+$primary-color-light:  #f5f98f;
+$primary-color-dark:  #c2a40c;
+$primary-color-transparent:rgba(240, 231, 20, 0.20);
+
+:root {
+	scroll-behavior: smooth;
+
+//* -- css + scss variables colors - - - -
+
+	--grey-40: #{$grey-40};
+	--grey-45: #{$grey-45};
+	--grey-50: #{$grey-50};
+	--grey-60: #{$grey-60};
+	--grey-65: #{$grey-65};
+	--grey-70: #{$grey-70};
+	--grey-80: #{$grey-80};
+	--grey-90: #{$grey-90};
+	--grey-100: #{$grey-100};
+
+	
+	--absolute-white: #{$absolute-white};
+	--primary-color: #{$primary-color};
+	--primary-color-light: #{$primary-color-light};
+	--primary-color-dark: #{$primary-color-dark};
+	--primary-color-transparent: #{$primary-color-transparent};
+}
