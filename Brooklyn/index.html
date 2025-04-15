@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson-20</title>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<!--* header - - - - - - - -->
+		<header class="header">
+			<div class="header__container">
+
+				<div class="header__block">
+					<a class="header__logo logo" href="#hero-section">
+						<div class="logo__img">
+							<img src="img/logo_icon.svg" alt="Brooklyn logo icon">
+						</div>
+						<p class="logo__text">Brooklyn</p>
+					</a>
+				</div>
+
+
+				<nav class="header__menu menu">
+					<div class="menu__body">
+
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#hero-section" class="menu__link">Home</a>
+							</li>
+
+							<li class="menu__item">
+								<a href="#section-about" class="menu__link">About</a>
+							</li>
+
+							<li class="menu__item">
+								<a href="#section-work-process" class="menu__link">Process</a>
+							</li>
+
+							<li class="menu__item">
+								<a href="#section-portfolio" class="menu__link">Portfolio</a>
+							</li>
+
+							<li class="menu__item">
+								<a href="#section-blog" class="menu__link">Blog</a>
+							</li>
+
+							<li class="menu__item">
+								<a href="#section-what-i-do" class="menu__link">Services</a>
+							</li>
+
+						</ul>
+
+					</div>
+				</nav>
+
+				<div class="header__actions actions">
+					<a class="actions__button button" href="#section-contacts">Contact</a>
+
+					<div class="actions__button-icon-menu menu-icon">
+						<button class="menu-icon__button" type="button" aria-label="Show or hide navigation menu">
+							<span></span>
+						</button>
+					</div>
+				</div>
+
+			</div>
+		</header>
+
+		<main class="page">
+
+			<!--* hero - - - - - - - -->
+			<section class="hero" id="hero-section">
+				<div class="hero__container">
+
+					<div class="hero__content">
+						<div class="hero__block-text">
+							<h1 class="hero__title title title--large">Hello, I’m Brooklyn Gilbert</h1>
+							<div class="hero__text text text--large">
+								<p>
+									I'm a Freelance <strong class="hero__strong">UI/UX Designer</strong> and <strong
+										class="hero__strong">Developer</strong> based in London, England. I strives to build
+									immersive and beautiful web applications through carefully crafted code and user-centric
+									design.
+								</p>
+							</div>
+							<a class="hero__button button" href="#section-contacts">Say Hello!</a>
+						</div>
+
+						<ul class="hero__counters-info info-counters">
+							<li class="info-counters__item">
+								<div class="info-counters__value">15 Y</div>
+								<p class="info-counters__description">Experience</p>
+							</li>
+
+							<li class="info-counters__item">
+								<div class="info-counters__value">250+</div>
+								<p class="info-counters__description">Project Completed</p>
+							</li>
+
+							<li class="info-counters__item">
+								<div class="info-counters__value">58</div>
+								<p class="info-counters__description">Happy Client</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="hero__photo-block">
+						<img src="img/hero_photo.png" alt="designer photo">
+					</div>
+
+				</div>
+			</section>
+
+			<!--* about - - - - - - - -->
+			<section class="about" id="section-about">
+				<div class="about__container">
+					<div class="about__photo-block">
+						<div class="about__photo">
+							<img src="img/about/about_designer.png" alt="designer photo">
+						</div>
+
+						<ul class="about__list-social social-list">
+							<li class="social-list__item">
+								<a class="social-list__link" href="#" aria-label="go to the link on facebook">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20"
+										fill="none">
+										<path
+											d="M13.4866 0.25H10.43C8.61604 0.25 6.59845 1.02784 6.59845 3.70863C6.60731 4.64273 6.59845 5.53731 6.59845 6.54411H4.5V9.94872H6.66339V19.75H10.6387V9.88404H13.2626L13.5 6.53456H10.5702C10.5702 6.53456 10.5768 5.04457 10.5702 4.61187C10.5702 3.55248 11.6514 3.61314 11.7164 3.61314C12.2309 3.61314 13.2313 3.61467 13.4881 3.61314V0.25H13.4866Z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</li>
+
+							<li class="social-list__item">
+								<a class="social-list__link" href="#" aria-label="go to the link on dribble">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+										fill="none">
+										<g clip-path="url(#clip0_47_214)">
+											<path
+												d="M0 9C0 7.36799 0.402012 5.86201 1.206 4.482C2.01001 3.10199 3.10201 2.01001 4.482 1.206C5.86201 0.401994 7.36801 0 9 0C10.632 0 12.138 0.401994 13.518 1.206C14.898 2.01001 15.99 3.10199 16.794 4.482C17.598 5.86201 18 7.36799 18 9C18 10.632 17.598 12.138 16.794 13.518C15.99 14.898 14.898 15.99 13.518 16.794C12.138 17.598 10.632 18 9 18C7.36801 18 5.86201 17.598 4.482 16.794C3.10201 15.99 2.01001 14.898 1.206 13.518C0.402012 12.138 0 10.632 0 9ZM1.494 9C1.494 10.872 2.124 12.522 3.384 13.95C3.96 12.822 4.87201 11.748 6.12 10.728C7.36801 9.70799 8.586 9.06601 9.774 8.802C9.594 8.38201 9.42001 8.00401 9.252 7.668C7.18801 8.32801 4.95601 8.658 2.556 8.658C2.088 8.658 1.74001 8.65201 1.512 8.64C1.512 8.68801 1.50901 8.748 1.503 8.82C1.49701 8.892 1.494 8.95199 1.494 9ZM1.728 7.146C1.99201 7.16999 2.38201 7.182 2.898 7.182C4.90201 7.182 6.804 6.912 8.604 6.372C7.69201 4.752 6.69001 3.402 5.598 2.322C4.65001 2.80201 3.83701 3.46801 3.159 4.32C2.48101 5.17199 2.00401 6.11401 1.728 7.146ZM4.41 14.922C5.76601 15.978 7.29601 16.506 9 16.506C9.88801 16.506 10.77 16.338 11.646 16.002C11.406 13.95 10.938 11.964 10.242 10.044C9.13801 10.284 8.02501 10.89 6.903 11.862C5.78101 12.834 4.95 13.854 4.41 14.922ZM7.164 1.746C8.22001 2.83801 9.198 4.19999 10.098 5.832C11.73 5.148 12.96 4.27801 13.788 3.222C12.396 2.07 10.8 1.494 9 1.494C8.388 1.494 7.776 1.57801 7.164 1.746ZM10.746 7.11C10.926 7.49399 11.13 7.97999 11.358 8.568C12.246 8.48399 13.212 8.442 14.256 8.442C15 8.442 15.738 8.46 16.47 8.496C16.374 6.86399 15.786 5.41201 14.706 4.14C13.926 5.30401 12.606 6.29401 10.746 7.11ZM11.808 9.828C12.42 11.604 12.834 13.428 13.05 15.3C13.998 14.688 14.772 13.902 15.372 12.942C15.972 11.982 16.332 10.944 16.452 9.828C15.576 9.76801 14.778 9.738 14.058 9.738C13.398 9.738 12.648 9.76801 11.808 9.828Z"
+												fill="currentColor" />
+										</g>
+										<defs>
+											<clipPath>
+												<rect width="18" height="18" fill="currentColor" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</li>
+
+							<li class="social-list__item">
+								<a class="social-list__link" href="#" aria-label="go to the link on instagram ">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+										fill="currentColor">
+										<g clip-path="url(#clip0_47_212)">
+											<path
+												d="M6.00049 9C6.00049 7.34321 7.34322 5.99976 9 5.99976C10.6568 5.99976 12.0002 7.34321 12.0002 9C12.0002 10.6568 10.6568 12.0002 9 12.0002C7.34322 12.0002 6.00049 10.6568 6.00049 9ZM4.37859 9C4.37859 11.5524 6.44758 13.6214 9 13.6214C11.5524 13.6214 13.6214 11.5524 13.6214 9C13.6214 6.44758 11.5524 4.37859 9 4.37859C6.44758 4.37859 4.37859 6.44758 4.37859 9ZM12.7243 4.1954C12.7243 4.79152 13.2078 5.27569 13.8046 5.27569C14.4007 5.27569 14.8849 4.79152 14.8849 4.1954C14.8849 3.59927 14.4015 3.11583 13.8046 3.11583C13.2078 3.11583 12.7243 3.59927 12.7243 4.1954ZM5.36365 16.3258C4.48619 16.2858 4.00929 16.1397 3.69233 16.0161C3.27213 15.8525 2.97262 15.6577 2.65711 15.3429C2.34233 15.0281 2.14677 14.7286 1.98393 14.3084C1.86034 13.9914 1.71422 13.5145 1.67423 12.6371C1.63061 11.6884 1.62189 11.4034 1.62189 9C1.62189 6.59661 1.63134 6.31236 1.67423 5.36292C1.71422 4.48546 1.86107 4.00929 1.98393 3.6916C2.1475 3.27141 2.34233 2.97189 2.65711 2.65638C2.97189 2.3416 3.27141 2.14604 3.69233 1.9832C4.00929 1.85961 4.48619 1.71349 5.36365 1.67351C6.31236 1.62989 6.59733 1.62116 9 1.62116C11.4034 1.62116 11.6876 1.63061 12.6371 1.67351C13.5145 1.71349 13.9907 1.86034 14.3084 1.9832C14.7286 2.14604 15.0281 2.3416 15.3436 2.65638C15.6584 2.97116 15.8532 3.27141 16.0168 3.6916C16.1404 4.00856 16.2865 4.48546 16.3265 5.36292C16.3701 6.31236 16.3788 6.59661 16.3788 9C16.3788 11.4027 16.3701 11.6876 16.3265 12.6371C16.2865 13.5145 16.1397 13.9914 16.0168 14.3084C15.8532 14.7286 15.6584 15.0281 15.3436 15.3429C15.0288 15.6577 14.7286 15.8525 14.3084 16.0161C13.9914 16.1397 13.5145 16.2858 12.6371 16.3258C11.6884 16.3694 11.4034 16.3781 9 16.3781C6.59733 16.3781 6.31236 16.3694 5.36365 16.3258V16.3258ZM5.2895 0.0545234C4.33134 0.0981422 3.67706 0.250081 3.10493 0.472536C2.51317 0.702262 2.01155 1.0105 1.51066 1.51066C1.0105 2.01082 0.702262 2.51244 0.472536 3.10493C0.250081 3.67706 0.0981422 4.33134 0.0545234 5.2895C0.0101777 6.24911 0 6.5559 0 9C0 11.4441 0.0101777 11.7509 0.0545234 12.7105C0.0981422 13.6687 0.250081 14.3229 0.472536 14.8951C0.702262 15.4868 1.00977 15.9892 1.51066 16.4893C2.01082 16.9895 2.51244 17.297 3.10493 17.5275C3.67779 17.7499 4.33134 17.9019 5.2895 17.9455C6.24984 17.9891 6.5559 18 9 18C11.4448 18 11.7509 17.9898 12.7105 17.9455C13.6687 17.9019 14.3229 17.7499 14.8951 17.5275C15.4868 17.297 15.9884 16.9895 16.4893 16.4893C16.9895 15.9892 17.297 15.4868 17.5275 14.8951C17.7499 14.3229 17.9026 13.6687 17.9455 12.7105C17.9891 11.7502 17.9993 11.4441 17.9993 9C17.9993 6.5559 17.9891 6.24911 17.9455 5.2895C17.9019 4.33134 17.7499 3.67706 17.5275 3.10493C17.297 2.51317 16.9895 2.01155 16.4893 1.51066C15.9892 1.0105 15.4868 0.702262 14.8958 0.472536C14.3229 0.250081 13.6687 0.0974152 12.7112 0.0545234C11.7516 0.0109047 11.4448 0 9.00073 0C6.5559 0 6.24984 0.0101777 5.2895 0.0545234"
+												fill="currentColor" />
+										</g>
+										<defs>
+											<clipPath>
+												<rect width="18" height="18" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</li>
+
+							<li class="social-list__item">
+								<a class="social-list__link" href="#" aria-label="go to the link on linkedin">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+										fill="currentColor">
+										<g clip-path="url(#clip0_47_200)">
+											<path
+												d="M0 2.09091C0 1.48483 0.202708 0.984835 0.608108 0.590908C1.01351 0.196963 1.54055 0 2.18919 0C2.82626 0 3.34169 0.193927 3.73552 0.581817C4.14092 0.981817 4.34363 1.50302 4.34363 2.14545C4.34363 2.72727 4.14672 3.2121 3.7529 3.59999C3.3475 3.99999 2.81467 4.19999 2.15444 4.19999H2.13707C1.49999 4.19999 0.984562 3.99999 0.590734 3.59999C0.196905 3.19999 0 2.69696 0 2.09091ZM0.225869 18V5.85454H4.08301V18H0.225869ZM6.22008 18H10.0772V11.2182C10.0772 10.7939 10.1236 10.4666 10.2162 10.2363C10.3784 9.82422 10.6245 9.47573 10.9546 9.19089C11.2847 8.90604 11.6988 8.76362 12.1969 8.76362C13.4942 8.76362 14.1429 9.67877 14.1429 11.5091V18H18V11.0363C18 9.2424 17.5946 7.88181 16.7838 6.95453C15.973 6.02726 14.9016 5.56363 13.5695 5.56363C12.0753 5.56363 10.9112 6.23635 10.0772 7.58181V7.61817H10.0598L10.0772 7.58181V5.85454H6.22008C6.24324 6.24241 6.25483 7.44846 6.25483 9.47271C6.25483 11.4969 6.24324 14.3394 6.22008 18Z"
+												fill="currentColor" />
+										</g>
+										<defs>
+											<clipPath>
+												<rect width="18" height="18" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</li>
+
+							<li class="social-list__item">
+								<a class="social-list__link" href="#" aria-label="go to the link on behance">
+									<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+										fill="none">
+										<path
+											d="M7.26331 8.02956C7.26331 8.02956 8.9664 7.90476 8.9664 5.93349C8.9664 3.96208 7.57305 3 5.80808 3H0.000244141V14.0165H5.80808C5.80808 14.0165 9.35355 14.127 9.35355 10.7649C9.35355 10.765 9.50813 8.02956 7.26331 8.02956V8.02956ZM5.39004 4.95806H5.80808C5.80808 4.95806 6.59754 4.95806 6.59754 6.10428C6.59754 7.25036 6.13325 7.41652 5.60663 7.41652H2.55925V4.95806H5.39004V4.95806ZM5.64396 12.0585H2.55925V9.11449H5.80808C5.80808 9.11449 6.98473 9.09926 6.98473 10.6274C6.98473 11.916 6.10589 12.0488 5.64396 12.0585V12.0585ZM14.0821 5.80292C9.78988 5.80292 9.79368 10.0358 9.79368 10.0358C9.79368 10.0358 9.49918 14.2469 14.0821 14.2469C14.0821 14.2469 17.9011 14.4623 17.9011 11.3175H15.937C15.937 11.3175 16.0025 12.5018 14.1476 12.5018C14.1476 12.5018 12.1832 12.6317 12.1832 10.5851H17.9666C17.9666 10.5851 18.5994 5.80292 14.0821 5.80292ZM12.1616 9.11449C12.1616 9.11449 12.4014 7.41649 14.1257 7.41649C15.8496 7.41649 15.828 9.11449 15.828 9.11449H12.1616ZM16.2855 5.00561H11.6808V3.64901H16.2855V5.00561Z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</li>
+
+
+						</ul>
+					</div>
+
+					<div class="about__content">
+						<h2 class="about__title title title--small">I am Professional User Experience Designer</h2>
+						<div class="about__text text text--large">
+							<p>
+								I design and develop services for customers specializing creating stylish, modern websites, web
+								services and online stores. My passion is to design digital user experiences.
+							</p>
+							<p>
+								I design and develop services for customers specializing creating stylish, modern websites, web
+								services.
+							</p>
+						</div>
+
+						<div class="about__action actions-about">
+							<a class="actions-about__button button" href="#section-portfolio" aria-label="go to my projects">My
+								Project</a>
+							<a class="actions-about__button button button--transparent"
+								href="img/about/brooklyn_gilbert_cv.pdf" download="brooklyn_gilbert_cv.pdf">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path
+										d="M21 14C20.7348 14 20.4804 14.1054 20.2929 14.2929C20.1054 14.4804 20 14.7348 20 15V19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H5C4.73478 20 4.48043 19.8946 4.29289 19.7071C4.10536 19.5196 4 19.2652 4 19V15C4 14.7348 3.89464 14.4804 3.70711 14.2929C3.51957 14.1054 3.26522 14 3 14C2.73478 14 2.48043 14.1054 2.29289 14.2929C2.10536 14.4804 2 14.7348 2 15V19C2 19.7956 2.31607 20.5587 2.87868 21.1213C3.44129 21.6839 4.20435 22 5 22H19C19.7956 22 20.5587 21.6839 21.1213 21.1213C21.6839 20.5587 22 19.7956 22 19V15C22 14.7348 21.8946 14.4804 21.7071 14.2929C21.5196 14.1054 21.2652 14 21 14ZM11.29 15.71C11.3851 15.801 11.4972 15.8724 11.62 15.92C11.7397 15.9729 11.8691 16.0002 12 16.0002C12.1309 16.0002 12.2603 15.9729 12.38 15.92C12.5028 15.8724 12.6149 15.801 12.71 15.71L16.71 11.71C16.8983 11.5217 17.0041 11.2663 17.0041 11C17.0041 10.7337 16.8983 10.4783 16.71 10.29C16.5217 10.1017 16.2663 9.99591 16 9.99591C15.7337 9.99591 15.4783 10.1017 15.29 10.29L13 12.59V3C13 2.73478 12.8946 2.48043 12.7071 2.29289C12.5196 2.10536 12.2652 2 12 2C11.7348 2 11.4804 2.10536 11.2929 2.29289C11.1054 2.48043 11 2.73478 11 3V12.59L8.71 10.29C8.61676 10.1968 8.50607 10.1228 8.38425 10.0723C8.26243 10.0219 8.13186 9.99591 8 9.99591C7.86814 9.99591 7.73757 10.0219 7.61575 10.0723C7.49393 10.1228 7.38324 10.1968 7.29 10.29C7.19676 10.3832 7.1228 10.4939 7.07234 10.6158C7.02188 10.7376 6.99591 10.8681 6.99591 11C6.99591 11.1319 7.02188 11.2624 7.07234 11.3842C7.1228 11.5061 7.19676 11.6168 7.29 11.71L11.29 15.71Z"
+										fill="currentColor" />
+								</svg>
+								Download CV
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--* work-process - - - - - - - -->
+			<section class="work-process" id="section-work-process">
+				<div class="work-process__container">
+
+					<div class="work-process__text-block">
+						<h2 class="work-process__title title">Work Process</h2>
+						<div class="work-process__text text text--large">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit
+								non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum. Suspendis imperdiet
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit
+								non.
+							</p>
+						</div>
+					</div>
+
+					<ol class="work-process__details process-details">
+						<li class="process-details__item">
+							<div class="process-details__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+									<path
+										d="M21.3333 18.6667H10.6667C10.313 18.6667 9.97391 18.8072 9.72386 19.0573C9.47381 19.3073 9.33333 19.6465 9.33333 20.0001C9.33333 20.3537 9.47381 20.6928 9.72386 20.9429C9.97391 21.1929 10.313 21.3334 10.6667 21.3334H21.3333C21.687 21.3334 22.0261 21.1929 22.2761 20.9429C22.5262 20.6928 22.6667 20.3537 22.6667 20.0001C22.6667 19.6465 22.5262 19.3073 22.2761 19.0573C22.0261 18.8072 21.687 18.6667 21.3333 18.6667ZM21.3333 13.3334H13.3333C12.9797 13.3334 12.6406 13.4739 12.3905 13.7239C12.1405 13.974 12 14.3131 12 14.6667C12 15.0204 12.1405 15.3595 12.3905 15.6096C12.6406 15.8596 12.9797 16.0001 13.3333 16.0001H21.3333C21.687 16.0001 22.0261 15.8596 22.2761 15.6096C22.5262 15.3595 22.6667 15.0204 22.6667 14.6667C22.6667 14.3131 22.5262 13.974 22.2761 13.7239C22.0261 13.4739 21.687 13.3334 21.3333 13.3334ZM26.6667 5.33341H22.6667V4.00008C22.6667 3.64646 22.5262 3.30732 22.2761 3.05727C22.0261 2.80722 21.687 2.66675 21.3333 2.66675C20.9797 2.66675 20.6406 2.80722 20.3905 3.05727C20.1405 3.30732 20 3.64646 20 4.00008V5.33341H17.3333V4.00008C17.3333 3.64646 17.1929 3.30732 16.9428 3.05727C16.6928 2.80722 16.3536 2.66675 16 2.66675C15.6464 2.66675 15.3072 2.80722 15.0572 3.05727C14.8071 3.30732 14.6667 3.64646 14.6667 4.00008V5.33341H12V4.00008C12 3.64646 11.8595 3.30732 11.6095 3.05727C11.3594 2.80722 11.0203 2.66675 10.6667 2.66675C10.313 2.66675 9.97391 2.80722 9.72386 3.05727C9.47381 3.30732 9.33333 3.64646 9.33333 4.00008V5.33341H5.33333C4.97971 5.33341 4.64057 5.47389 4.39052 5.72394C4.14048 5.97399 4 6.31313 4 6.66675V25.3334C4 26.3943 4.42143 27.4117 5.17157 28.1618C5.92172 28.912 6.93913 29.3334 8 29.3334H24C25.0609 29.3334 26.0783 28.912 26.8284 28.1618C27.5786 27.4117 28 26.3943 28 25.3334V6.66675C28 6.31313 27.8595 5.97399 27.6095 5.72394C27.3594 5.47389 27.0203 5.33341 26.6667 5.33341ZM25.3333 25.3334C25.3333 25.687 25.1929 26.0262 24.9428 26.2762C24.6928 26.5263 24.3536 26.6667 24 26.6667H8C7.64638 26.6667 7.30724 26.5263 7.05719 26.2762C6.80714 26.0262 6.66667 25.687 6.66667 25.3334V8.00008H9.33333V9.33342C9.33333 9.68704 9.47381 10.0262 9.72386 10.2762C9.97391 10.5263 10.313 10.6667 10.6667 10.6667C11.0203 10.6667 11.3594 10.5263 11.6095 10.2762C11.8595 10.0262 12 9.68704 12 9.33342V8.00008H14.6667V9.33342C14.6667 9.68704 14.8071 10.0262 15.0572 10.2762C15.3072 10.5263 15.6464 10.6667 16 10.6667C16.3536 10.6667 16.6928 10.5263 16.9428 10.2762C17.1929 10.0262 17.3333 9.68704 17.3333 9.33342V8.00008H20V9.33342C20 9.68704 20.1405 10.0262 20.3905 10.2762C20.6406 10.5263 20.9797 10.6667 21.3333 10.6667C21.687 10.6667 22.0261 10.5263 22.2761 10.2762C22.5262 10.0262 22.6667 9.68704 22.6667 9.33342V8.00008H25.3333V25.3334Z"
+										fill="currentColor" />
+								</svg>
+							</div>
+
+							<h3 class="process-details__title">Research</h3>
+							<div class="process-details__text text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.
+								</p>
+							</div>
+						</li>
+
+						<li class="process-details__item">
+							<div class="process-details__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+									<path
+										d="M9.33333 21.3334C9.86377 21.3334 10.3725 21.1227 10.7475 20.7476C11.1226 20.3726 11.3333 19.8638 11.3333 19.3334C11.3398 19.2669 11.3398 19.1999 11.3333 19.1334L15.0533 15.4134H15.36H15.6667L17.8133 17.5601C17.8133 17.5601 17.8133 17.6267 17.8133 17.6667C17.8133 18.1972 18.024 18.7059 18.3991 19.081C18.7742 19.456 19.2829 19.6667 19.8133 19.6667C20.3438 19.6667 20.8525 19.456 21.2275 19.081C21.6026 18.7059 21.8133 18.1972 21.8133 17.6667V17.5601L26.6667 12.6667C27.0622 12.6667 27.4489 12.5495 27.7778 12.3297C28.1067 12.1099 28.363 11.7976 28.5144 11.4321C28.6658 11.0667 28.7054 10.6645 28.6282 10.2766C28.5511 9.88861 28.3606 9.53224 28.0809 9.25253C27.8012 8.97283 27.4448 8.78235 27.0568 8.70518C26.6689 8.62801 26.2668 8.66761 25.9013 8.81899C25.5358 8.97036 25.2235 9.22671 25.0037 9.55561C24.784 9.88451 24.6667 10.2712 24.6667 10.6667C24.6602 10.7333 24.6602 10.8002 24.6667 10.8667L19.8533 15.6801H19.64L17.3333 13.3334C17.3333 12.803 17.1226 12.2943 16.7475 11.9192C16.3725 11.5441 15.8638 11.3334 15.3333 11.3334C14.8029 11.3334 14.2942 11.5441 13.9191 11.9192C13.544 12.2943 13.3333 12.803 13.3333 13.3334L9.33333 17.3334C8.8029 17.3334 8.29419 17.5441 7.91912 17.9192C7.54405 18.2943 7.33333 18.803 7.33333 19.3334C7.33333 19.8638 7.54405 20.3726 7.91912 20.7476C8.29419 21.1227 8.8029 21.3334 9.33333 21.3334V21.3334ZM27.3333 26.6667H4.66667V4.00008C4.66667 3.64646 4.52619 3.30732 4.27614 3.05727C4.02609 2.80722 3.68696 2.66675 3.33333 2.66675C2.97971 2.66675 2.64057 2.80722 2.39052 3.05727C2.14048 3.30732 2 3.64646 2 4.00008V28.0001C2 28.3537 2.14048 28.6928 2.39052 28.9429C2.64057 29.1929 2.97971 29.3334 3.33333 29.3334H27.3333C27.687 29.3334 28.0261 29.1929 28.2761 28.9429C28.5262 28.6928 28.6667 28.3537 28.6667 28.0001C28.6667 27.6465 28.5262 27.3073 28.2761 27.0573C28.0261 26.8072 27.687 26.6667 27.3333 26.6667Z"
+										fill="currentColor" />
+								</svg>
+							</div>
+
+							<h3 class="process-details__title">Analyze</h3>
+							<div class="process-details__text text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.
+								</p>
+							</div>
+						</li>
+
+						<li class="process-details__item">
+							<div class="process-details__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+									<path
+										d="M29.3333 9.65319C29.3343 9.47772 29.3007 9.30377 29.2343 9.14132C29.168 8.97887 29.0702 8.83111 28.9466 8.70653L23.2933 3.05319C23.1687 2.92962 23.021 2.83185 22.8585 2.7655C22.6961 2.69915 22.5221 2.66551 22.3466 2.66653C22.1712 2.66551 21.9972 2.69915 21.8348 2.7655C21.6723 2.83185 21.5246 2.92962 21.4 3.05319L17.6266 6.82653L3.05331 21.3999C2.92974 21.5244 2.83197 21.6722 2.76562 21.8346C2.69927 21.9971 2.66563 22.1711 2.66665 22.3465V27.9999C2.66665 28.3535 2.80712 28.6926 3.05717 28.9427C3.30722 29.1927 3.64636 29.3332 3.99998 29.3332H9.65331C9.83988 29.3433 10.0265 29.3142 10.2011 29.2475C10.3756 29.1809 10.5343 29.0784 10.6666 28.9465L25.16 14.3732L28.9466 10.6665C29.0683 10.5373 29.1675 10.3886 29.24 10.2265C29.2528 10.1202 29.2528 10.0128 29.24 9.90653C29.2462 9.84446 29.2462 9.78192 29.24 9.71986L29.3333 9.65319ZM9.10665 26.6665H5.33331V22.8932L18.5733 9.65319L22.3466 13.4265L9.10665 26.6665ZM24.2266 11.5465L20.4533 7.77319L22.3466 5.89319L26.1066 9.65319L24.2266 11.5465Z"
+										fill="currentColor" />
+								</svg>
+							</div>
+
+							<h3 class="process-details__title">Design</h3>
+							<div class="process-details__text text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.
+								</p>
+							</div>
+						</li>
+
+						<li class="process-details__item">
+							<div class="process-details__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+									<path
+										d="M28 18.6668H26.6666V9.3335C26.6666 8.27263 26.2452 7.25521 25.4951 6.50507C24.7449 5.75492 23.7275 5.3335 22.6666 5.3335H9.33329C8.27243 5.3335 7.25501 5.75492 6.50487 6.50507C5.75472 7.25521 5.33329 8.27263 5.33329 9.3335V18.6668H3.99996C3.64634 18.6668 3.3072 18.8073 3.05715 19.0574C2.8071 19.3074 2.66663 19.6465 2.66663 20.0002V22.6668C2.66663 23.7277 3.08805 24.7451 3.8382 25.4953C4.58834 26.2454 5.60576 26.6668 6.66663 26.6668H25.3333C26.3942 26.6668 27.4116 26.2454 28.1617 25.4953C28.9119 24.7451 29.3333 23.7277 29.3333 22.6668V20.0002C29.3333 19.6465 29.1928 19.3074 28.9428 19.0574C28.6927 18.8073 28.3536 18.6668 28 18.6668ZM7.99996 9.3335C7.99996 8.97987 8.14044 8.64074 8.39048 8.39069C8.64053 8.14064 8.97967 8.00016 9.33329 8.00016H22.6666C23.0202 8.00016 23.3594 8.14064 23.6094 8.39069C23.8595 8.64074 24 8.97987 24 9.3335V18.6668H7.99996V9.3335ZM26.6666 22.6668C26.6666 23.0205 26.5262 23.3596 26.2761 23.6096C26.0261 23.8597 25.6869 24.0002 25.3333 24.0002H6.66663C6.313 24.0002 5.97387 23.8597 5.72382 23.6096C5.47377 23.3596 5.33329 23.0205 5.33329 22.6668V21.3335H26.6666V22.6668Z"
+										fill="currentColor" />
+								</svg>
+							</div>
+
+							<h3 class="process-details__title">Launch</h3>
+							<div class="process-details__text text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.
+								</p>
+							</div>
+						</li>
+
+					</ol>
+				</div>
+			</section>
+
+			<!--*portfolio - - - - - - - -->
+			<section class="portfolio" id="section-portfolio">
+				<div class="portfolio__container">
+
+					<div class="portfolio__header-section section-header">
+						<h2 class="portfolio__title title">Portfolio</h2>
+						<div class="portfolio__text text text--large">
+							<p>
+								There are many variations of passages of Lorem Ipsum available,
+								but the majority have suffered alteration.
+							</p>
+						</div>
+					</div>
+
+					<div class="portfolio__card card-portfolio">
+						<article class="card-portfolio__item">
+							<div class="card-portfolio__photo">
+								<img src="img/portfolio/1_photo.jpg" alt="Abstract waves in blue and purple hues"
+									loading="lazy">
+							</div>
+
+							<div class="card-portfolio__body">
+								<div class="card-portfolio__label">UI-UX DESIGN</div>
+								<h3 class="card-portfolio__title">Product Admin Dashboard</h3>
+								<div class="card-portfolio__text text text--small">
+									<p>
+										Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet
+										lacus.
+									</p>
+								</div>
+								<a class="card-portfolio__button button button--transparent" href="#">
+									Case Study
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										fill="none">
+										<path
+											d="M17.92 11.6202C17.8724 11.4974 17.801 11.3853 17.71 11.2902L12.71 6.29019C12.6168 6.19695 12.5061 6.12299 12.3842 6.07253C12.2624 6.02207 12.1319 5.99609 12 5.99609C11.7337 5.99609 11.4783 6.10188 11.29 6.29019C11.1968 6.38342 11.1228 6.49411 11.0723 6.61594C11.0219 6.73776 10.9959 6.86833 10.9959 7.00019C10.9959 7.26649 11.1017 7.52188 11.29 7.71019L14.59 11.0002H7C6.73478 11.0002 6.48043 11.1055 6.29289 11.2931C6.10536 11.4806 6 11.735 6 12.0002C6 12.2654 6.10536 12.5198 6.29289 12.7073C6.48043 12.8948 6.73478 13.0002 7 13.0002H14.59L11.29 16.2902C11.1963 16.3831 11.1219 16.4937 11.0711 16.6156C11.0203 16.7375 10.9942 16.8682 10.9942 17.0002C10.9942 17.1322 11.0203 17.2629 11.0711 17.3848C11.1219 17.5066 11.1963 17.6172 11.29 17.7102C11.383 17.8039 11.4936 17.8783 11.6154 17.9291C11.7373 17.9798 11.868 18.006 12 18.006C12.132 18.006 12.2627 17.9798 12.3846 17.9291C12.5064 17.8783 12.617 17.8039 12.71 17.7102L17.71 12.7102C17.801 12.6151 17.8724 12.5029 17.92 12.3802C18.02 12.1367 18.02 11.8636 17.92 11.6202Z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</div>
+						</article>
+
+						<article class="card-portfolio__item">
+							<div class="card-portfolio__photo">
+								<img src="img/portfolio/2_photo.jpg"
+									alt="A 3D illustration of a dynamic wave composed of iridescent colors" loading="lazy">
+							</div>
+
+							<div class="card-portfolio__body">
+								<div class="card-portfolio__label">UI-UX DESIGN</div>
+								<h3 class="card-portfolio__title">Product Admin Dashboard</h3>
+								<div class="card-portfolio__text text text--small">
+									<p>
+										Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet
+										lacus.
+									</p>
+								</div>
+								<a class="card-portfolio__button button button--transparent" href="#">
+									Case Study
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										fill="none">
+										<path
+											d="M17.92 11.6202C17.8724 11.4974 17.801 11.3853 17.71 11.2902L12.71 6.29019C12.6168 6.19695 12.5061 6.12299 12.3842 6.07253C12.2624 6.02207 12.1319 5.99609 12 5.99609C11.7337 5.99609 11.4783 6.10188 11.29 6.29019C11.1968 6.38342 11.1228 6.49411 11.0723 6.61594C11.0219 6.73776 10.9959 6.86833 10.9959 7.00019C10.9959 7.26649 11.1017 7.52188 11.29 7.71019L14.59 11.0002H7C6.73478 11.0002 6.48043 11.1055 6.29289 11.2931C6.10536 11.4806 6 11.735 6 12.0002C6 12.2654 6.10536 12.5198 6.29289 12.7073C6.48043 12.8948 6.73478 13.0002 7 13.0002H14.59L11.29 16.2902C11.1963 16.3831 11.1219 16.4937 11.0711 16.6156C11.0203 16.7375 10.9942 16.8682 10.9942 17.0002C10.9942 17.1322 11.0203 17.2629 11.0711 17.3848C11.1219 17.5066 11.1963 17.6172 11.29 17.7102C11.383 17.8039 11.4936 17.8783 11.6154 17.9291C11.7373 17.9798 11.868 18.006 12 18.006C12.132 18.006 12.2627 17.9798 12.3846 17.9291C12.5064 17.8783 12.617 17.8039 12.71 17.7102L17.71 12.7102C17.801 12.6151 17.8724 12.5029 17.92 12.3802C18.02 12.1367 18.02 11.8636 17.92 11.6202Z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</div>
+						</article>
+
+						<article class="card-portfolio__item">
+							<div class="card-portfolio__photo">
+								<img src="img/portfolio/3_photo.jpg"
+									alt="An abstract composition of colorful shapes against a pink background" loading="lazy">
+							</div>
+
+							<div class="card-portfolio__body">
+								<div class="card-portfolio__label">UI-UX DESIGN</div>
+								<h3 class="card-portfolio__title">Product Admin Dashboard</h3>
+								<div class="card-portfolio__text text text--small">
+									<p>
+										Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet
+										lacus.
+									</p>
+								</div>
+								<a class="card-portfolio__button button button--transparent" href="#">
+									Case Study
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										fill="none">
+										<path
+											d="M17.92 11.6202C17.8724 11.4974 17.801 11.3853 17.71 11.2902L12.71 6.29019C12.6168 6.19695 12.5061 6.12299 12.3842 6.07253C12.2624 6.02207 12.1319 5.99609 12 5.99609C11.7337 5.99609 11.4783 6.10188 11.29 6.29019C11.1968 6.38342 11.1228 6.49411 11.0723 6.61594C11.0219 6.73776 10.9959 6.86833 10.9959 7.00019C10.9959 7.26649 11.1017 7.52188 11.29 7.71019L14.59 11.0002H7C6.73478 11.0002 6.48043 11.1055 6.29289 11.2931C6.10536 11.4806 6 11.735 6 12.0002C6 12.2654 6.10536 12.5198 6.29289 12.7073C6.48043 12.8948 6.73478 13.0002 7 13.0002H14.59L11.29 16.2902C11.1963 16.3831 11.1219 16.4937 11.0711 16.6156C11.0203 16.7375 10.9942 16.8682 10.9942 17.0002C10.9942 17.1322 11.0203 17.2629 11.0711 17.3848C11.1219 17.5066 11.1963 17.6172 11.29 17.7102C11.383 17.8039 11.4936 17.8783 11.6154 17.9291C11.7373 17.9798 11.868 18.006 12 18.006C12.132 18.006 12.2627 17.9798 12.3846 17.9291C12.5064 17.8783 12.617 17.8039 12.71 17.7102L17.71 12.7102C17.801 12.6151 17.8724 12.5029 17.92 12.3802C18.02 12.1367 18.02 11.8636 17.92 11.6202Z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</div>
+						</article>
+
+						<article class="card-portfolio__item">
+							<div class="card-portfolio__photo">
+								<img src="img/portfolio/4_photo.jpg"
+									alt="A 3D illustration of geometric shapes and organic elements in a monochromatic color scheme"
+									loading="lazy">
+							</div>
+
+							<div class="card-portfolio__body">
+								<div class="card-portfolio__label">UI-UX DESIGN</div>
+								<h3 class="card-portfolio__title">Product Admin Dashboard</h3>
+								<div class="card-portfolio__text text text--small">
+									<p>
+										Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet
+										lacus.
+									</p>
+								</div>
+								<a class="card-portfolio__button button button--transparent" href="#">
+									Case Study
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										fill="none">
+										<path
+											d="M17.92 11.6202C17.8724 11.4974 17.801 11.3853 17.71 11.2902L12.71 6.29019C12.6168 6.19695 12.5061 6.12299 12.3842 6.07253C12.2624 6.02207 12.1319 5.99609 12 5.99609C11.7337 5.99609 11.4783 6.10188 11.29 6.29019C11.1968 6.38342 11.1228 6.49411 11.0723 6.61594C11.0219 6.73776 10.9959 6.86833 10.9959 7.00019C10.9959 7.26649 11.1017 7.52188 11.29 7.71019L14.59 11.0002H7C6.73478 11.0002 6.48043 11.1055 6.29289 11.2931C6.10536 11.4806 6 11.735 6 12.0002C6 12.2654 6.10536 12.5198 6.29289 12.7073C6.48043 12.8948 6.73478 13.0002 7 13.0002H14.59L11.29 16.2902C11.1963 16.3831 11.1219 16.4937 11.0711 16.6156C11.0203 16.7375 10.9942 16.8682 10.9942 17.0002C10.9942 17.1322 11.0203 17.2629 11.0711 17.3848C11.1219 17.5066 11.1963 17.6172 11.29 17.7102C11.383 17.8039 11.4936 17.8783 11.6154 17.9291C11.7373 17.9798 11.868 18.006 12 18.006C12.132 18.006 12.2627 17.9798 12.3846 17.9291C12.5064 17.8783 12.617 17.8039 12.71 17.7102L17.71 12.7102C17.801 12.6151 17.8724 12.5029 17.92 12.3802C18.02 12.1367 18.02 11.8636 17.92 11.6202Z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</div>
+						</article>
+
+						<article class="card-portfolio__item card-portfolio__item--phone-none">
+							<div class="card-portfolio__photo">
+								<img src="img/portfolio/5_photo.jpg"
+									alt="A digital rendering of an abstract knot composed of purple and black shapes"
+									loading="lazy">
+							</div>
+
+							<div class="card-portfolio__body">
+								<div class="card-portfolio__label">UI-UX DESIGN</div>
+								<h3 class="card-portfolio__title">Product Admin Dashboard</h3>
+								<div class="card-portfolio__text text text--small">
+									<p>
+										Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet
+										lacus.
+									</p>
+								</div>
+								<a class="card-portfolio__button button button--transparent" href="#">
+									Case Study
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										fill="none">
+										<path
+											d="M17.92 11.6202C17.8724 11.4974 17.801 11.3853 17.71 11.2902L12.71 6.29019C12.6168 6.19695 12.5061 6.12299 12.3842 6.07253C12.2624 6.02207 12.1319 5.99609 12 5.99609C11.7337 5.99609 11.4783 6.10188 11.29 6.29019C11.1968 6.38342 11.1228 6.49411 11.0723 6.61594C11.0219 6.73776 10.9959 6.86833 10.9959 7.00019C10.9959 7.26649 11.1017 7.52188 11.29 7.71019L14.59 11.0002H7C6.73478 11.0002 6.48043 11.1055 6.29289 11.2931C6.10536 11.4806 6 11.735 6 12.0002C6 12.2654 6.10536 12.5198 6.29289 12.7073C6.48043 12.8948 6.73478 13.0002 7 13.0002H14.59L11.29 16.2902C11.1963 16.3831 11.1219 16.4937 11.0711 16.6156C11.0203 16.7375 10.9942 16.8682 10.9942 17.0002C10.9942 17.1322 11.0203 17.2629 11.0711 17.3848C11.1219 17.5066 11.1963 17.6172 11.29 17.7102C11.383 17.8039 11.4936 17.8783 11.6154 17.9291C11.7373 17.9798 11.868 18.006 12 18.006C12.132 18.006 12.2627 17.9798 12.3846 17.9291C12.5064 17.8783 12.617 17.8039 12.71 17.7102L17.71 12.7102C17.801 12.6151 17.8724 12.5029 17.92 12.3802C18.02 12.1367 18.02 11.8636 17.92 11.6202Z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</div>
+						</article>
+
+						<article class="card-portfolio__item card-portfolio__item--phone-none">
+							<div class="card-portfolio__photo">
+								<img src="img/portfolio/6_photo.jpg"
+									alt="A minimalist composition featuring a twisted, three-dimensional form with a gradient color effect"
+									loading="lazy">
+							</div>
+
+							<div class="card-portfolio__body">
+								<div class="card-portfolio__label">UI-UX DESIGN</div>
+								<h3 class="card-portfolio__title">Product Admin Dashboard</h3>
+								<div class="card-portfolio__text text text--small">
+									<p>
+										Vivamus eleifend convallis ante, non pharetra libero molestie laoreet. Donec id imperdiet
+										lacus.
+									</p>
+								</div>
+								<a class="card-portfolio__button button button--transparent" href="#">
+									Case Study
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+										fill="none">
+										<path
+											d="M17.92 11.6202C17.8724 11.4974 17.801 11.3853 17.71 11.2902L12.71 6.29019C12.6168 6.19695 12.5061 6.12299 12.3842 6.07253C12.2624 6.02207 12.1319 5.99609 12 5.99609C11.7337 5.99609 11.4783 6.10188 11.29 6.29019C11.1968 6.38342 11.1228 6.49411 11.0723 6.61594C11.0219 6.73776 10.9959 6.86833 10.9959 7.00019C10.9959 7.26649 11.1017 7.52188 11.29 7.71019L14.59 11.0002H7C6.73478 11.0002 6.48043 11.1055 6.29289 11.2931C6.10536 11.4806 6 11.735 6 12.0002C6 12.2654 6.10536 12.5198 6.29289 12.7073C6.48043 12.8948 6.73478 13.0002 7 13.0002H14.59L11.29 16.2902C11.1963 16.3831 11.1219 16.4937 11.0711 16.6156C11.0203 16.7375 10.9942 16.8682 10.9942 17.0002C10.9942 17.1322 11.0203 17.2629 11.0711 17.3848C11.1219 17.5066 11.1963 17.6172 11.29 17.7102C11.383 17.8039 11.4936 17.8783 11.6154 17.9291C11.7373 17.9798 11.868 18.006 12 18.006C12.132 18.006 12.2627 17.9798 12.3846 17.9291C12.5064 17.8783 12.617 17.8039 12.71 17.7102L17.71 12.7102C17.801 12.6151 17.8724 12.5029 17.92 12.3802C18.02 12.1367 18.02 11.8636 17.92 11.6202Z"
+											fill="currentColor" />
+									</svg>
+								</a>
+							</div>
+						</article>
+					</div>
+
+					<div class="portfolio__button">
+						<a class="button" href="#">More Project</a>
+					</div>
+
+				</div>
+			</section>
+
+			<!--*work-together - - - - - - - -->
+			<section class="work-together">
+				<div class="work-together__container">
+
+					<div class="work-together__body">
+						<h2 class="work-together__title title">Do you have Project Idia?
+							Let's discuss your project!</h2>
+						<div class="work-together__text text text--large">
+							<p>
+								There are many variations of passages of Lorem Ipsum available,
+								but the majority have suffered alteration.
+							</p>
+						</div>
+						<a class="work-together__button button" href="#">Let’s work Together
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+								<path
+									d="M18.42 11.6202C18.3724 11.4974 18.301 11.3853 18.21 11.2902L13.21 6.29019C13.1168 6.19695 13.0061 6.12299 12.8842 6.07253C12.7624 6.02207 12.6319 5.99609 12.5 5.99609C12.2337 5.99609 11.9783 6.10188 11.79 6.29019C11.6968 6.38342 11.6228 6.49411 11.5723 6.61594C11.5219 6.73776 11.4959 6.86833 11.4959 7.00019C11.4959 7.26649 11.6017 7.52188 11.79 7.71019L15.09 11.0002H7.5C7.23478 11.0002 6.98043 11.1055 6.79289 11.2931C6.60536 11.4806 6.5 11.735 6.5 12.0002C6.5 12.2654 6.60536 12.5198 6.79289 12.7073C6.98043 12.8948 7.23478 13.0002 7.5 13.0002H15.09L11.79 16.2902C11.6963 16.3831 11.6219 16.4937 11.5711 16.6156C11.5203 16.7375 11.4942 16.8682 11.4942 17.0002C11.4942 17.1322 11.5203 17.2629 11.5711 17.3848C11.6219 17.5066 11.6963 17.6172 11.79 17.7102C11.883 17.8039 11.9936 17.8783 12.1154 17.9291C12.2373 17.9798 12.368 18.006 12.5 18.006C12.632 18.006 12.7627 17.9798 12.8846 17.9291C13.0064 17.8783 13.117 17.8039 13.21 17.7102L18.21 12.7102C18.301 12.6151 18.3724 12.5029 18.42 12.3802C18.52 12.1367 18.52 11.8636 18.42 11.6202Z"
+									fill="CurrentColor" />
+							</svg>
+						</a>
+					</div>
+
+				</div>
+			</section>
+
+			<!--*blog - - - - - - - -->
+			<section class="blog" id="section-blog">
+				<div class="blog__container">
+
+					<div class="blog__header-section section-header">
+						<h2 class="blog__title title">Blog</h2>
+						<div class="blog__text text text--large">
+							<p>There are many variations of passages of Lorem Ipsum available,
+								but the majority have suffered alteration.</p>
+						</div>
+					</div>
+
+					<div class="blog__swiper swiper">
+						<ul class="blog__swiper-wrapper swiper-wrapper">
+
+							<li class="blog__slide swiper-slide">
+								<a class="blog__link" href="#">
+									<div class="blog__photo">
+										<img src="img/blog/1_photo.jpg"
+											alt="Night sky with the Milky Way over snow-covered mountains">
+									</div>
+
+									<div class="blog__body">
+										<div class="blog__label">
+											<time datetime="2020-10-22">22 Oct, 2020 </time>
+											<span>/ 246 Comments</span>
+										</div>
+
+										<h3 class="blog__description">Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+									</div>
+								</a>
+							</li>
+
+							<li class="blog__slide swiper-slide">
+								<a class="blog__link" href="#">
+									<div class="blog__photo">
+										<img src="img/blog/2_photo.jpg"
+											alt="Night sky with the Milky Way over snow-covered mountains">
+									</div>
+
+									<div class="blog__body">
+										<div class="blog__label">
+											<time datetime="2020-10-22">22 Oct, 2020 </time>
+											<span>/ 246 Comments</span>
+										</div>
+
+										<h3 class="blog__description">Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+									</div>
+								</a>
+							</li>
+
+							<li class="blog__slide swiper-slide">
+								<a class="blog__link" href="#">
+									<div class="blog__photo">
+										<img src="img/blog/3_photo.jpg"
+											alt="Night sky with the Milky Way over snow-covered mountains">
+									</div>
+
+									<div class="blog__body">
+										<div class="blog__label">
+											<time datetime="2020-10-22">22 Oct, 2020 </time>
+											<span>/ 246 Comments</span>
+										</div>
+
+										<h3 class="blog__description">Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+									</div>
+								</a>
+							</li>
+
+							<li class="blog__slide swiper-slide">
+								<a class="blog__link" href="#">
+									<div class="blog__photo">
+										<img src="img/blog/4_photo.jpg"
+											alt="Night sky with the Milky Way over snow-covered mountains">
+									</div>
+
+									<div class="blog__body">
+										<div class="blog__label">
+											<time datetime="2020-10-22">22 Oct, 2020 </time>
+											<span>/ 246 Comments</span>
+										</div>
+
+										<h3 class="blog__description">Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+									</div>
+								</a>
+							</li>
+
+							<li class="blog__slide swiper-slide">
+								<a class="blog__link" href="#">
+									<div class="blog__photo">
+										<img src="img/blog/1_photo.jpg"
+											alt="Night sky with the Milky Way over snow-covered mountains">
+									</div>
+
+									<div class="blog__body">
+										<div class="blog__label">
+											<time datetime="2020-10-22">22 Oct, 2020 </time>
+											<span>/ 246 Comments</span>
+										</div>
+
+										<h3 class="blog__description">Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+									</div>
+								</a>
+							</li>
+
+							<li class="blog__slide swiper-slide">
+								<a class="blog__link" href="#">
+									<div class="blog__photo">
+										<img src="img/blog/2_photo.jpg"
+											alt="Night sky with the Milky Way over snow-covered mountains">
+									</div>
+
+									<div class="blog__body">
+										<div class="blog__label">
+											<time datetime="2020-10-22">22 Oct, 2020 </time>
+											<span>/ 246 Comments</span>
+										</div>
+
+										<h3 class="blog__description">Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+									</div>
+								</a>
+							</li>
+
+							<li class="blog__slide swiper-slide">
+								<a class="blog__link" href="#">
+									<div class="blog__photo">
+										<img src="img/blog/3_photo.jpg"
+											alt="Night sky with the Milky Way over snow-covered mountains">
+									</div>
+
+									<div class="blog__body">
+										<div class="blog__label">
+											<time datetime="2020-10-22">22 Oct, 2020 </time>
+											<span>/ 246 Comments</span>
+										</div>
+
+										<h3 class="blog__description">Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+									</div>
+								</a>
+							</li>
+
+							<li class="blog__slide swiper-slide">
+								<a class="blog__link" href="#">
+									<div class="blog__photo">
+										<img src="img/blog/4_photo.jpg"
+											alt="Night sky with the Milky Way over snow-covered mountains">
+									</div>
+
+									<div class="blog__body">
+										<div class="blog__label">
+											<time datetime="2020-10-22">22 Oct, 2020 </time>
+											<span>/ 246 Comments</span>
+										</div>
+
+										<h3 class="blog__description">Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+									</div>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+
+					<div class="blog__pagination-swiper swiper-pagination"></div>
+
+				</div>
+			</section>
+
+			<!--*what-i-do - - - - - - - -->
+			<section class="what-i-do" id="section-what-i-do">
+				<div class="what-i-do__container">
+
+					<div class="what-i-do__text-block">
+						<h2 class="what-i-do__title title">What I do?</h2>
+						<div class="what-i-do__text text text--large">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit
+								non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum. Suspendis imperdiet,
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit
+								non.
+							</p>
+						</div>
+						<a class="what-i-do__button button" href="#section-contacts">Say Hello!</a>
+					</div>
+
+					<ul class="what-i-do__info-experience experience-info">
+						<li class="experience-info__item">
+							<h3 class="experience-info__title">User Experience (UX)</h3>
+							<div class="experience-info__text text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit
+									non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.
+								</p>
+							</div>
+						</li>
+
+						<li class="experience-info__item">
+							<h3 class="experience-info__title">User Interface (UI)</h3>
+							<div class="experience-info__text text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit
+									non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.
+								</p>
+							</div>
+						</li>
+
+						<li class="experience-info__item">
+							<h3 class="experience-info__title">Web Development</h3>
+							<div class="experience-info__text text">
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit
+									non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum.
+								</p>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+			<!--*happy-clients - - - - - - - -->
+			<section class="happy-clients">
+				<div class="happy-clients__container">
+
+					<div class="happy-clients__header-section section-header">
+						<h2 class="happy-clients__title title">Happy Clients</h2>
+						<div class="happy-clients__text text">
+							<p>
+								There are many variations of passages of Lorem Ipsum available,
+								but the majority have suffered alteration.
+							</p>
+						</div>
+					</div>
+
+					<div class="happy-clients__logo-group">
+						<ul class="happy-clients__logo clients-logo">
+							<li class="clients-logo__item clients-logo__item--1">
+								<img src="img/logos/1_google.svg" alt="google logo">
+							</li>
+							<li class="clients-logo__item ">
+								<img src="img/logos/2_dribble.svg" alt="dribble logo">
+							</li>
+							<li class="clients-logo__item">
+								<img src="img/logos/3_linked_in.svg" alt="linkedin logo">
+							</li>
+							<li class="clients-logo__item clients-logo__item--4">
+								<img src="img/logos/4_amazon.svg" alt="amazon logo">
+							</li>
+							<li class="clients-logo__item">
+								<img src="img/logos/5_medium.svg" alt="medium logo">
+							</li>
+							<li class="clients-logo__item">
+								<img src="img/logos/6_spotify.svg" alt="spotify logo">
+							</li>
+
+						</ul>
+
+						<ul class="happy-clients__logo clients-logo" aria-hidden="true">
+							<li class="clients-logo__item clients-logo__item--1">
+								<img src="img/logos/1_google.svg" alt="google logo">
+							</li>
+							<li class="clients-logo__item ">
+								<img src="img/logos/2_dribble.svg" alt="dribble logo">
+							</li>
+							<li class="clients-logo__item">
+								<img src="img/logos/3_linked_in.svg" alt="linkedin logo">
+							</li>
+							<li class="clients-logo__item clients-logo__item--4">
+								<img src="img/logos/4_amazon.svg" alt="amazon logo">
+							</li>
+							<li class="clients-logo__item">
+								<img src="img/logos/5_medium.svg" alt="medium logo">
+							</li>
+							<li class="clients-logo__item">
+								<img src="img/logos/6_spotify.svg" alt="spotify logo">
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!--*	testimonials - - - - - - - -->
+			<section class="testimonials">
+				<div class="testimonials__container">
+
+					<div class="testimonials__header-section section-header">
+						<h2 class="testimonials__title title">Testimonial</h2>
+						<div class="testimonials__text text">
+							<p>
+								There are many variations of passages of Lorem Ipsum available,
+								but the majority have suffered alteration.
+							</p>
+						</div>
+					</div>
+
+					<div class="testimonials__swiper swiper">
+						<ul class="testimonials__swiper-wrapper swiper-wrapper">
+
+							<li class="testimonials__slide swiper-slide">
+								<div class="testimonials__slide-content">
+									<blockquote class="testimonials__quote">
+										“Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium asperiores eum ipsa
+										quisquam aut exercitationem molestiae provident voluptatibus amet in vel, neque natus
+										vitae, dolorem consectetur culpa eaque. Est amet fugit enim, dolorem, ea aspernatur minima
+										sunt dolorum qui veniam magnam ipsam sint, repudiandae laborum.”
+									</blockquote>
+									<div class="testimonials__author">Esther Howard</div>
+									<div class="testimonials__position">Managing Director, ABC company</div>
+								</div>
+							</li>
+
+							<li class="testimonials__slide swiper-slide">
+								<div class="testimonials__slide-content">
+									<blockquote class="testimonials__quote">
+										“Nulla efficitur nisl sit amet velit malesuada dapibus. Duis mollis felis turpis, nec
+										semper odio
+										convallis at. Curabitur imperdiet semper arcu, a finibus arcu suscipit in. Donec quis
+										placerat
+										nibh. Maecenas est purus, eleifend ac cursus sed, tincidunt ut sapien.
+										Morbi ornare elit at libero suscipit porta.”
+									</blockquote>
+									<div class="testimonials__author">Esther Howard</div>
+									<div class="testimonials__position">Managing Director, ABC company</div>
+								</div>
+							</li>
+
+							<li class="testimonials__slide swiper-slide">
+								<div class="testimonials__slide-content">
+									<blockquote class="testimonials__quote">
+										“Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit ex minus
+										voluptatem iusto quia, omnis expedita. Sapiente perferendis provident delectus cumque,
+										molestias impedit obcaecati doloribus aperiam ipsam. Sunt, recusandae et..”
+									</blockquote>
+									<div class="testimonials__author">Esther Howard</div>
+									<div class="testimonials__position">Managing Director, ABC company</div>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+
+					<div class="testimonials__pagination-swiper swiper-pagination"></div>
+				</div>
+			</section>
+
+			<!--* contacts - - - - - - - -->
+			<section class="contacts" id="section-contacts">
+				<div class="contacts__container">
+
+					<div class="contacts__block block-contact">
+						<h2 class="block-contact__title title title--small">Let’s discuss your Project</h2>
+						<div class="block-contact__text text text--large">
+							<p>
+								There are many variations of passages of Lorem Ipsu available. but the majority have suffered
+								alte.
+							</p>
+						</div>
+
+						<address class="block-contact__address">
+							<div class="block-contact__group contact-group">
+								<a class="contact-group__item" href="https://goo.gl/maps" target="_blank">
+									<div class="contact-group__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+											fill="currentColor">
+											<path
+												d="M18 4.4804C16.4087 2.8891 14.2504 1.99512 12 1.99512C9.74955 1.99512 7.59129 2.8891 5.99999 4.4804C4.40869 6.0717 3.51471 8.22996 3.51471 10.4804C3.51471 12.7308 4.40869 14.8891 5.99999 16.4804L11.27 21.7604C11.363 21.8541 11.4736 21.9285 11.5954 21.9793C11.7173 22.0301 11.848 22.0562 11.98 22.0562C12.112 22.0562 12.2427 22.0301 12.3646 21.9793C12.4864 21.9285 12.597 21.8541 12.69 21.7604L18 16.4304C19.5846 14.8457 20.4749 12.6965 20.4749 10.4554C20.4749 8.21434 19.5846 6.06508 18 4.4804ZM16.57 15.0004L12 19.5904L7.42999 15.0004C6.52713 14.0967 5.91247 12.9456 5.66369 11.6927C5.4149 10.4397 5.54318 9.14115 6.03229 7.96108C6.52141 6.78101 7.34941 5.77245 8.41162 5.06288C9.47383 4.3533 10.7226 3.97458 12 3.97458C13.2774 3.97458 14.5261 4.3533 15.5884 5.06288C16.6506 5.77245 17.4786 6.78101 17.9677 7.96108C18.4568 9.14115 18.5851 10.4397 18.3363 11.6927C18.0875 12.9456 17.4728 14.0967 16.57 15.0004ZM8.99999 7.4104C8.19271 8.22017 7.73939 9.31697 7.73939 10.4604C7.73939 11.6038 8.19271 12.7006 8.99999 13.5104C9.59975 14.1112 10.3636 14.5215 11.1956 14.6898C12.0277 14.8581 12.8909 14.777 13.6771 14.4566C14.4632 14.1361 15.1372 13.5907 15.6145 12.8886C16.0918 12.1866 16.3511 11.3593 16.36 10.5104C16.3645 9.9436 16.2553 9.38166 16.0389 8.85779C15.8225 8.33392 15.5032 7.85875 15.1 7.4604C14.7037 7.05498 14.2311 6.73194 13.7094 6.50986C13.1878 6.28779 12.6273 6.17107 12.0604 6.16643C11.4935 6.16178 10.9312 6.2693 10.406 6.48279C9.88073 6.69628 9.40291 7.01153 8.99999 7.4104ZM13.69 12.0904C13.311 12.4751 12.8102 12.7163 12.2731 12.7727C11.736 12.829 11.1961 12.697 10.7455 12.3993C10.2949 12.1016 9.96179 11.6566 9.803 11.1405C9.64421 10.6243 9.66964 10.069 9.87495 9.56955C10.0803 9.07007 10.4527 8.65741 10.9286 8.40213C11.4045 8.14686 11.9542 8.06481 12.4839 8.17002C13.0136 8.27522 13.4903 8.56116 13.8325 8.97893C14.1747 9.3967 14.3612 9.92037 14.36 10.4604C14.3454 11.0777 14.0865 11.6639 13.64 12.0904H13.69Z"
+												fill="currentColor" />
+										</svg>
+									</div>
+
+									<div class="contact-group__description">
+
+										<div class="contact-group__name">
+											<p>Address:</p>
+										</div>
+										<div class="contact-group__text">
+											<p>New Mexico 31134</p>
+										</div>
+
+									</div>
+
+								</a>
+
+								<a class="contact-group__item" href="mailto:mymail@mail.com">
+									<div class="contact-group__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+											fill="currentColor">
+											<path
+												d="M18 4.4804C16.4087 2.8891 14.2504 1.99512 12 1.99512C9.74955 1.99512 7.59129 2.8891 5.99999 4.4804C4.40869 6.0717 3.51471 8.22996 3.51471 10.4804C3.51471 12.7308 4.40869 14.8891 5.99999 16.4804L11.27 21.7604C11.363 21.8541 11.4736 21.9285 11.5954 21.9793C11.7173 22.0301 11.848 22.0562 11.98 22.0562C12.112 22.0562 12.2427 22.0301 12.3646 21.9793C12.4864 21.9285 12.597 21.8541 12.69 21.7604L18 16.4304C19.5846 14.8457 20.4749 12.6965 20.4749 10.4554C20.4749 8.21434 19.5846 6.06508 18 4.4804ZM16.57 15.0004L12 19.5904L7.42999 15.0004C6.52713 14.0967 5.91247 12.9456 5.66369 11.6927C5.4149 10.4397 5.54318 9.14115 6.03229 7.96108C6.52141 6.78101 7.34941 5.77245 8.41162 5.06288C9.47383 4.3533 10.7226 3.97458 12 3.97458C13.2774 3.97458 14.5261 4.3533 15.5884 5.06288C16.6506 5.77245 17.4786 6.78101 17.9677 7.96108C18.4568 9.14115 18.5851 10.4397 18.3363 11.6927C18.0875 12.9456 17.4728 14.0967 16.57 15.0004ZM8.99999 7.4104C8.19271 8.22017 7.73939 9.31697 7.73939 10.4604C7.73939 11.6038 8.19271 12.7006 8.99999 13.5104C9.59975 14.1112 10.3636 14.5215 11.1956 14.6898C12.0277 14.8581 12.8909 14.777 13.6771 14.4566C14.4632 14.1361 15.1372 13.5907 15.6145 12.8886C16.0918 12.1866 16.3511 11.3593 16.36 10.5104C16.3645 9.9436 16.2553 9.38166 16.0389 8.85779C15.8225 8.33392 15.5032 7.85875 15.1 7.4604C14.7037 7.05498 14.2311 6.73194 13.7094 6.50986C13.1878 6.28779 12.6273 6.17107 12.0604 6.16643C11.4935 6.16178 10.9312 6.2693 10.406 6.48279C9.88073 6.69628 9.40291 7.01153 8.99999 7.4104ZM13.69 12.0904C13.311 12.4751 12.8102 12.7163 12.2731 12.7727C11.736 12.829 11.1961 12.697 10.7455 12.3993C10.2949 12.1016 9.96179 11.6566 9.803 11.1405C9.64421 10.6243 9.66964 10.069 9.87495 9.56955C10.0803 9.07007 10.4527 8.65741 10.9286 8.40213C11.4045 8.14686 11.9542 8.06481 12.4839 8.17002C13.0136 8.27522 13.4903 8.56116 13.8325 8.97893C14.1747 9.3967 14.3612 9.92037 14.36 10.4604C14.3454 11.0777 14.0865 11.6639 13.64 12.0904H13.69Z"
+												fill="currentColor" />
+										</svg>
+									</div>
+
+									<div class="contact-group__description">
+										<div class="contact-group__name">
+											<p>My Email:</p>
+										</div>
+										<div class="contact-group__text">
+											<p>mymail@mail.com</p>
+										</div>
+									</div>
+
+								</a>
+
+								<a class="contact-group__item" href="tel:00123400000">
+
+									<div class="contact-group__icon">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+											fill="currentColor">
+											<path
+												d="M18 4.4804C16.4087 2.8891 14.2504 1.99512 12 1.99512C9.74955 1.99512 7.59129 2.8891 5.99999 4.4804C4.40869 6.0717 3.51471 8.22996 3.51471 10.4804C3.51471 12.7308 4.40869 14.8891 5.99999 16.4804L11.27 21.7604C11.363 21.8541 11.4736 21.9285 11.5954 21.9793C11.7173 22.0301 11.848 22.0562 11.98 22.0562C12.112 22.0562 12.2427 22.0301 12.3646 21.9793C12.4864 21.9285 12.597 21.8541 12.69 21.7604L18 16.4304C19.5846 14.8457 20.4749 12.6965 20.4749 10.4554C20.4749 8.21434 19.5846 6.06508 18 4.4804ZM16.57 15.0004L12 19.5904L7.42999 15.0004C6.52713 14.0967 5.91247 12.9456 5.66369 11.6927C5.4149 10.4397 5.54318 9.14115 6.03229 7.96108C6.52141 6.78101 7.34941 5.77245 8.41162 5.06288C9.47383 4.3533 10.7226 3.97458 12 3.97458C13.2774 3.97458 14.5261 4.3533 15.5884 5.06288C16.6506 5.77245 17.4786 6.78101 17.9677 7.96108C18.4568 9.14115 18.5851 10.4397 18.3363 11.6927C18.0875 12.9456 17.4728 14.0967 16.57 15.0004ZM8.99999 7.4104C8.19271 8.22017 7.73939 9.31697 7.73939 10.4604C7.73939 11.6038 8.19271 12.7006 8.99999 13.5104C9.59975 14.1112 10.3636 14.5215 11.1956 14.6898C12.0277 14.8581 12.8909 14.777 13.6771 14.4566C14.4632 14.1361 15.1372 13.5907 15.6145 12.8886C16.0918 12.1866 16.3511 11.3593 16.36 10.5104C16.3645 9.9436 16.2553 9.38166 16.0389 8.85779C15.8225 8.33392 15.5032 7.85875 15.1 7.4604C14.7037 7.05498 14.2311 6.73194 13.7094 6.50986C13.1878 6.28779 12.6273 6.17107 12.0604 6.16643C11.4935 6.16178 10.9312 6.2693 10.406 6.48279C9.88073 6.69628 9.40291 7.01153 8.99999 7.4104ZM13.69 12.0904C13.311 12.4751 12.8102 12.7163 12.2731 12.7727C11.736 12.829 11.1961 12.697 10.7455 12.3993C10.2949 12.1016 9.96179 11.6566 9.803 11.1405C9.64421 10.6243 9.66964 10.069 9.87495 9.56955C10.0803 9.07007 10.4527 8.65741 10.9286 8.40213C11.4045 8.14686 11.9542 8.06481 12.4839 8.17002C13.0136 8.27522 13.4903 8.56116 13.8325 8.97893C14.1747 9.3967 14.3612 9.92037 14.36 10.4604C14.3454 11.0777 14.0865 11.6639 13.64 12.0904H13.69Z"
+												fill="currentColor" />
+										</svg>
+									</div>
+
+									<div class="contact-group__description">
+
+										<div class="contact-group__name">
+											<p>Call Me Now:</p>
+										</div>
+										<div class="contact-group__text">
+											<p>00-1234 00000</p>
+										</div>
+
+									</div>
+
+								</a>
+							</div>
+
+							<ul class="block-contact__list-social social-list">
+								<li class="social-list__item">
+									<a class="social-list__link" href="#" aria-label="go to the link on facebook">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" viewBox="0 0 18 20"
+											fill="none">
+											<path
+												d="M13.4866 0.25H10.43C8.61604 0.25 6.59845 1.02784 6.59845 3.70863C6.60731 4.64273 6.59845 5.53731 6.59845 6.54411H4.5V9.94872H6.66339V19.75H10.6387V9.88404H13.2626L13.5 6.53456H10.5702C10.5702 6.53456 10.5768 5.04457 10.5702 4.61187C10.5702 3.55248 11.6514 3.61314 11.7164 3.61314C12.2309 3.61314 13.2313 3.61467 13.4881 3.61314V0.25H13.4866Z"
+												fill="currentColor" />
+										</svg>
+									</a>
+								</li>
+
+								<li class="social-list__item">
+									<a class="social-list__link" href="#" aria-label="go to the link on dribble">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+											fill="none">
+											<g clip-path="url(#clip0_47_214)">
+												<path
+													d="M0 9C0 7.36799 0.402012 5.86201 1.206 4.482C2.01001 3.10199 3.10201 2.01001 4.482 1.206C5.86201 0.401994 7.36801 0 9 0C10.632 0 12.138 0.401994 13.518 1.206C14.898 2.01001 15.99 3.10199 16.794 4.482C17.598 5.86201 18 7.36799 18 9C18 10.632 17.598 12.138 16.794 13.518C15.99 14.898 14.898 15.99 13.518 16.794C12.138 17.598 10.632 18 9 18C7.36801 18 5.86201 17.598 4.482 16.794C3.10201 15.99 2.01001 14.898 1.206 13.518C0.402012 12.138 0 10.632 0 9ZM1.494 9C1.494 10.872 2.124 12.522 3.384 13.95C3.96 12.822 4.87201 11.748 6.12 10.728C7.36801 9.70799 8.586 9.06601 9.774 8.802C9.594 8.38201 9.42001 8.00401 9.252 7.668C7.18801 8.32801 4.95601 8.658 2.556 8.658C2.088 8.658 1.74001 8.65201 1.512 8.64C1.512 8.68801 1.50901 8.748 1.503 8.82C1.49701 8.892 1.494 8.95199 1.494 9ZM1.728 7.146C1.99201 7.16999 2.38201 7.182 2.898 7.182C4.90201 7.182 6.804 6.912 8.604 6.372C7.69201 4.752 6.69001 3.402 5.598 2.322C4.65001 2.80201 3.83701 3.46801 3.159 4.32C2.48101 5.17199 2.00401 6.11401 1.728 7.146ZM4.41 14.922C5.76601 15.978 7.29601 16.506 9 16.506C9.88801 16.506 10.77 16.338 11.646 16.002C11.406 13.95 10.938 11.964 10.242 10.044C9.13801 10.284 8.02501 10.89 6.903 11.862C5.78101 12.834 4.95 13.854 4.41 14.922ZM7.164 1.746C8.22001 2.83801 9.198 4.19999 10.098 5.832C11.73 5.148 12.96 4.27801 13.788 3.222C12.396 2.07 10.8 1.494 9 1.494C8.388 1.494 7.776 1.57801 7.164 1.746ZM10.746 7.11C10.926 7.49399 11.13 7.97999 11.358 8.568C12.246 8.48399 13.212 8.442 14.256 8.442C15 8.442 15.738 8.46 16.47 8.496C16.374 6.86399 15.786 5.41201 14.706 4.14C13.926 5.30401 12.606 6.29401 10.746 7.11ZM11.808 9.828C12.42 11.604 12.834 13.428 13.05 15.3C13.998 14.688 14.772 13.902 15.372 12.942C15.972 11.982 16.332 10.944 16.452 9.828C15.576 9.76801 14.778 9.738 14.058 9.738C13.398 9.738 12.648 9.76801 11.808 9.828Z"
+													fill="currentColor" />
+											</g>
+											<defs>
+												<clipPath>
+													<rect width="18" height="18" fill="currentColor" />
+												</clipPath>
+											</defs>
+										</svg>
+									</a>
+								</li>
+
+								<li class="social-list__item">
+									<a class="social-list__link" href="#" aria-label="go to the link on behance">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+											fill="none">
+											<path
+												d="M7.26331 8.02956C7.26331 8.02956 8.9664 7.90476 8.9664 5.93349C8.9664 3.96208 7.57305 3 5.80808 3H0.000244141V14.0165H5.80808C5.80808 14.0165 9.35355 14.127 9.35355 10.7649C9.35355 10.765 9.50813 8.02956 7.26331 8.02956V8.02956ZM5.39004 4.95806H5.80808C5.80808 4.95806 6.59754 4.95806 6.59754 6.10428C6.59754 7.25036 6.13325 7.41652 5.60663 7.41652H2.55925V4.95806H5.39004V4.95806ZM5.64396 12.0585H2.55925V9.11449H5.80808C5.80808 9.11449 6.98473 9.09926 6.98473 10.6274C6.98473 11.916 6.10589 12.0488 5.64396 12.0585V12.0585ZM14.0821 5.80292C9.78988 5.80292 9.79368 10.0358 9.79368 10.0358C9.79368 10.0358 9.49918 14.2469 14.0821 14.2469C14.0821 14.2469 17.9011 14.4623 17.9011 11.3175H15.937C15.937 11.3175 16.0025 12.5018 14.1476 12.5018C14.1476 12.5018 12.1832 12.6317 12.1832 10.5851H17.9666C17.9666 10.5851 18.5994 5.80292 14.0821 5.80292ZM12.1616 9.11449C12.1616 9.11449 12.4014 7.41649 14.1257 7.41649C15.8496 7.41649 15.828 9.11449 15.828 9.11449H12.1616ZM16.2855 5.00561H11.6808V3.64901H16.2855V5.00561Z"
+												fill="currentColor" />
+										</svg>
+									</a>
+								</li>
+
+								<li class="social-list__item">
+									<a class="social-list__link" href="#" aria-label="go to the link on instagram">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+											fill="currentColor">
+											<g clip-path="url(#clip0_47_212)">
+												<path
+													d="M6.00049 9C6.00049 7.34321 7.34322 5.99976 9 5.99976C10.6568 5.99976 12.0002 7.34321 12.0002 9C12.0002 10.6568 10.6568 12.0002 9 12.0002C7.34322 12.0002 6.00049 10.6568 6.00049 9ZM4.37859 9C4.37859 11.5524 6.44758 13.6214 9 13.6214C11.5524 13.6214 13.6214 11.5524 13.6214 9C13.6214 6.44758 11.5524 4.37859 9 4.37859C6.44758 4.37859 4.37859 6.44758 4.37859 9ZM12.7243 4.1954C12.7243 4.79152 13.2078 5.27569 13.8046 5.27569C14.4007 5.27569 14.8849 4.79152 14.8849 4.1954C14.8849 3.59927 14.4015 3.11583 13.8046 3.11583C13.2078 3.11583 12.7243 3.59927 12.7243 4.1954ZM5.36365 16.3258C4.48619 16.2858 4.00929 16.1397 3.69233 16.0161C3.27213 15.8525 2.97262 15.6577 2.65711 15.3429C2.34233 15.0281 2.14677 14.7286 1.98393 14.3084C1.86034 13.9914 1.71422 13.5145 1.67423 12.6371C1.63061 11.6884 1.62189 11.4034 1.62189 9C1.62189 6.59661 1.63134 6.31236 1.67423 5.36292C1.71422 4.48546 1.86107 4.00929 1.98393 3.6916C2.1475 3.27141 2.34233 2.97189 2.65711 2.65638C2.97189 2.3416 3.27141 2.14604 3.69233 1.9832C4.00929 1.85961 4.48619 1.71349 5.36365 1.67351C6.31236 1.62989 6.59733 1.62116 9 1.62116C11.4034 1.62116 11.6876 1.63061 12.6371 1.67351C13.5145 1.71349 13.9907 1.86034 14.3084 1.9832C14.7286 2.14604 15.0281 2.3416 15.3436 2.65638C15.6584 2.97116 15.8532 3.27141 16.0168 3.6916C16.1404 4.00856 16.2865 4.48546 16.3265 5.36292C16.3701 6.31236 16.3788 6.59661 16.3788 9C16.3788 11.4027 16.3701 11.6876 16.3265 12.6371C16.2865 13.5145 16.1397 13.9914 16.0168 14.3084C15.8532 14.7286 15.6584 15.0281 15.3436 15.3429C15.0288 15.6577 14.7286 15.8525 14.3084 16.0161C13.9914 16.1397 13.5145 16.2858 12.6371 16.3258C11.6884 16.3694 11.4034 16.3781 9 16.3781C6.59733 16.3781 6.31236 16.3694 5.36365 16.3258V16.3258ZM5.2895 0.0545234C4.33134 0.0981422 3.67706 0.250081 3.10493 0.472536C2.51317 0.702262 2.01155 1.0105 1.51066 1.51066C1.0105 2.01082 0.702262 2.51244 0.472536 3.10493C0.250081 3.67706 0.0981422 4.33134 0.0545234 5.2895C0.0101777 6.24911 0 6.5559 0 9C0 11.4441 0.0101777 11.7509 0.0545234 12.7105C0.0981422 13.6687 0.250081 14.3229 0.472536 14.8951C0.702262 15.4868 1.00977 15.9892 1.51066 16.4893C2.01082 16.9895 2.51244 17.297 3.10493 17.5275C3.67779 17.7499 4.33134 17.9019 5.2895 17.9455C6.24984 17.9891 6.5559 18 9 18C11.4448 18 11.7509 17.9898 12.7105 17.9455C13.6687 17.9019 14.3229 17.7499 14.8951 17.5275C15.4868 17.297 15.9884 16.9895 16.4893 16.4893C16.9895 15.9892 17.297 15.4868 17.5275 14.8951C17.7499 14.3229 17.9026 13.6687 17.9455 12.7105C17.9891 11.7502 17.9993 11.4441 17.9993 9C17.9993 6.5559 17.9891 6.24911 17.9455 5.2895C17.9019 4.33134 17.7499 3.67706 17.5275 3.10493C17.297 2.51317 16.9895 2.01155 16.4893 1.51066C15.9892 1.0105 15.4868 0.702262 14.8958 0.472536C14.3229 0.250081 13.6687 0.0974152 12.7112 0.0545234C11.7516 0.0109047 11.4448 0 9.00073 0C6.5559 0 6.24984 0.0101777 5.2895 0.0545234"
+													fill="currentColor" />
+											</g>
+											<defs>
+												<clipPath>
+													<rect width="18" height="18" fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+									</a>
+								</li>
+
+								<li class="social-list__item">
+									<a class="social-list__link" href="#" aria-label="go to the link on linkedin">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+											fill="currentColor">
+											<g clip-path="url(#clip0_47_200)">
+												<path
+													d="M0 2.09091C0 1.48483 0.202708 0.984835 0.608108 0.590908C1.01351 0.196963 1.54055 0 2.18919 0C2.82626 0 3.34169 0.193927 3.73552 0.581817C4.14092 0.981817 4.34363 1.50302 4.34363 2.14545C4.34363 2.72727 4.14672 3.2121 3.7529 3.59999C3.3475 3.99999 2.81467 4.19999 2.15444 4.19999H2.13707C1.49999 4.19999 0.984562 3.99999 0.590734 3.59999C0.196905 3.19999 0 2.69696 0 2.09091ZM0.225869 18V5.85454H4.08301V18H0.225869ZM6.22008 18H10.0772V11.2182C10.0772 10.7939 10.1236 10.4666 10.2162 10.2363C10.3784 9.82422 10.6245 9.47573 10.9546 9.19089C11.2847 8.90604 11.6988 8.76362 12.1969 8.76362C13.4942 8.76362 14.1429 9.67877 14.1429 11.5091V18H18V11.0363C18 9.2424 17.5946 7.88181 16.7838 6.95453C15.973 6.02726 14.9016 5.56363 13.5695 5.56363C12.0753 5.56363 10.9112 6.23635 10.0772 7.58181V7.61817H10.0598L10.0772 7.58181V5.85454H6.22008C6.24324 6.24241 6.25483 7.44846 6.25483 9.47271C6.25483 11.4969 6.24324 14.3394 6.22008 18Z"
+													fill="currentColor" />
+											</g>
+											<defs>
+												<clipPath>
+													<rect width="18" height="18" fill="white" />
+												</clipPath>
+											</defs>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</address>
+					</div>
+
+					<div class="contacts__block-form block-form-contact">
+						<div class="block-form-contact__text text text--large">
+							<p>There are many variations of passages of Lorem Ipsu available,
+								but the majority have suffered alte.</p>
+						</div>
+
+						<form class="block-form-contact__form contact-form" action="#">
+							<div class="contact-form__field">
+								<input class="contact-form__style" id="name-field" placeholder="Name*" type="text" name="Name"
+									required>
+							</div>
+
+							<div class="contact-form__field">
+								<input class="contact-form__style" id="email-field" placeholder="Email*" type="email"
+									name="E-mail" required>
+							</div>
+
+							<div class="contact-form__field">
+								<input class="contact-form__style" id="location-field" placeholder="Location" type="text"
+									name="Location">
+							</div>
+
+							<div class="contact-form__field contact-form__field--group">
+								<div class="contact-form__field-item contact-form__field-item--budget">
+									<input class="contact-form__style" id="budget-field" placeholder="Budget*" type="number"
+										name="Budget" required>
+								</div>
+
+								<div class="contact-form__field-item contact-form__field-item--subject">
+									<input class="contact-form__style" id="subject-field" placeholder="Subject*" type="text"
+										name="Subject" required>
+								</div>
+							</div>
+
+							<div class="contact-form__field">
+								<textarea class="contact-form__style" id="message-field" placeholder="Message*" name="Message"
+									required spellcheck="true"></textarea>
+							</div>
+
+							<button class="contact-form__button button" type="submit">Submit
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="currentColor">
+									<path
+										d="M20.34 9.32013L6.34 2.32013C5.78749 2.04514 5.16362 1.94724 4.55344 2.03978C3.94326 2.13232 3.37646 2.4108 2.93033 2.83724C2.48421 3.26369 2.18046 3.81735 2.0605 4.42274C1.94054 5.02813 2.0102 5.65578 2.26 6.22013L4.66 11.5901C4.71446 11.72 4.74251 11.8593 4.74251 12.0001C4.74251 12.1409 4.71446 12.2803 4.66 12.4101L2.26 17.7801C2.0567 18.2368 1.97076 18.7371 2.00998 19.2355C2.0492 19.7339 2.21235 20.2145 2.48459 20.6338C2.75682 21.0531 3.12953 21.3977 3.56883 21.6363C4.00812 21.875 4.50009 22 5 22.0001C5.46823 21.9955 5.92949 21.8861 6.35 21.6801L20.35 14.6801C20.8466 14.4303 21.264 14.0474 21.5557 13.5742C21.8474 13.101 22.0018 12.556 22.0018 12.0001C22.0018 11.4442 21.8474 10.8993 21.5557 10.4261C21.264 9.95282 20.8466 9.56994 20.35 9.32013H20.34ZM19.45 12.8901L5.45 19.8901C5.26617 19.9784 5.05973 20.0084 4.85839 19.976C4.65705 19.9436 4.47041 19.8504 4.32352 19.709C4.17662 19.5675 4.07648 19.3845 4.03653 19.1846C3.99658 18.9846 4.01873 18.7772 4.1 18.5901L6.49 13.2201C6.52094 13.1484 6.54766 13.075 6.57 13.0001H13.46C13.7252 13.0001 13.9796 12.8948 14.1671 12.7072C14.3546 12.5197 14.46 12.2653 14.46 12.0001C14.46 11.7349 14.3546 11.4806 14.1671 11.293C13.9796 11.1055 13.7252 11.0001 13.46 11.0001H6.57C6.54766 10.9253 6.52094 10.8518 6.49 10.7801L4.1 5.41013C4.01873 5.22309 3.99658 5.01568 4.03653 4.8157C4.07648 4.61572 4.17662 4.43273 4.32352 4.29128C4.47041 4.14982 4.65705 4.05666 4.85839 4.02428C5.05973 3.9919 5.26617 4.02186 5.45 4.11013L19.45 11.1101C19.6138 11.194 19.7513 11.3215 19.8473 11.4786C19.9433 11.6356 19.994 11.8161 19.994 12.0001C19.994 12.1842 19.9433 12.3647 19.8473 12.5217C19.7513 12.6787 19.6138 12.8062 19.45 12.8901Z"
+										fill="currentColor" />
+								</svg>
+							</button>
+						</form>
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+
+		<!--* footer - - - - - - - -->
+		<footer class="footer">
+			<div class="footer__container">
+
+				<a class="footer__logo logo" href="#">
+					<div class="logo__img">
+						<img src="img/logo_icon.svg" alt="Brooklyn logo icon">
+					</div>
+					<p class="logo__text">Brooklyn</p>
+				</a>
+
+				<ul class="footer__navigation navigation-footer">
+					<li class="navigation-footer__item">
+						<a class="navigation-footer__link" href="#hero-section">Home</a>
+					</li>
+					<li class="navigation-footer__item">
+						<a class="navigation-footer__link" href="#section-about">About</a>
+					</li>
+					<li class="navigation-footer__item">
+						<a class="navigation-footer__link" href="#section-work-process">Process</a>
+					</li>
+					<li class="navigation-footer__item">
+						<a class="navigation-footer__link" href="#section-portfolio">Portfolio</a>
+					</li>
+					<li class="navigation-footer__item">
+						<a class="navigation-footer__link" href="#section-blog">Blog</a>
+					</li>
+					<li class="navigation-footer__item">
+						<a class="navigation-footer__link" href="#section-what-i-do">Services</a>
+					</li>
+					<li class="navigation-footer__item">
+						<a class="navigation-footer__link" href="#section-contacts">Contact</a>
+					</li>
+				</ul>
+
+				<div class="footer__copyright">Copyright © 2022 Picto.</div>
+
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
