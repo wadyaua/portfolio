@@ -316,7 +316,7 @@ body {
   font-family: "Mazzard M", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 18/16; /* 112.5% */
+  line-height: 1.13;
   will-change: transform;
   -webkit-transition: background-color 0.3s ease-out, -webkit-transform 0.05s ease-out;
   transition: background-color 0.3s ease-out, -webkit-transform 0.05s ease-out;
