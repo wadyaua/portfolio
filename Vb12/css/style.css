@@ -292,7 +292,7 @@ body {
 }
 @media (min-width: 47.99875em) and (min-width: 61.99875em) {
   .menu__link::before {
-    bottom: -2.375rem;
+    bottom: -2.4375rem;
   }
 }
 @media (any-hover: hover) {
