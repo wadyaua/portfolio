@@ -1,0 +1,138 @@
+
+
+// Адаптивна властивість (clamp)
+@mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
+	@if ($startSize==0) {
+		$startSize: 0.000001;
+	}
+	@if ($minSize==0) {
+		$minSize: 0.000001;
+	}
+
+	// Для calc();
+	$addSize: math.div($startSize - $minSize, 16);
+
+	@if ($widthFrom == $containerWidth and $maxWidthContainer == 0) {
+		$widthFrom: $maxWidth;
+	}
+
+	// Брейк-поїнти в EM
+	$widthFromMedia: toEm($widthFrom);
+	$widthToMedia: toEm($widthTo);
+
+	// Формула плаваючого значення
+	// Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+	$slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+	$yIntersection: -$widthTo * $slope + $minSize;
+	@if ($yIntersection==0) {
+		$yIntersection: 0.000001;
+	}
+	$flyValue: #{toRem($yIntersection)}" + " #{$slope * 100}vw;
+
+	// Отримання значення властивості
+	$propertyValue: #{"clamp(" toRem($minSize) "," $flyValue "," toRem($startSize) ")"};
+	// Якщо негативні значення
+	@if ($minSize > $startSize) {
+		$propertyValue: #{"clamp(" toRem($startSize) "," $flyValue "," toRem($minSize) ")"};
+	}
+
+	// Встановлюємо значення за замовчуванням
+	@if $keepSize != 1 and $keepSize != 3 {
+		@media (min-width: $widthFromMedia) {
+			#{$property}: toRem($startSize);
+		}
+	}
+	// Адаптуємо розмір у проміжку між зазначеними ширинами в'юпорту
+	@media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+		#{$property}: $propertyValue;
+
+		// Якщо підтримується clamp();
+		//@supports (#{$property}: $propertyValue) {
+		//	#{$property}: $propertyValue;
+		//}
+		// Якщо не підтримується clamp();
+		//@supports not (#{$property}: $propertyValue) {
+		//	#{$property}: calc(#{toRem($minSize)} + #{$addSize} * (100vw - #{toRem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+		//}
+	}
+	@if $keepSize != 1 and $keepSize != 2 {
+		@media (max-width: $widthToMedia) {
+			#{$property}: toRem($minSize);
+		}
+	}
+}
+
+//Більш короткий запис, для задання розмірів для img у %
+@mixin width-height-ToPercent($inline-size, $block-size: $inline-size) {
+	inline-size: $inline-size;
+	block-size: $block-size;
+}
+
+// Задання значень для width та height з конвертацією у rem
+@mixin width-height-ToRem($inline-size, $block-size: $inline-size) {
+	inline-size: toRem($inline-size);
+	block-size: toRem($block-size);
+}
+
+
+// Декор елемент
+@mixin decorative-element($inset-block, $inset-inline, $border-radius, $z-index-before: 1, $z-index-after: 2) {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: $z-index-before;
+
+    #{$inset-block}: toRem(0);
+    #{$inset-inline}: toRem(0);
+
+    inline-size: 100%;
+    block-size: clamp(3.125rem, 0.677rem + 5.31vw, 6.25rem);
+    background-color: var(--absolute-white);
+  }
+
+  &::after {
+    content: "";
+    z-index: $z-index-after;
+    position: absolute;
+
+    #{$inset-block}: toRem(0);
+    #{$inset-inline}: toRem(0);
+
+    inline-size: percent(687, 1920);
+    block-size: clamp(6.25rem, 1.354rem + 10.62vw, 12.5rem);
+    border-radius: toRemValues($border-radius);
+
+    background-color: var(--light);
+
+    @media (max-width: toEm(1100.98)) {
+      border-radius: toRemValues(map-get($border-radius-mobile, $border-radius));
+    }
+  }
+
+  &::before,
+  &::after {
+    @media (max-width: toEm(768.98)) {
+      display: none;
+    }
+  }
+}
+
+// Додатковий мапінг для мобільних значень border-radius
+$border-radius-mobile: (
+  "800 0 0 1280": "400 0 0 800",
+  "0 800 1280 0": "0 400 880 0",
+  "0 1280 800 0": "0 800 480 0"
+);
+
+// Використання mixin для різних варіантів
+.element-1 {
+  @include decorative-element("inset-block-end", "inset-inline-end", "800 0 0 1280", 1, 2);
+}
+
+.element-2 {
+  @include decorative-element("inset-block-end", "inset-inline-start", "0 800 1280 0", -2, -1);
+}
+
+.element-3 {
+  @include decorative-element("inset-block-start", "inset-inline-start", "0 1280 800 0", -2, -1);
+}
