@@ -1,0 +1,263 @@
+// Адаптивна властивість (clamp)
+@mixin adaptiveValue($property, $startSize, $minSize, $keepSize: 0, $widthFrom: $containerWidth, $widthTo: $minWidth) {
+	@if ($startSize==0) {
+		$startSize: 0.000001;
+	}
+	@if ($minSize==0) {
+		$minSize: 0.000001;
+	}
+
+	// Для calc();
+	$addSize: math.div($startSize - $minSize, 16);
+
+	@if ($widthFrom == $containerWidth and $maxWidthContainer == 0) {
+		$widthFrom: $maxWidth;
+	}
+
+	// Брейк-поїнти в EM
+	$widthFromMedia: toEm($widthFrom);
+	$widthToMedia: toEm($widthTo);
+
+	// Формула плаваючого значення
+	// Источник: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/
+	$slope: math.div(($startSize - $minSize), ($widthFrom - $widthTo));
+	$yIntersection: -$widthTo * $slope + $minSize;
+	@if ($yIntersection==0) {
+		$yIntersection: 0.000001;
+	}
+	$flyValue: #{toRem($yIntersection)}" + " #{$slope * 100}vw;
+
+	// Отримання значення властивості
+	$propertyValue: #{"clamp(" toRem($minSize) "," $flyValue "," toRem($startSize) ")"};
+	// Якщо негативні значення
+	@if ($minSize > $startSize) {
+		$propertyValue: #{"clamp(" toRem($startSize) "," $flyValue "," toRem($minSize) ")"};
+	}
+
+	// Встановлюємо значення за замовчуванням
+	@if $keepSize != 1 and $keepSize != 3 {
+		@media (min-width: $widthFromMedia) {
+			#{$property}: toRem($startSize);
+		}
+	}
+	// Адаптуємо розмір у проміжку між зазначеними ширинами в'юпорту
+	@media (min-width: $widthToMedia) and (max-width: $widthFromMedia) {
+		#{$property}: $propertyValue;
+
+		// Якщо підтримується clamp();
+		//@supports (#{$property}: $propertyValue) {
+		//	#{$property}: $propertyValue;
+		//}
+		// Якщо не підтримується clamp();
+		//@supports not (#{$property}: $propertyValue) {
+		//	#{$property}: calc(#{toRem($minSize)} + #{$addSize} * (100vw - #{toRem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)});
+		//}
+	}
+	@if $keepSize != 1 and $keepSize != 2 {
+		@media (max-width: $widthToMedia) {
+			#{$property}: toRem($minSize);
+		}
+	}
+}
+
+//Більш короткий запис, для задання розмірів для img у %
+@mixin width-height-ToPercent($inline-size, $block-size: $inline-size) {
+	inline-size: $inline-size;
+	block-size: $block-size;
+}
+
+// Задання значень для width та height з конвертацією у rem
+@mixin width-height-ToRem($inline-size, $block-size: $inline-size) {
+	inline-size: toRem($inline-size);
+	block-size: toRem($block-size);
+}
+
+// Міксин для стану hover кнопки
+@mixin button-hover($transition-duration, $color, $background-color, $border-color: null) {
+	@media (any-hover: hover) {
+		&:hover {
+			transition-duration: $transition-duration;
+			color: $color;
+			background-color: $background-color;
+
+			@if $border-color {
+				border-color: $border-color;
+			}
+		}
+	}
+}
+
+// Міксин для стану active кнопки
+@mixin button-active($transform, $color, $background-color, $border-color: null) {
+	&:active {
+		transition-duration: 0.001s;
+		transform: $transform;
+		color: $color;
+		background-color: $background-color;
+
+		@if $border-color {
+			border-color: $border-color;
+		}
+	}
+}
+
+@mixin button-animation ($background-color: rgba(241, 242, 237, 0.5)) {
+	position: relative;
+		@keyframes slide {
+			0% {
+				background-position: 130%;
+				opacity: 1;
+			}
+
+			to {
+				background-position: -166%;
+				opacity: 0;
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			inset: 0;
+			background: linear-gradient(-65deg, #0000 40%, $background-color 50%, #0000 70%);
+			background-size: 200% 100%;
+			background-repeat: no-repeat;
+			animation: slide 3s cubic-bezier(0.86, 0, 0.07, 1) infinite;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					display: none;
+				}
+			}
+		}
+}
+
+// Міксин для задання кольору тексту та фону
+@mixin color-and-bg($color, $background-color) {
+	color: $color;
+	background-color: $background-color;
+}
+
+// Міксин для задання border-radius та border
+@mixin borderStyle($radius, $width, $color, $style: solid) {
+	border-radius: $radius;
+	border: toRem($width) $style $color;
+}
+
+// Міксин для задання шрифту
+@mixin fontStyle($font-size, $line-height, $font-weight: null, $font-family: null) {
+	font-size: toRem($font-size);
+	line-height: $line-height;
+
+	@if $font-weight {
+		font-weight: $font-weight;
+	}
+
+	@if $font-family {
+		font-family: $font-family;
+	}
+}
+
+// Міксин для link-hover
+@mixin linkHover($background: var(--primary-color-dark), $translate: 4) {
+	position: relative;
+	will-change: transform;
+	transition: transform 0.005s ease;
+
+	@media (min-width: toEm(896.98)) {
+		&::before {
+		content: "";
+		position: absolute;
+
+		inset-inline-start: 0;
+		inset-block-end: 0;
+
+		inline-size: 100%;
+		block-size: toRem(2.2);
+
+		background-color: $background;
+		transform: translateY(toRem($translate));	
+		opacity: 0;
+
+		@content;
+
+		@media (min-width: toEm(1100.98)) {
+			transition: opacity 0.5s ease;
+		}
+	}
+	}
+
+	@media (min-width: toEm(896.98)) {
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					transition-duration: 0.3s;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&:active {
+		transition-duration: 0.001s;
+		transform: scale(0.94);
+
+		@media (min-width: toEm(896.98)) {
+			&::before {
+				transition-duration: 0.001s;
+				opacity: 1;
+				background-color: $background;
+			}
+		}
+	}
+}
+
+// Декор елемент
+@mixin decorative-element(
+	$inset-block,
+	$inset-inline,
+	$border-radius,
+	$border-radius-mobile,
+	$z-index-before: 1,
+	$z-index-after: 2) {
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: $z-index-before;
+
+		#{$inset-block}: toRem(-1);
+		#{$inset-inline}: 0;
+
+		inline-size: 100%;
+		block-size: clamp(3.125rem, 0.677rem + 5.31vw, 6.25rem);
+		background-color: var(--background-color);
+	}
+
+	&::after {
+		content: "";
+		z-index: $z-index-after;
+		position: absolute;
+
+		#{$inset-block}: toRem(0);
+		#{$inset-inline}: toRem(0);
+
+		inline-size: percent(687, 1920);
+		block-size: clamp(6.25rem, 1.354rem + 10.62vw, 12.5rem);
+		border-radius: toRemValues($border-radius);
+
+		background-color: var(--light);
+
+		@media (max-width: toEm(1100.98)) {
+			border-radius: toRemValues($border-radius-mobile);
+		}
+	}
+
+	&::before,
+	&::after {
+		@media (max-width: toEm(768.98)) {
+			display: none;
+		}
+	}
+}
