@@ -1,0 +1,145 @@
+/* обнулення */
+@import url("reset.css");
+/* шрифти */
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:regular,500,700,800&display=swap");
+
+:root {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Plus Jakarta Sans";
+	color: #171717;
+}
+
+.wrapper {
+	min-block-size: 100%;
+
+	display: flex;
+	flex-direction: column;
+	overflow: clip;
+}
+
+.wrapper>main {
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-width: 1342px;
+	padding-inline: 15px;
+	margin-inline: auto;
+}
+.header {
+	padding-block: 2.5rem;
+	background-color: rgb(194, 165, 34);
+	text-align: center;
+
+}
+.header__title {
+	font-weight: 900;
+	font-size: 2.625rem;
+	text-transform: uppercase;
+}
+.grid {
+	padding-block: 80px;
+	background-color: #262626;
+}
+
+.grid__box {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	column-gap: 32px;
+	row-gap: 24px;
+	border-radius: 8px;
+}
+.grid__item {
+	position: relative;
+	z-index: 10;
+	border-radius: 8px;
+	
+	overflow: hidden;
+	transition: transform 0.6s ease-out;
+}
+@media (any-hover: hover) {
+	.grid__item:nth-child(even):hover {
+		transform: translateY(-6px) scale(1.1) rotate(5deg);
+		transition: transform 0.2s ease-in;
+	}
+	.grid__item:nth-child(odd):hover {
+		transform: translateY(-6px) scale(1.08) rotate(-5deg);
+		transition: transform 0.2s ease-in;
+	}
+}
+
+.grid__content {
+	padding: 10px;
+}
+.grid__content > img {
+	position: absolute;
+	top: 0;
+	left: 0;	
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.grid__number {
+	position: relative;
+	z-index: 5;
+	color: #ffffff;
+	font-size: clamp(60px, 7vw, 32px);
+	font-weight: 800;
+}
+.grid__item:nth-child(3),
+.grid__item:nth-child(9),
+.grid__item:nth-child(11) {
+	grid-row: span 1;
+}
+
+.grid__item:nth-child(1),
+.grid__item:nth-child(4),
+.grid__item:nth-child(8),
+.grid__item:nth-child(10),
+.grid__item:nth-child(16) {
+	grid-row: span 2;
+}
+
+.grid__item:nth-child(2),
+.grid__item:nth-child(5),
+.grid__item:nth-child(6),
+.grid__item:nth-child(7),
+.grid__item:nth-child(12),
+.grid__item:nth-child(14),
+.grid__item:nth-child(15) {
+	grid-row: span 3;
+}
+
+.grid__item:nth-child(13) {
+	grid-row: span 5;
+}
+.grid__item:nth-child(3) .grid__content,  
+.grid__item:nth-child(5) .grid__content,  
+.grid__item:nth-child(9) .grid__content,  
+.grid__item:nth-child(11) .grid__content,  
+.grid__item:nth-child(14) .grid__content,  
+.grid__item:nth-child(17) .grid__content {
+	aspect-ratio: 304 / 152;
+}   
+
+.grid__item:nth-child(1) .grid__content,  
+.grid__item:nth-child(4) .grid__content,  
+.grid__item:nth-child(8) .grid__content,  
+.grid__item:nth-child(10) .grid__content,  
+.grid__item:nth-child(16) .grid__content {
+	aspect-ratio: 304 / 184;
+}
+.grid__item:nth-child(2) .grid__content,  
+.grid__item:nth-child(6) .grid__content,  
+.grid__item:nth-child(7) .grid__content,  
+.grid__item:nth-child(12) .grid__content,  
+.grid__item:nth-child(15) .grid__content {
+	aspect-ratio: 304 / 296;
+}
+.grid__item:nth-child(13) .grid__content  {
+	aspect-ratio: 304 / 504;
+}
