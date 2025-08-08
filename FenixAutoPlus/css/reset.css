@@ -1,0 +1,70 @@
+*,
+::before,
+::after {
+  padding:    0;
+  margin:     0;
+  border:     none;
+  outline:    none;
+  box-sizing: border-box; 
+}
+*::before,
+*::after {
+  display: inline-block;
+}
+:root {
+  scroll-behavior: smooth;
+}
+html,body {
+  line-height: 1;
+  height:      100%;
+  min-width:   20rem;
+}
+body._lock {
+  overflow: hidden;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: inherit;
+  font-size:   inherit;
+  margin:      0;
+  padding:     0;
+  text-wrap:   balance;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+ul,ol,li {
+  list-style: none;
+}
+p, li, figcaption {
+  text-wrap: pretty;
+}
+img {
+  vertical-align: top;
+}
+address {
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+input,button,textarea {
+  font-family:      inherit;
+  font-size:        inherit;
+  font-weight:      inherit;
+  color:            inherit;
+  background-color: transparent;
+}
+input,textarea {
+  width: 100%;
+}
+button {
+  line-height: inherit;
+}
+button,select,option {
+  cursor: pointer;
+}
+input[type="text"],input[type="email"],input[type="tel"],textarea {
+  appearance: none;
+}
