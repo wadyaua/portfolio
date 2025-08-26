@@ -39,11 +39,11 @@
 [Код проекту](https://github.com/wadyaua/portfolio/tree/main/FenixAutoPlus)
 
 9. Pit Stop - Autoservice  
-[View live demo](https://wadyaua.github.io/portfolio/PitStop_AutoService/)
+[View live demo](https://wadyaua.github.io/portfolio/PitStop_AutoService/)  
 [Код проекту](https://github.com/wadyaua/portfolio/tree/main/PitStop_AutoService)
 
 10. Adaptive Grid Masonry  
-[View live demo](https://wadyaua.github.io/portfolio/Grid_Masonry/)
+[View live demo](https://wadyaua.github.io/portfolio/Grid_Masonry/)  
 [Код проекту](https://github.com/wadyaua/portfolio/tree/main/Grid_Masonry)
 
 
