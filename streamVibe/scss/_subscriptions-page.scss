@@ -1,0 +1,195 @@
+.subscriptions-page {
+	// .subscriptions-page__payment
+	&__payment {
+		padding-block-start: clamp(6.875rem, 0.765rem + 12.75vw, 13.75rem);
+	}
+	// .subscriptions-page__plans-compare
+	&__plans-compare {
+	}
+}
+
+.table {
+	@media (max-width: toEm(545.98)) {
+		display: none;
+	}
+	border-radius: toRem(12);
+	border: toRem(1) solid var(--black-15);
+
+	text-align: left;
+	border-collapse: separate;
+	border-spacing: 0;
+	font-size: clamp(0.875rem, 0.741rem + 0.34vw, 1.125rem);
+	// viewport from 629 to 1800 / values from 14 to 18
+
+	th,
+	td {
+		width: 25%; /* 400/1600 */
+		padding: clamp(0.625rem, -0.046rem + 1.71vw, 1.875rem);
+		// viewport from 629 to 1800 / values from 10 to 30
+		border: toRem(1) solid var(--black-15);
+	}
+}
+
+.head-table {
+	background-color: var(--black-06);
+	color: var(--white);
+
+	// .head-table__header
+	&__header {
+		&--btl {
+			border-top-left-radius: toRem(12);
+		}
+		&--btr {
+			border-top-right-radius: toRem(12);
+		}
+	}
+	// .head-table__header-label
+	&__header-label {
+		margin-left: toRem(8);
+		padding: toRemValues(3 6);
+		vertical-align: middle;
+
+		color: var(--white);
+		font-size: toRem(14);
+		font-weight: 500;
+
+		background-color: var(--primary-color);
+		border-radius: toRem(4);
+
+		@media (max-width: toEm(940.98)) {
+			font-size: toRem(10);
+			padding: toRemValues(1.5 3);
+			margin-left: toRem(4);
+		}
+	}
+}
+.body-table {
+	// .body-table__data
+	&__data {
+		vertical-align: top;
+		&--header {
+			color: var(--white);
+		}
+		&--bbl {
+			border-bottom-left-radius: toRem(12);
+		}
+		&--bbr {
+			border-bottom-right-radius: toRem(12);
+		}
+	}
+}
+
+.plans-compare {
+	// .plans-compare__table-mobile
+	&__table-mobile {
+	}
+}
+.mobile-table {
+	@media (min-width: toEm(545.98)) {
+		display: none;
+	}
+	// .mobile-table__tabs-plan
+	&__tabs-plan {
+		&:not(:last-child) {
+			margin-block-end: clamp(0.875rem, 0.342rem + 2.67vw, 1.25rem);
+			// viewport from 320 to 545 / values from 14 to 20
+		}
+	}
+	// .mobile-table__grid
+	&__grid {
+		padding: toRem(24);
+		background-color: var(--black-06);
+
+		@include borderStyle(12, 2, var(--black-15));
+		// radius / border-width / color / style
+
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: toRem(24);
+
+		@media (max-width: toEm(320.98)) {
+			padding: toRem(14);
+			gap: toRem(18);
+		}
+	}
+	// .mobile-table__grid-item
+	&__grid-item {
+		&--span {
+			grid-column: 1 / -1;
+		}
+	}
+	// .mobile-table__title
+	&__title {
+		font-weight: 500;
+	}
+	// .mobile-table__text
+	&__text {
+		color: var(--white);
+		font-weight: 500;
+		
+		// opacity: 1;
+			transform: translateY(0);
+			transition:
+				opacity 0.25s ease-out,
+				transform 0.25s ease-out;
+
+		&--animate {
+			opacity: 0;
+			transform: translateY(6px);
+		}
+	}
+}
+
+.plan-tabs {
+	display: flex;
+	flex-direction: column;
+	gap: toRem(4);
+
+	@media (min-width: toEm(379.98)) {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	padding: toRem(8);
+
+	background-color: var(--black-06);
+
+	@include borderStyle(8, 2, var(--black-15));
+	// radius / border-width / color / style
+
+	// .plan-tabs__button
+	&__button {
+		color: var(--grey-60);
+		font-weight: 500;
+		padding: toRemValues(12 6);
+
+		border-radius: toRem(6);
+
+		transition:
+			color 0.3s ease,
+			background-color 0.3s ease,
+			transform 0.05s ease-out;
+
+		@media (min-width: toEm(379.98)) {
+			flex: 1 1 toRem(115);
+			// grow / shrink / basis
+		}
+
+		&--active {
+			@include colorScheme(var(--white), var(--black-12));
+			// color / background-color
+		}
+		&:active:not(.plan-tabs__button--active) {
+			color: var(--white);
+			transform: scale(0.96);
+			background-color: var(--primary-color-dark);
+			transition:
+				transform 0.001s ease-in,
+				background-color 0.001s ease-in;
+		}
+	}
+	// .plan-tabs__button--active
+	&__button--active {
+	}
+}

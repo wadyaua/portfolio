@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+
+	<link rel="stylesheet" href="swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Subscriptions Page - StreamVibe</title>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<!--*  header - - - - - - - - - - - - -->
+		<header class="header">
+			<div class="header__container">
+
+				<a class="header__logo" href="index.html" id="id-logo">
+					<img src="icons/logo/full-logo.svg" alt="StrimeVibe logo">
+				</a>
+
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link" href="index.html">Home</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link" href="catalog_page.html">Movies & Shows</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link" href="support_page.html">Support</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link menu__link--active" href="#">Subscriptions</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__actions actions-header">
+					<button class="actions-header__item button -icon-light-theme" type="button"></button>
+					<button class="actions-header__item button -icon-search" type="button"></button>
+					<button class="actions-header__item button -icon-notofication" type="button"></button>
+
+					<div class="actions-header__icon-menu menu-icon">
+						<button class="menu-icon__button" type="button"
+							aria-label="Open navigation menu"><span></span></button>
+					</div>
+				</div>
+
+			</div>
+		</header>
+
+		<main class="subscriptions-page">
+
+			<!--* payment - - - - - - - - - - - - -->
+			<section class="subscriptions-page__payment payment">
+				<div class="payment__container">
+
+					<div class="payment__header-section section-header section-header--margin">
+						<div class="section-header__content">
+							<h2 class="section-header__title">Choose the plan that's right for you</h2>
+							<div class="section-header__text">
+								<p>
+									Join StreamVibe and select from our flexible subscription options tailored to suit your
+									viewing preferences. Get ready for non-stop entertainment!
+								</p>
+							</div>
+						</div>
+
+						<div class="section-header__plan-switcher plan-switcher">
+							<button class="plan-switcher__button plan-switcher__button--active" data-type="m"
+								type="button">Monthly</button>
+							<button class="plan-switcher__button" data-type="y" type="button">Yearly</button>
+						</div>
+					</div>
+
+					<ul class="payment__grid">
+						<li class="payment__plan plan-item">
+
+							<div class="plan-item__header">
+								<h3 class="plan-item__title">Basic Plan</h3>
+								<div class="plan-item__description">
+									<p>
+										Enjoy an extensive library of movies and shows, featuring a range of content, including
+										recently released titles
+									</p>
+								</div>
+							</div>
+
+							<div class="plan-item__footer">
+								<div class="plan-item__price">
+									<span class="plan-item__price-value">$9.99</span>
+									<small class="plan-item__price-period">/month</small>
+								</div>
+
+								<div class="plan-item__buttons">
+									<a class="plan-item__button plan-item__button--trial" href="#">Start Free Trial</a>
+									<a class="plan-item__button plan-item__button--plan" href="#">Choose Plan</a>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="payment__plan plan-item">
+
+							<div class="plan-item__header">
+								<h3 class="plan-item__title">Standard Plan
+									<span class="plan-item__title-label">Popular</span>
+								</h3>
+								<div class="plan-item__description">
+									<p>
+										Access to a wider selection of movies and shows, including most new releases and exclusive
+										content
+									</p>
+								</div>
+							</div>
+
+							<div class="plan-item__footer">
+								<div class="plan-item__price">
+									<span class="plan-item__price-value">$12.99</span>
+									<small class="plan-item__price-period">/month</small>
+								</div>
+
+								<div class="plan-item__buttons">
+									<a class="plan-item__button plan-item__button--trial" href="#">Start Free Trial</a>
+									<a class="plan-item__button plan-item__button--plan" href="#">Choose Plan</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="payment__plan plan-item">
+
+							<div class="plan-item__header">
+								<h3 class="plan-item__title">Premium Plan</h3>
+								<div class="plan-item__description">
+									<p>
+										Access to a widest selection of movies and shows, including all new releases and Offline
+										Viewing
+									</p>
+								</div>
+							</div>
+
+							<div class="plan-item__footer">
+								<div class="plan-item__price">
+									<span class="plan-item__price-value">$14.99</span>
+									<small class="plan-item__price-period">/month</small>
+								</div>
+
+								<div class="plan-item__buttons">
+									<a class="plan-item__button plan-item__button--trial" href="#">Start Free Trial</a>
+									<a class="plan-item__button plan-item__button--plan" href="#">Choose Plan</a>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+			<!--* plans-compare - - - - - - - - - - - - -->
+			<section class="subscriptions-page__plans-compare plans-compare">
+				<div class="plans-compare__container">
+
+					<div class="plans-compare__header-section section-header section-header--margin">
+						<h2 class="section-header__title">Compare our plans and find the right one for you</h2>
+						<div class="section-header__text">
+							<p>
+								StreamVibe offers three different plans to fit your needs: Basic, Standard, and Premium. Compare
+								the features of each plan and choose the one that's right for you.
+							</p>
+						</div>
+					</div>
+
+					<table class="plans-compare__table table">
+						<thead class="table__head head-table">
+							<tr>
+								<th class="head-table__header head-table__header--btl" scope="col">Features</th>
+								<th class="head-table__header" scope="col">Basic</th>
+								<th class="head-table__header" scope="col">Standard<span
+										class="head-table__header-label">Popular</span></th>
+								<th class="head-table__header head-table__header--btr" scope="col">Premium</th>
+							</tr>
+						</thead>
+
+						<tbody class="table__body body-table">
+							<tr>
+								<th class="body-table__data body-table__data--header" scope="row">Price</th>
+								<td class="body-table__data">$9.99/Month</td>
+								<td class="body-table__data">$12.99/Month</td>
+								<td class="body-table__data">$14.99/Month</td>
+							</tr>
+
+							<tr>
+								<th class="body-table__data body-table__data--header" scope="row">Content</th>
+								<td class="body-table__data">Access to a wide selection of movies and shows, including
+									some new releases</td>
+								<td class="body-table__data">Access to a wider selection of movies and shows, including
+									most new releases and exclusive content</td>
+								<td class="body-table__data">Access to a widest selection of movies and shows, including
+									all new releases and Offline Viewing</td>
+							</tr>
+
+							<tr>
+								<th class="body-table__data body-table__data--header" scope="row">Devices</th>
+								<td class="body-table__data">Watch on one device simultaneously</td>
+								<td class="body-table__data">Watch on Two device simultaneously</td>
+								<td class="body-table__data">Watch on Four device simultaneously</td>
+							</tr>
+
+							<tr>
+								<th class="body-table__data body-table__data--header" scope="row">Free Trail</th>
+								<td class="body-table__data">7 Days</td>
+								<td class="body-table__data">7 Days</td>
+								<td class="body-table__data">7 Days</td>
+							</tr>
+
+							<tr>
+								<th class="body-table__data body-table__data--header" scope="row">Cancel Anytime</th>
+								<td class="body-table__data">Yes</td>
+								<td class="body-table__data">Yes</td>
+								<td class="body-table__data">Yes</td>
+							</tr>
+
+							<tr>
+								<th class="body-table__data body-table__data--header" scope="row">HDR</th>
+								<td class="body-table__data">No</td>
+								<td class="body-table__data">Yes</td>
+								<td class="body-table__data">Yes</td>
+							</tr>
+
+							<tr>
+								<th class="body-table__data body-table__data--header" scope="row">Dolby Atmos</th>
+								<td class="body-table__data">No</td>
+								<td class="body-table__data">Yes</td>
+								<td class="body-table__data">Yes</td>
+							</tr>
+
+							<tr>
+								<th class="body-table__data body-table__data--header" scope="row">Ad - Free</th>
+								<td class="body-table__data">No</td>
+								<td class="body-table__data">Yes</td>
+								<td class="body-table__data">Yes</td>
+							</tr>
+
+							<tr>
+								<th class="body-table__data body-table__data--header" scope="row">Offline Viewing</th>
+								<td class="body-table__data">No</td>
+								<td class="body-table__data">Yes, for select titles</td>
+								<td class="body-table__data">Yes, for all titles</td>
+							</tr>
+
+							<tr>
+								<th class="body-table__data body-table__data--header body-table__data--bbl" scope="row">Family
+									Sharing</th>
+								<td class="body-table__data">No</td>
+								<td class="body-table__data">Yes, up to 5 family members.</td>
+								<td class="body-table__data body-table__data--bbr">Yes, up to 6 family members.</td>
+							</tr>
+
+						</tbody>
+					</table>
+
+					<div class="plans-compare__table-mobile mobile-table">
+
+						<div class="mobile-table__tabs-plan plan-tabs">
+
+							<button class="plan-tabs__button" data-plan="basic" role="tab" aria-selected="false" tabindex="-1" type="button">Basic</button>
+							<button class="plan-tabs__button plan-tabs__button--active" data-plan="standard" role="tab" aria-selected="true" tabindex="0" type="button">Standard</button>
+							<button class="plan-tabs__button" data-plan="premium" role="tab" aria-selected="false" tabindex="-1" type="button">Premium</button>
+						</div>
+
+						<div class="mobile-table__grid" id="mobilePlanGrid">
+
+							<div class="mobile-table__grid-item" data-key="price">
+								<div class="mobile-table__title">Price</div>
+
+								<div class="mobile-table__text">
+									<p>$12.99/Month</p>
+								</div>
+							</div>
+
+							<div class="mobile-table__grid-item" data-key="freeTrial">
+								<div class="mobile-table__title">Free Trail</div>
+
+								<div class="mobile-table__text">
+									<p></p>
+								</div>
+							</div>
+
+							<div class="mobile-table__grid-item mobile-table__grid-item--span" data-key="content">
+								<div class="mobile-table__title">Content</div>
+
+								<div class="mobile-table__text">
+									<p></p>
+								</div>
+							</div>
+
+							<div class="mobile-table__grid-item mobile-table__grid-item--span" data-key="devices">
+								<div class="mobile-table__title">Devices</div>
+
+								<div class="mobile-table__text">
+									<p></p>
+								</div>
+							</div>
+
+							<div class="mobile-table__grid-item" data-key="cancel">
+								<div class="mobile-table__title">Cancel Anytime</div>
+
+								<div class="mobile-table__text">
+									<p></p>
+								</div>
+							</div>
+
+							<div class="mobile-table__grid-item" data-key="hdr">
+								<div class="mobile-table__title">HDR</div>
+
+								<div class="mobile-table__text">
+									<p></p>
+								</div>
+							</div>
+
+							<div class="mobile-table__grid-item" data-key="dolby">
+								<div class="mobile-table__title">Dolby Atmos</div>
+
+								<div class="mobile-table__text">
+									<p></p>
+								</div>
+							</div>
+
+							<div class="mobile-table__grid-item" data-key="adFree">
+								<div class="mobile-table__title">Ad - Free</div>
+
+								<div class="mobile-table__text">
+									<p></p>
+								</div>
+							</div>
+
+							<div class="mobile-table__grid-item" data-key="offline">
+								<div class="mobile-table__title">Offline Viewing</div>
+
+								<div class="mobile-table__text">
+									<p></p>
+								</div>
+							</div>
+
+							<div class="mobile-table__grid-item" data-key="family">
+								<div class="mobile-table__title">Family Sharing</div>
+
+								<div class="mobile-table__text">
+									<p></p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!--* trial - - - - - - - - - - - - -->
+			<section class="subscriptions-page__trial trial">
+				<div class="trial__container">
+
+					<div class="trial__content">
+						<div class="trial__header-section section-header">
+
+							<div class="section-header__content section-header__content--text-center">
+								<h2 class="section-header__title">Start your free trial today!</h2>
+								<div class="section-header__text">
+
+									<p>
+										This is a clear and concise call to action that encourages users to sign up for a free
+										trial
+										of StreamVibe.
+									</p>
+								</div>
+							</div>
+
+							<a class="section-header__button section-header__button--center button button--main" href="#">
+								Start a Free Trail
+							</a>
+						</div>
+
+						<div class="trial__background">
+							<img class="trial__background-image" src="img/home_page/trial/background_img.png"
+								alt="trial background image">
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+
+		<!--* footer - - - - - - - - - - - -->
+		<footer class="footer">
+			<div class="footer__container">
+
+				<div class="footer__columns">
+					<div class="footer__column">
+						<h3 class="footer__column-title">Home</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Categories</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Devices</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Pricing</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">FAQ</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Movie</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Gernes</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Trending</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">New Release</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Popular</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Shows</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Gernes</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Trending</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">New Release</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Popular</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Support</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Subscription</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Plans</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Features</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Connect With Us</h3>
+
+						<ul class="footer__social">
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-facebook button" href="#"></a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-twitter button" href="#"></a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-linkedin button" href="#"></a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__copyright copyright-footer">
+					<div class="copyright-footer__text">
+						<p>
+							@2023 streamvib, All Rights Reserved
+						</p>
+					</div>
+
+					<ul class="copyright-footer__list">
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Terms of Use</a>
+						</li>
+
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Privacy Policy</a>
+						</li>
+
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Cookie Policy</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="swiper/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

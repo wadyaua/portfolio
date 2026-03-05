@@ -1,0 +1,285 @@
+.support-page {
+	// .support-page__hero
+	&__hero {
+	}
+}
+.support-hero {
+	padding-block-start: clamp(6.875rem, 0.765rem + 12.75vw, 13.75rem);
+	// viewport from 1630 to 767 / values from 110 to 220
+
+	// .support-hero__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+
+		gap: clamp(1.875rem, 0.836rem + 3.47vw, 2.5rem);
+		// viewport from 479 to 767 / values from 30 to 40
+
+		@media (min-width: toEm(767.98)) {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+
+			column-gap: clamp(1.25rem, -2.083rem + 6.95vw, 5rem);
+			// viewport from 992 to 1630 / values from 20 to 80
+		}
+	}
+}
+.content-hero {
+	display: flex;
+	flex-direction: column;
+	row-gap: toRem(30);
+
+	@media (min-width: toEm(767.98)) and (max-width: toEm(1630.98)) {
+		position: sticky;
+		inset-block-start: clamp(6.875rem, 0.765rem + 12.75vw, 13.75rem);
+		// viewport from 1630 to 767 / values from 110 to 220
+	}
+
+	@media (min-width: toEm(534.98)) and (max-width: toEm(767.98)) {
+		flex-direction: row;
+		column-gap: toRem(16);
+	}
+	@media (min-width: toEm(767.98)) {
+		flex: 0 1 toRem(533);
+		// grow / shrink / basis
+		row-gap: clamp(1.75rem, 1.083rem + 1.39vw, 2.5rem);
+		// viewport from 767 to 1630 / values from 28 to 40
+	}
+
+	// .content-hero__header
+	&__header {
+		@media (min-width: toEm(534.98)) and (max-width: toEm(767.98)) {
+			align-self: center;
+			flex: 1 1 50%;
+			// grow / shrink / basis
+		}
+
+		> * {
+			margin-block-end: toRem(10);
+
+			@media (min-width: toEm(534.98)) {
+				margin-block-end: toRem(14);
+			}
+		}
+
+		> :last-child {
+			margin-block-end: 0;
+		}
+	}
+
+	// .content-hero__title
+	&__title {
+		color: var(--white);
+
+		font-weight: 700;
+
+		font-size: clamp(2.25rem, 1.366rem + 3.77vw, 2.625rem);
+		// viewport from 375 to 534 / values from 36 to 42
+
+		@media (min-width: toEm(534.98)) {
+			font-size: clamp(1.75rem, -0.255rem + 6.01vw, 2.625rem);
+			// viewport from 540 to 767 / values from 28 to 42
+		}
+
+		@media (min-width: toEm(767.98)) {
+			font-size: clamp(1.938rem, 0.993rem + 1.97vw, 3rem);
+			// viewport from 767 to 1630 / values from 31 to 48
+		}
+	}
+	// .content-hero__text
+	&__text {
+	}
+
+	// .content-hero__image
+	&__image {
+		@include borderStyle(16, 6, var(--black-15));
+		// radius / border-width / color / style
+
+		aspect-ratio: 516 / 480;
+		overflow: hidden;
+
+		@media (min-width: toEm(534.98)) and (max-width: toEm(767.98)) {
+			aspect-ratio: 445 / 330;
+			// aspect-ratio: 1 / 1;
+			flex: 1 1 50%;
+			// grow / shrink / basis
+		}
+		img {
+			@include sizesToPercent(100%);
+			object-fit: cover;
+		}
+	}
+}
+
+.form {
+	@include borderStyle(12, 1, var(--black-15));
+	// radius / border-width / color / style
+
+	background-color: var(--black-06);
+	padding: clamp(1.25rem, 0.003rem + 4.17vw, 2rem);
+	// viewport from 479 to 767 / values from 20 to 32
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: clamp(1.25rem, 0.626rem + 2.08vw, 1.625rem);
+	// viewport from 479 to 767 / values from 20 to 26
+
+	@media (min-width: toEm(767.98)) {
+		flex: 0 1 toRem(976);
+		// grow / shrink / basis
+
+		gap: clamp(1.125rem, -0.653rem + 3.71vw, 3.125rem);
+		// viewport from 767 to 1630 / values from 18 to 50
+
+		padding: clamp(1.625rem, 0.292rem + 2.78vw, 3.125rem);
+		// viewport from 767 to 1630 / values from 26 to 50
+	}
+
+	// .form__field
+	&__field {
+		flex: 1 1 toRem(280);
+		// grow / shrink / basis
+
+		&--textarea {
+			flex-grow: 1;
+
+			> textarea {
+				min-height: toRem(160);
+				max-height: toRem(240);
+				resize: vertical;
+				overflow: auto;
+			}
+		}
+	}
+	// .form__label
+	&__label {
+		font-size: clamp(1rem, 0.889rem + 0.23vw, 1.125rem);
+		// viewport from 767 to 1630 / values from 16 to 18
+		font-weight: 600;
+
+		display: inline-flex;
+		color: var(--white);
+
+		margin-block-end: clamp(0.75rem, 0.528rem + 0.46vw, 1rem);
+		// viewport from 767 to 1630 / values from 12 to 16
+	}
+	// .form__style
+	&__style {
+		font-size: clamp(0.875rem, 0.653rem + 0.46vw, 1.125rem);
+		// viewport from 767 to 1630 / values from 14 to 18
+
+		padding-block: clamp(0.75rem, 0.306rem + 0.93vw, 1.25rem);
+		// viewport from 767 to 1630 / values from 12 to 20
+		padding-inline: toRem(20);
+
+		@include borderStyle(8, 1, var(--black-15));
+		// radius / border-width / color / style
+
+		@include colorScheme(var(--grey-60), var(--black-08));
+		// color / background-color
+
+		transition: border-color 0.3s ease-out;
+
+		&:focus-visible {
+			outline: none;
+			border-color: var(--primary-color);
+		}
+		@media (min-width: toEm(767.98)) {
+			@media (any-hover: hover) {
+				&:hover {
+					border-color: var(--primary-color);
+				}
+			}
+		}
+	}
+	// .form__field--textarea
+	&__field--textarea {
+	}
+	// .form__group-field
+	&__group-field {
+	}
+}
+.field-group {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	align-items: flex-start;
+	row-gap: toRem(20);
+
+	@media (min-width: toEm(534.98)) {
+		column-gap: toRem(16);
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .field-group__item
+	&__item {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(10);
+	}
+	// .field-group__checkbox
+	&__checkbox {
+		appearance: none;
+		flex-shrink: 0;
+
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+
+		@include sizesToRem(24);
+		// inline-size / block-size
+
+		@include borderStyle(4, 1, var(--black-15));
+		// radius / border-width / color / style
+
+		background-color: var(--black-06);
+		transition: border 0.3s ease-out;
+
+		&::after {
+			content: "";
+			opacity: 0;
+
+			@include sizesToRem(14);
+			// inline-size / block-size
+
+			background: url(../icons/check.svg) center / 100% no-repeat;
+			transition: opacity 0.3s ease-out;
+		}
+
+		@media (min-width: toEm(767.98)) {
+			@media (any-hover: hover) {
+				&:hover {
+					border: toRem(1) solid var(--primary-color);
+					cursor: pointer;
+				}
+			}
+		}
+
+		&:checked {
+			transition-duration: 0.1s;
+			border: toRem(1) solid var(--primary-color);
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+
+	// .field-group__checkbox-label
+	&__checkbox-label {
+		color: var(--grey-60);
+		font-weight: 400;
+	}
+
+	// .field-group__button
+	&__button {
+		@media (max-width: toEm(479.98)) {
+			align-self: stretch;
+		}
+		@media (min-width: toEm(479.98)) {
+			flex-shrink: 0;
+		}
+	}
+}

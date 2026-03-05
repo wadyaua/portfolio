@@ -1,0 +1,62 @@
+.title {
+  font-size: 3.4375rem;
+  line-height: 1;
+  font-weight: 500;
+  font-family: var(--syne-font);
+  color: var(--primary-color-dark);
+}
+.title--big {
+  font-size: 3.8125rem;
+}
+.title--small {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.title--light {
+  color: var(--primary-color);
+}
+
+.text {
+  font-size: 1.375rem;
+  line-height: 1.1;
+  color: var(--primary-color-dark);
+}
+.text--big {
+  font-size: 1.625rem;
+}
+.text--light {
+  color: var(--light);
+}
+
+.button {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem 1.875rem;
+  border-radius: 3.125rem;
+  overflow: hidden;
+  will-change: transform;
+  -webkit-transition: background-color 0.6s ease-out, color 0.6s ease-out, border 0.6s ease-out, -webkit-transform 0.05s ease-out;
+  transition: background-color 0.6s ease-out, color 0.6s ease-out, border 0.6s ease-out, -webkit-transform 0.05s ease-out;
+  transition: background-color 0.6s ease-out, color 0.6s ease-out, border 0.6s ease-out, transform 0.05s ease-out;
+  transition: background-color 0.6s ease-out, color 0.6s ease-out, border 0.6s ease-out, transform 0.05s ease-out, -webkit-transform 0.05s ease-out;
+  color: var(--text-color);
+  background-color: var(--black);
+}
+@media (any-hover: hover) {
+  .button:hover {
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+}
+.button:active {
+  -webkit-transition-duration: 0.001s;
+          transition-duration: 0.001s;
+  -webkit-transform: scale(0.94);
+          transform: scale(0.94);
+  color: var(--primary-color-dark);
+  background-color: var(--primary-color);
+}

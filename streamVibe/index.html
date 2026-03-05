@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+
+	<link rel="stylesheet" href="swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Home Page - StreamVibe</title>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<!--*  header - - - - - - - - - - - - -->
+		<header class="header">
+			<div class="header__container">
+
+				<a class="header__logo" href="#" id="id-logo">
+					<img src="icons/logo/full-logo.svg" alt="StrimeVibe logo">
+				</a>
+
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link menu__link--active" href="#">Home</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link" href="catalog_page.html">Movies & Shows</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link" href="support_page.html">Support</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link" href="subscriptions_page.html">Subscriptions</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__actions actions-header">
+					<button class="actions-header__item button -icon-light-theme" type="button"></button>
+					<button class="actions-header__item button -icon-search" type="button"></button>
+					<button class="actions-header__item button -icon-notofication" type="button"></button>
+
+					<div class="actions-header__icon-menu menu-icon">
+						<button class="menu-icon__button" type="button"
+							aria-label="Open navigation menu"><span></span></button>
+					</div>
+				</div>
+
+			</div>
+		</header>
+
+		<main class="home-page">
+
+			<!--* page-theme - - - - - - - - - - - - -->
+			<!-- <div class="page-theme">
+				<button type="button" class="page-theme__button">
+					<span aria-hidden="true"></span>
+				</button>
+				<button type="button" class="page-theme__reset" aria-label="Reset theme to system settings">
+					<span aria-hidden="true"></span>
+				</button>
+			</div> -->
+
+			<!--* hero - - - - - - - - - - - - -->
+			<section class="home-page__hero hero">
+				<div class="hero__container">
+					<div class="hero__logo-box">
+						<div class="hero__logo">
+							<img src="img/home_page/hero/blur_logo.svg" alt="hero section blur logo">
+						</div>
+					</div>
+
+					<div class="hero__content">
+						<h1 class="hero__title title title--big">The Best Streaming Experience</h1>
+
+						<div class="hero__text">
+							<p>
+								StreamVibe is the best streaming experience for watching your favorite movies and shows on
+								demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including
+								the latest blockbusters, classic movies, popular TV shows, and more. You can also create your
+								own watchlists, so you can easily find the content you want to watch.
+							</p>
+						</div>
+
+						<a class="hero__button button button--main" href="#">
+							<span class="-icon-play"></span>
+							Start Watching Now
+						</a>
+					</div>
+				</div>
+
+				<div class="hero__background">
+					<img class="hero__background-image" src="img/home_page/hero/hero_background.png"
+						alt="hero background img">
+				</div>
+			</section>
+
+			<!--* cards-slider - - - - - - - - - - - - -->
+			<section class="home-page__cards-slider cards-slider">
+				<div class="cards-slider__container">
+
+					<div class="cards-slider__header-section section-header section-header--margin" >
+						<div class="section-header__content">
+							<h2 class="section-header__title">Explore our wide variety of categories</h2>
+							<div class="section-header__text">
+								<p>
+									Whether you're looking for a comedy to make you laugh, a drama to make you think, or a
+									documentary to learn something new
+								</p>
+							</div>
+						</div>
+
+						<div class="section-header__navigation navigation-header">
+							<button
+								class="navigation-header__button button button--secondary -icon-arrow-left js-prev"
+								type="button">
+							</button>
+
+							<button
+								class="navigation-header__button button button--secondary -icon-arrow-right js-next"
+								type="button">
+							</button>
+						</div>
+					</div>
+
+					<div class="cards-slider__swiper swiper js-swiper">
+						<ul class="cards-slider__swiper-wrapper swiper-wrapper">
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/action/1_breaking_bad.webp" alt="movie poster 1">
+										</div>
+
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/action/2_the_boys.webp" alt="movie poster 2">
+										</div>
+
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/action/3_punisher.webp" alt="movie poster 3">
+										</div>
+
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/action/4_reacher.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Action</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/adventure/1_game_of_thrones.webp" alt="movie poster 1">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/adventure/2_the_mandalorian.webp" alt="movie poster 2">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/adventure/3_fallout.webp" alt="movie poster 3">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/adventure/4_the_witcher.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Adventure</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/comedy/1_the_office.webp" alt="movie poster 1">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/comedy/2_ted_lasso.webp" alt="movie poster 2">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/comedy/3_scrubs.webp" alt="movie poster 3">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/comedy/4_shrinking.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Comedy</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/crime_thriller/1_true_detective.webp" alt="movie poster 1">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/crime_thriller/2_mindhunter.webp" alt="movie poster 2">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/crime_thriller/3_Narcos.webp" alt="movie poster 3">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/crime_thriller/4_sherlock.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Crime\Thriller</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/drama/1_the_sopranos.webp" alt="movie poster 1">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/drama/2_chernobyl.webp" alt="movie poster 2">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/drama/3_house_of_cards.webp" alt="movie poster 3">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/drama/4_her_his.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Drama</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/fantasy/1_shadow_and_bone.webp" alt="movie poster 1">
+										</div>
+
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/fantasy/2_the_wheel_of_time.webp" alt="movie poster 2">
+										</div>
+
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/fantasy/3_his_dark_materials.webp" alt="movie poster 3">
+										</div>
+
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/fantasy/4_the_sandman.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Fantasy</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/horror/1_the_haunting_of_hill_house.webp" alt="movie poster 1">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/horror/2_the_walking_dead.webp" alt="movie poster 2">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/horror/3_american_horror_story.webp" alt="movie poster 3">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/horror/4_the_last_of_us.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Horror</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/post-apocalyptic/1_silo.webp" alt="movie poster 1">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/post-apocalyptic/2_see.webp" alt="movie poster 2">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/post-apocalyptic/3_black_summer.webp" alt="movie poster 3">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/post-apocalyptic/4_fallout.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Post-Apocalyptic</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/psychological/1_Dark.webp" alt="movie poster 1">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/psychological/2_severance.webp" alt="movie poster 2">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/psychological/3_mr_robot.webp" alt="movie poster 3">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/psychological/4_1899.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Psychological</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+							<li class="cards-slider__item cards-slider__item--categories-small swiper-slide">
+								<a class="cards-slider__card card card--categories-small card--categories-padding" href="#">
+									<div
+										class="card__images card__images--categories card__images--categories-small card__images--home-page">
+
+										<div class="card__image card__image--categories-small">
+											<img src="img/cards/show/categories_card_small/sci-fi/stranger_things_5.webp" alt="movie poster 1">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/sci-fi/2_black_mirrorjpg.webp" alt="movie poster 2">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/sci-fi/3_westworld.webp" alt="movie poster 3">
+										</div>
+										<div class="card__image">
+											<img src="img/cards/show/categories_card_small/sci-fi/4_the_expanse.webp" alt="movie poster 4">
+										</div>
+									</div>
+
+									<div class="card__footer card-footer card-footer--categories-small">
+										<h3 class="card-footer__title">Sci-Fi</h3>
+										<div class="card-footer__button card-footer__button--categories -icon-card-arrow"></div>
+									</div>
+
+								</a>
+							</li>
+
+						</ul>
+						
+						<div class="cards-slider__scrollbar scrollbar scrollbar--component js-scrollbar"></div>
+					</div>
+				</div>
+			</section>
+
+			<!--* devices - - - - - - - - - - - - -->
+			<section class="home-page__devices devices">
+				<div class="devices__container">
+
+					<div class="devices__header-section section-header section-header--margin">
+						<h2 class="section-header__title">We Provide you streaming experience across various devices</h2>
+						<div class="section-header__text">
+							<p>
+								With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our
+								platform is designed to be compatible with a wide range of devices, ensuring that you never
+								miss a moment of entertainment
+							</p>
+						</div>
+					</div>
+
+					<ul class="devices__cards">
+						<li class="devices__card card-devices">
+							<div class="card-devices__header">
+								<div class="card-devices__icon -icon-phone"></div>
+								<h3 class="card-devices__title">Smartphones</h3>
+							</div>
+
+							<div class="card-devices__text">
+								<p>
+									StreamVibe runs smoothly on both Android and iOS phones. Just grab the app from your store
+									and start streaming on the go
+								</p>
+							</div>
+						</li>
+
+						<li class="devices__card card-devices">
+							<div class="card-devices__header">
+								<div class="card-devices__icon -icon-tablet"></div>
+								<h3 class="card-devices__title">Tablet</h3>
+							</div>
+
+							<div class="card-devices__text">
+								<p>
+									Enjoy StreamVibe on a bigger screen with your tablet. Optimized for both Android and iPadOS —
+									perfect for binge-watching anywhere
+								</p>
+							</div>
+						</li>
+
+						<li class="devices__card card-devices">
+							<div class="card-devices__header">
+								<div class="card-devices__icon -icon-tv"></div>
+								<h3 class="card-devices__title">Smart TV</h3>
+							</div>
+
+							<div class="card-devices__text">
+								<p>
+									StreamVibe is built for the big screen. Download the app on your Android TV or use
+									AirPlay/Cast to enjoy your favorites in full HD.
+								</p>
+							</div>
+						</li>
+
+						<li class="devices__card card-devices">
+							<div class="card-devices__header">
+								<div class="card-devices__icon -icon-laptop"></div>
+								<h3 class="card-devices__title">Laptops</h3>
+							</div>
+
+							<div class="card-devices__text">
+								<p>
+									No app needed — just open your browser and dive into StreamVibe. Works great on Windows,
+									macOS, and ChromeOS.
+								</p>
+							</div>
+						</li>
+
+						<li class="devices__card card-devices">
+							<div class="card-devices__header">
+								<div class="card-devices__icon -icon-consoles"></div>
+								<h3 class="card-devices__title">Gaming Consoles</h3>
+							</div>
+
+							<div class="card-devices__text">
+								<p>
+									Turn your console into a streaming hub. StreamVibe supports major platforms like Xbox and
+									PlayStation for seamless viewing.
+								</p>
+							</div>
+						</li>
+
+						<li class="devices__card card-devices">
+							<div class="card-devices__header">
+								<div class="card-devices__icon -icon-vr"></div>
+								<h3 class="card-devices__title">VR Headsets </h3>
+							</div>
+
+							<div class="card-devices__text">
+								<p>
+									Experience movies in a whole new way. StreamVibe supports select VR devices for immersive,
+									theater-like streaming.
+								</p>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+			<!--* spoilers - - - - - - - - - - - - -->
+			<section class="home-page__spoilers spoilers">
+				<div class="spoilers__container">
+
+					<div class="spoilers__header-section section-header section-header--margin">
+
+						<div class="section-header__content">
+							<h2 class="section-header__title">Frequently Asked Questions</h2>
+							<div class="section-header__text">
+								<p>
+									Got questions? We've got answers! Check out our FAQ section to find answers to the most
+									common questions about StreamVibe.
+								</p>
+							</div>
+						</div>
+
+						<a class="section-header__button button button--main" href="support_page.html">Ask a Question</a>
+					</div>
+
+					<div class="spoilers__columns">
+						<div class="spoilers__column">
+							<div class="spoilers__item spoiler">
+								<details class="spoiler__details" data-spoiler="400" open>
+									<summary class="spoiler__summary">
+										<span class="spoiler__summary-content">
+											<span class="spoiler__summary-number"></span>
+											<span class="spoiler__summary-text">What is StreamVibe?</span>
+										</span>
+										<span class="-icon-plus"></span>
+									</summary>
+									<div class="spoiler__text">
+										<p>
+											StreamVibe is an on-demand streaming platform where you can watch movies and shows
+											anytime, without ads or delays
+										</p>
+									</div>
+								</details>
+							</div>
+
+							<div class="spoilers__item spoiler">
+								<details class="spoiler__details" data-spoiler="400">
+									<summary class="spoiler__summary">
+										<span class="spoiler__summary-content">
+											<span class="spoiler__summary-number"></span>
+											<span class="spoiler__summary-text">How much does StreamVibe cost?</span>
+										</span>
+										<span class="-icon-plus"></span>
+									</summary>
+									<div class="spoiler__text">
+										<p>
+											StreamVibe offers several pricing plans — from basic to premium. The cost depends on
+											features like video quality, number of devices, and access to new releases
+										</p>
+									</div>
+								</details>
+							</div>
+
+							<div class="spoilers__item spoiler">
+								<details class="spoiler__details" data-spoiler="400">
+									<summary class="spoiler__summary">
+										<span class="spoiler__summary-content">
+											<span class="spoiler__summary-number"></span>
+											<span class="spoiler__summary-text">What content is available on StreamVibe?</span>
+										</span>
+										<span class="-icon-plus"></span>
+									</summary>
+									<div class="spoiler__text">
+										<p>
+											You’ll find thousands of movies, series, documentaries, and shows. From Hollywood
+											blockbusters to indie gems — there’s something for every taste
+										</p>
+									</div>
+								</details>
+							</div>
+
+							<div class="spoilers__item spoiler">
+								<details class="spoiler__details" data-spoiler="400">
+									<summary class="spoiler__summary">
+										<span class="spoiler__summary-content">
+											<span class="spoiler__summary-number"></span>
+											<span class="spoiler__summary-text">How can I watch StreamVibe?</span>
+										</span>
+										<span class="-icon-plus"></span>
+									</summary>
+									<div class="spoiler__text">
+										<p>
+											StreamVibe works on phones, tablets, laptops, and Smart TVs. Just log in via browser or
+											app and start watching
+										</p>
+									</div>
+								</details>
+							</div>
+						</div>
+
+						<div class="spoilers__column">
+							<div class="spoilers__item spoiler">
+								<details class="spoiler__details" data-spoiler="400">
+									<summary class="spoiler__summary">
+										<span class="spoiler__summary-content">
+											<span class="spoiler__summary-number"></span>
+											<span class="spoiler__summary-text">How do I sign up for StreamVibe?</span>
+										</span>
+										<span class="-icon-plus"></span>
+									</summary>
+									<div class="spoiler__text">
+										<p>
+											Signing up takes a minute: enter your email, create a password, choose a plan — and
+											you’re in
+										</p>
+									</div>
+								</details>
+							</div>
+
+							<div class="spoilers__item spoiler">
+								<details class="spoiler__details" data-spoiler="400">
+									<summary class="spoiler__summary">
+										<span class="spoiler__summary-content">
+											<span class="spoiler__summary-number"></span>
+											<span class="spoiler__summary-text">What is the StreamVibe free trial?</span>
+										</span>
+										<span class="-icon-plus"></span>
+									</summary>
+									<div class="spoiler__text">
+										<p>
+											New users get a free trial for a few days. It’s a chance to explore the service before
+											committing
+										</p>
+									</div>
+								</details>
+							</div>
+
+							<div class="spoilers__item spoiler">
+								<details class="spoiler__details" data-spoiler="400">
+									<summary class="spoiler__summary">
+										<span class="spoiler__summary-content">
+											<span class="spoiler__summary-number"></span>
+											<span class="spoiler__summary-text">How do I contact StreamVibe customer
+												support?</span>
+										</span>
+										<span class="-icon-plus"></span>
+									</summary>
+									<div class="spoiler__text">
+										<p>
+											Got questions or issues? Support is always available — reach out via the contact form
+											or live chat
+										</p>
+									</div>
+								</details>
+							</div>
+
+							<div class="spoilers__item spoiler">
+								<details class="spoiler__details" data-spoiler="400">
+									<summary class="spoiler__summary">
+										<span class="spoiler__summary-content">
+											<span class="spoiler__summary-number"></span>
+											<span class="spoiler__summary-text">What are the StreamVibe payment methods?</span>
+										</span>
+										<span class="-icon-plus"></span>
+									</summary>
+									<div class="spoiler__text">
+										<p>
+											StreamVibe accepts credit cards, PayPal, and other popular payment options. Fast and
+											secure checkout
+										</p>
+									</div>
+								</details>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!--* payment - - - - - - - - - - - - -->
+			<section class="home-page__payment payment">
+				<div class="payment__container">
+
+					<div class="payment__header-section section-header section-header--margin">
+						<div class="section-header__content">
+							<h2 class="section-header__title">Choose the plan that's right for you</h2>
+							<div class="section-header__text">
+								<p>
+									Join StreamVibe and select from our flexible subscription options tailored to suit your
+									viewing preferences. Get ready for non-stop entertainment!
+								</p>
+							</div>
+						</div>
+
+						<div class="section-header__plan-switcher plan-switcher">
+							<button class="plan-switcher__button plan-switcher__button--active" data-type="m" type="button">Monthly</button>
+							<button class="plan-switcher__button" data-type="y" type="button">Yearly</button>
+						</div>
+					</div>
+
+					<ul class="payment__grid">
+						<li class="payment__plan plan-item">
+
+							<div class="plan-item__header">
+								<h3 class="plan-item__title">Basic Plan</h3>
+								<div class="plan-item__description">
+									<p>
+										Enjoy an extensive library of movies and shows, featuring a range of content, including
+										recently released titles
+									</p>
+								</div>
+							</div>
+
+							<div class="plan-item__footer">
+								<div class="plan-item__price">
+									<span class="plan-item__price-value">$9.99</span>
+									<small class="plan-item__price-period">/month</small>
+								</div>
+
+								<div class="plan-item__buttons">
+									<a class="plan-item__button plan-item__button--trial" href="#">Start Free Trial</a>
+									<a class="plan-item__button plan-item__button--plan" href="#">Choose Plan</a>
+								</div>
+							</div>
+
+						</li>
+
+						<li class="payment__plan plan-item">
+
+							<div class="plan-item__header">
+								<h3 class="plan-item__title">Standard Plan
+									<span class="plan-item__title-label">Popular</span>
+								</h3>
+								<div class="plan-item__description">
+									<p>
+										Access to a wider selection of movies and shows, including most new releases and exclusive
+										content
+									</p>
+								</div>
+							</div>
+
+							<div class="plan-item__footer">
+								<div class="plan-item__price">
+									<span class="plan-item__price-value">$12.99</span>
+									<small class="plan-item__price-period">/month</small>
+								</div>
+
+								<div class="plan-item__buttons">
+									<a class="plan-item__button plan-item__button--trial" href="#">Start Free Trial</a>
+									<a class="plan-item__button plan-item__button--plan" href="#">Choose Plan</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="payment__plan plan-item">
+
+							<div class="plan-item__header">
+								<h3 class="plan-item__title">Premium Plan</h3>
+								<div class="plan-item__description">
+									<p>
+										Access to a widest selection of movies and shows, including all new releases and Offline
+										Viewing
+									</p>
+								</div>
+							</div>
+
+							<div class="plan-item__footer">
+								<div class="plan-item__price">
+									<span class="plan-item__price-value">$14.99</span>
+									<small class="plan-item__price-period">/month</small>
+								</div>
+
+								<div class="plan-item__buttons">
+									<a class="plan-item__button plan-item__button--trial" href="#">Start Free Trial</a>
+									<a class="plan-item__button plan-item__button--plan" href="#">Choose Plan</a>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+			<!--* trial - - - - - - - - - - - - -->
+			<section class="home-page__trial trial">
+				<div class="trial__container">
+
+					<div class="trial__content">
+						<div class="trial__header-section section-header">
+
+							<div class="section-header__content section-header__content--text-center">
+								<h2 class="section-header__title">Start your free trial today!</h2>
+								<div class="section-header__text">
+									<p>
+										This is a clear and concise call to action that encourages users to sign up for a free
+										trial
+										of StreamVibe.
+									</p>
+								</div>
+							</div>
+
+							<a class="section-header__button section-header__button--center button button--main" href="subscriptions_page.html">
+								Start a Free Trail
+							</a>
+						</div>
+
+						<div class="trial__background">
+							<img class="trial__background-image" src="img/home_page/trial/background_img.png"
+								alt="trial background image">
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</main>
+
+		<!--* footer - - - - - - - - - - - -->
+		<footer class="footer">
+			<div class="footer__container">
+
+				<div class="footer__columns">
+					<div class="footer__column">
+						<h3 class="footer__column-title">Home</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Categories</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Devices</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Pricing</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">FAQ</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Movie</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Gernes</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Trending</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">New Release</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Popular</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Shows</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Gernes</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Trending</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">New Release</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Popular</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Support</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Subscription</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Plans</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Features</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Connect With Us</h3>
+
+						<ul class="footer__social">
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-facebook button" href="#"></a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-twitter button" href="#"></a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-linkedin button" href="#"></a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__copyright copyright-footer">
+					<div class="copyright-footer__text">
+						<p>
+							@2023 streamvib, All Rights Reserved
+						</p>
+					</div>
+
+					<ul class="copyright-footer__list">
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Terms of Use</a>
+						</li>
+
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Privacy Policy</a>
+						</li>
+
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Cookie Policy</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</footer>
+
+	</div>
+	
+	<script src="swiper/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

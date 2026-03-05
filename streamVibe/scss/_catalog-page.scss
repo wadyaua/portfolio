@@ -1,0 +1,207 @@
+.catalog-page {
+	// .catalog__hero
+	&__hero {
+		padding-block-start: clamp(5.625rem, 1.181rem + 9.27vw, 10.625rem);
+		// viewport from 767 to 1630 / values from 90 to 170
+	}
+}
+
+.genres {
+	// .genres__header-section
+	&__header-section {
+	}
+}
+.section-header {
+	// .section-header__title
+	&__title {
+	}
+	// .section-header__navigation
+	&__navigation {
+	}
+}
+.section-header--margin {
+}
+.navigation-header {
+	// .navigation-header__button
+	&__button {
+	}
+	// .navigation-header__button--genres-movie-prev
+	&__button--genres-movie-prev {
+	}
+	// .navigation-header__bullets
+	&__bullets {
+		// min-inline-size: toRem(150);
+		// max-inline-size: toRem(140);
+	}
+	// .navigation-header__button--genres-movie-next
+	&__button--genres-movie-next {
+	}
+}
+
+.catalog-page {
+	// .catalog-page__collection
+	&__collection {
+	}
+}
+.collection {
+	// .collection__container
+	&__container {
+	}
+	// .collection__body
+	&__body {
+		@media (max-width: toEm(567.98)) {
+			overflow: hidden;
+		}
+	}
+	// .collection__content
+	&__content {
+		@media (max-width: toEm(567.98)) {
+			display: flex;
+
+			// transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+			transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+		}
+	}
+	// .collection__item
+	&__item {
+		position: relative;
+
+		@media (max-width: toEm(567.98)) {
+			width: 100%;
+			opacity: 0;
+			transition: opacity 0.3s ease-in;
+
+			&--active {
+				opacity: 1;
+			}
+		}
+
+		@media (min-width: toEm(567.98)) {
+			padding-block: clamp(2.5rem, 2.167rem + 0.94vw, 3.125rem);
+			// viewport from 567 to 1630 / values from 40 to 50
+			padding-inline: clamp(1.5rem, 0.633rem + 2.45vw, 3.125rem);
+			// viewport from 567 to 1630 / values from 24 to 50
+			@include borderStyle(12, 1, var(--black-15));
+			// radius / border-width / color / style
+
+			&:has(+ .collection__item) {
+				margin-block-end: clamp(5rem, 2.666rem + 6.59vw, 9.375rem);
+				// viewport from 567 to 1630 / values from 80 to 150
+			}
+		}
+
+		> * {
+			margin-block-end: clamp(3.125rem, 1.458rem + 4.7vw, 6.25rem);
+			// viewport from 567 to 1630 / values from 50 to 100
+		}
+
+		> :last-child {
+			margin-block-end: 0;
+		}
+	}
+	// .collection__label
+	&__label {
+		position: absolute;
+		inset-block-start: toRem(-20);
+		inset-inline-start: 3.125%; /* 40/1280 */
+
+		padding-block: clamp(0.5rem, 0.33rem + 0.29vw, 0.625rem);
+		// viewport from 940 to 1630 / values from 8 to 10
+		padding-inline: clamp(1.25rem, 0.909rem + 0.58vw, 1.5rem);
+		// viewport from 940 to 1630 / values from 20 to 24
+		border-radius: toRem(8);
+
+		@include colorScheme(var(--white), var(--primary-color));
+		// color / background-color
+
+		font-size: clamp(1rem, 0.659rem + 0.58vw, 1.25rem);
+		// viewport from 940 to 1630 / values from 16 to 20
+		font-weight: 600;
+
+		@media (max-width: toEm(567.98)) {
+			display: none;
+		}
+	}
+	// .collection__genres
+	&__genres {
+	}
+}
+.genres {
+	// .genres__header-section
+	&__header-section {
+	}
+	// .genres__swiper
+	&__swiper {
+	}
+	// .genres__swiper--movie
+	&__swiper--movie {
+	}
+	// .genres__swiper-wrapper
+	&__swiper-wrapper {
+	}
+	// .genres__slide
+	&__slide {
+		flex: 1 1 toRem(301);
+		// grow / shrink / basis
+	}
+	&__scrollbar {
+	}
+	// .genres__card
+	&__card {
+	}
+}
+.section-header {
+	// .section-header__title
+	&__title {
+	}
+	// .section-header__navigation
+	&__navigation {
+	}
+}
+.section-header--margin {
+}
+.navigation-header {
+	// .navigation-header__button
+	&__button {
+	}
+	// .navigation-header__button--genres-movie-prev
+	&__button--genres-movie-prev {
+	}
+	// .navigation-header__button--genres-movie-next
+	&__button--genres-movie-next {
+	}
+}
+
+.card {
+	// .card__images
+	&__images {
+	}
+	// .card__images--categories
+	&__images--categories {
+	}
+	// .card__images--categories-small
+	&__images--categories-small {
+	}
+	// .card__image
+	&__image {
+	}
+	// .card__footer
+	&__footer {
+	}
+}
+
+.card-footer {
+	// .card-footer__title
+	&__title {
+	}
+	// .card-footer__button
+	&__button {
+	}
+	// .card-footer__button--categories
+	&__button--categories {
+	}
+}
+.card-footer--categories-small {
+}
+.-icon-card-arrow {
+}

@@ -1,0 +1,159 @@
+@use "sass:math";
+//@ reset 
+@import "reset.css";
+
+//@ fonts 
+@import "iconsfont.css";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+//@ scss components
+@import "_mixins";
+@import "_functions";
+@import "_variables";
+
+
+@import "_page-settings";
+
+
+
+html.dark {
+	// --primary-color: #d1e47eec;
+	// --primary-color-dark: #c2ded5;
+}
+
+
+
+
+//* - - components - - - - - - - - - - - - -
+@import "_components";
+
+//* - - header - - - - - - - - - - - - -
+@import "_header";
+
+
+
+//* - - page__theme - - - - - - - - - - - - -
+
+// .page-theme {
+// 	position: fixed;
+// 	z-index: 90;
+// 	inset-inline-end: toRem(30);
+// 	inset-block-end: toRem(30);
+
+// 	@media (max-width: toEm(768.98)) {
+// 		inset-inline-end: toRem(18);
+// 		inset-block-end: toRem(18);
+// 	}
+
+// 	// .page-theme__button
+// 	&__button {
+// 		@include colorScheme(var(--primary-color), var(--primary-color-dark));
+// 		@include width-height-ToRem(50);
+// 		@include borderStyle(50%, 1.5, var(--primary-color));
+// 		backdrop-filter: blur(toRem(8));
+// 		transition:
+// 			background-color 0.6s ease-out,
+// 			color 0.6s ease-out,
+// 			border 0.6s ease-out,
+// 			transform 0.005s ease;
+
+// 		> span {
+// 			@include width-height-ToRem(26);
+// 			display: inline-block;
+
+// 			&::before {
+// 				font-family: "icomoon";
+// 				font-size: toRem(26);
+// 			}
+// 		}
+
+// 		@media (max-width: toEm(768.98)) {
+// 			@include width-height-ToRem(44);
+// 		}
+
+// 		@media (any-hover: hover) {
+// 			&:hover {
+// 				transition-duration: 0.3s;
+// 				@include colorScheme(var(--primary-color-dark), var(--primary-color));
+// 			}
+// 		}
+
+// 		&:active {
+// 			transition-duration: 0.001s;
+// 			transform: scale(0.9);
+// 			@include colorScheme(var(--primary-color-dark), var(--primary-color));
+// 		}
+
+// 		html.dark & {
+// 			@include colorScheme(var(--background-color), var(--primary-color));
+// 			border-color: var(--background-color);
+// 			> span {
+// 				&::before {
+// 					content: "\e906";
+// 				}
+// 			}
+
+// 			@media (any-hover: hover) {
+// 				&:hover {
+// 					background-color: var(--primary-color-dark);
+// 				}
+// 			}
+
+// 			&:active {
+// 				background-color: var(--primary-color-dark);
+// 			}
+// 		}
+// 		html.light & {
+// 			> span {
+// 				&::before {
+// 					content: "\e905";
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	&__reset {
+// 		opacity: 0;
+// 		visibility: hidden;
+
+// 		&::before {
+// 			content: "";
+// 			background: url(../img/icons/close_small.svg) 0 0 / 100% no-repeat;
+
+// 			position: absolute;
+// 			inset-block-start: 0;
+// 			inset-inline-end: 0;
+
+// 			inline-size: toRem(18);
+// 			block-size: toRem(18);
+// 			background-color: var(--primary-color);
+// 			@include borderStyle(50%, 1.5, var(--primary-color-dark));
+
+// 			html.dark & {
+// 				background-color: var(--primary-color-dark);
+// 				border-color: var(--background-color);
+// 			}
+// 		}
+// 	}
+// 	&__reset.active {
+// 		opacity: 1;
+// 		visibility: visible;
+// 	}
+// }
+
+//* - - home-page - - - - - - - - - - - - -
+@import "_home-page";
+
+//* - - support-page - - - - - - - - - - - - -
+@import "_support-page";
+
+//* - - subscriptions-page - - - - - - - - - - - - -
+@import "_subscriptions-page";
+
+//* - - movies_shows_page - - - - - - - - - - - - -
+@import "_catalog-page";
+
+//* - - footer - - - - - - - - - - - - -
+@import "_footer";
+
+

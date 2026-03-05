@@ -1,0 +1,123 @@
+@import "functions.scss";
+@import "mixins";
+
+:root {
+	--black-06: #0f0f0f;
+	--black-08: #141414;
+	--black-09: #171717;
+	--black-10: #1a1a1a;
+	--black-12: #1f1f1f;
+	--black-15: #262626;
+	--black-20: #333333;
+
+	--grey-60: #999999;
+	--grey-75: #bfbfbf;
+
+	--white: #fefffc;
+	--bg-color: #141414;
+	--primary-color: #e50000;
+	--primary-color-dark: #9d0000;
+	--primary-color-50: #ff0000;
+	--primary-color-55: #ff1919;
+	--primary-color-60: #ff3333;
+	--primary-color-80: #ff9999;
+
+	--manrope-font: "Manrope", sans-serif;
+}
+
+// ::details-content {
+// 	transition: height 0.3s ease-out, content-visibility 0.3s ease-out allow-discrete;
+// 	height: 0;
+// 	overflow: clip;
+// }
+// @supports (interpolate-size: allow-keywords) {
+// 	:root {
+// 		interpolate-size: allow-keywords;
+// 	}
+// 	[open]::details-content {
+// 		height: auto;
+// 	}
+// }
+
+body {
+	@include fontStyle(14, 1.5, 400, var(--manrope-font));
+	// font-size / line-height / if font-weight / if font-family
+
+	@include colorScheme(var(--grey-60), var(--bg-color));
+	// color / background-color
+
+	// background-color: var(--white);
+
+	opacity: 0;
+	// transform: scale(0.92);
+	transition: opacity 0.5s ease-in;
+
+	@media (min-width: toEm(767.98)) and (max-width: toEm(1629.98)) {
+		font-size: toRem(16);
+	}
+
+	@media (min-width: toEm(1630)) {
+		font-size: toRem(18);
+	}
+
+	.loaded & {
+		opacity: 1;
+		// transform: scale(1);
+	}
+}
+
+.wrapper {
+	min-block-size: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+
+	main {
+		flex-grow: 1;
+	}
+}
+
+[class*="__container"] {
+	padding-inline: toRem(16);
+
+	@media (min-width: toEm(479.98)) {
+		padding-inline: toRem(24);
+	}
+
+	@media (min-width: toEm(992.98)) {
+		max-inline-size: toRem(1360);
+		padding-inline: toRem(40);
+		margin-inline: auto;
+	}
+	@media (min-width: toEm(1440.98)) {
+		max-inline-size: toRem(1760);
+		padding-inline: toRem(80);
+	}
+}
+
+
+main {
+	// > :first-child {
+	// 	padding-block-end: toRem(40);
+
+	// 	@media (min-width: toEm(767.98)) and (max-width: toEm(1629.98)) {
+	// 		padding-block-end: toRem(120);
+	// 	}
+
+	// 	@media (min-width: toEm(1630)) {
+	// 		padding-block-end: toRem(150);
+	// 	}
+	// }
+	> * {
+		padding-block-end: toRem(80);
+
+		@media (min-width: toEm(767.98)) and (max-width: toEm(1629.98)) {
+			padding-block-end: toRem(120);
+		}
+
+		@media (min-width: toEm(1630)) {
+			padding-block-end: toRem(150);
+		}
+	}
+
+}
