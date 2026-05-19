@@ -83,87 +83,6 @@ function _slideToggle(target, duration = 300) {
 	}
 }
 
-//@ - - перемикання теми - - - - - - -
-// window.addEventListener("load", windowLoad);
-
-// function windowLoad() {
-// 	// HTML
-// 	const htmlBlock = document.documentElement;
-
-// 	// Отримуємо збережену тему
-// 	const saveUserTheme = localStorage.getItem('user-theme');
-
-// 	// Кнопки
-// 	const themeButton = document.querySelector('.page-theme__button');
-// 	const resetButton = document.querySelector('.page-theme__reset');
-
-// 	// Робота з системними налаштуваннями
-// 	let userTheme;
-// 	if (window.matchMedia) {
-// 		userTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-// 	}
-// 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-// 		!saveUserTheme ? changeTheme() : null;
-// 	});
-
-// 	// Зміна теми по кліку
-// 	if (themeButton) {
-// 		themeButton.addEventListener("click", function () {
-// 			resetButton.classList.add('active');
-// 			changeTheme(true);
-// 		});
-// 	}
-
-// 	if (resetButton) {
-// 		resetButton.addEventListener("click", function () {
-// 			resetButton.classList.remove('active');
-// 			localStorage.setItem('user-theme', '');
-// 		});
-// 	}
-
-// 	// Функція додавання класу теми
-// 	function setThemeClass() {
-// 		if (saveUserTheme) {
-// 			htmlBlock.classList.add(saveUserTheme);
-// 			resetButton.classList.add('active');
-// 		} else {
-// 			htmlBlock.classList.add(userTheme);
-// 		}
-// 		// Оновлюємо aria-label кнопки після ініціалізації
-// 		updateThemeButtonAria();
-// 	}
-
-// 	// Додаємо клас теми
-// 	setThemeClass();
-
-// 	// Функція зміни теми
-// 	function changeTheme(saveTheme = false) {
-// 		let currentTheme = htmlBlock.classList.contains('light') ? 'light' : 'dark';
-// 		let newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-// 		htmlBlock.classList.remove(currentTheme);
-// 		htmlBlock.classList.add(newTheme);
-
-// 		// Оновлюємо aria-label кнопки після зміни теми
-// 		updateThemeButtonAria();
-
-// 		if (saveTheme) {
-// 			localStorage.setItem('user-theme', newTheme);
-// 		}
-// 	}
-
-// 	// Функція оновлення aria-label для themeButton
-// 	function updateThemeButtonAria() {
-// 		if (!themeButton) return;
-
-// 		if (htmlBlock.classList.contains('dark')) {
-// 			themeButton.setAttribute('aria-label', 'Switch to light theme');
-// 		} else {
-// 			themeButton.setAttribute('aria-label', 'Switch to dark theme');
-// 		}
-// 	}
-// }
-
 //=============================
 // HEADER SCROLL
 //=============================
@@ -355,7 +274,7 @@ function animateText(wrapper) {
 
 async function initPriceSwitcher() {
 
-	const response = await fetch('../json/plan.json');
+	const response = await fetch('/streamVibe/json/plan.json');
 	if (!response.ok) {
 		console.error('plan.json loading error');
 		return;
@@ -399,7 +318,7 @@ async function initPriceSwitcher() {
 
 async function initMobilePlanTable() {
 
-	const response = await fetch('../json/plans_features.json');
+	const response = await fetch('/streamVibe/json/plans_features.json');
 	if (!response.ok) {
 		console.error('plans_features.json loading error');
 		return;
