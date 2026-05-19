@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Show Page - StreamVibe</title>
+
+	<meta name="description" content="Watch movies and TV shows online in high quality. Enjoy seamless streaming, personalized recommendations, and access anytime.">
+	<meta name="author" content="Vadym Sheveiko">
+	<meta name="theme-color" content="#141414">
+	<meta name="color-scheme" content="dark">
+
+	<meta property="og:title" content="StreamVibe">
+	<meta property="og:description" content="Movie streaming website concept">
+	<meta property="og:type" content="website">
+	
+	<meta property="og:image" content="https://wadyaua.github.io/portfolio/streamvibe/img/preview.webp">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="560">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/show-and-movie-page.css">
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<!--*  header - - - - - - - - - - - - -->
+		<header class="header">
+			<div class="header__container">
+
+				<a class="header__logo" href="index.html" id="id-logo">
+					<img fetchpriority="high" src="icons/logo/full-logo.svg" alt="StrimeVibe logo">
+				</a>
+
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link " href="index.html">Home</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link menu__link--active" href="#">Movies & Shows</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link" href="support.html">Support</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link" href="subscriptions.html">Subscriptions</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__actions actions-header">
+					<div data-dropdown class="actions-header__item-dropdown dropdown">
+						<button data-dropdown-button aria-haspopup="true" aria-expanded="false"
+							aria-controls="dropdown-search" aria-label="Open search"
+							class="dropdown__button button button--header -icon-search" type="button"></button>
+
+						<div id="dropdown-search" class="dropdown__content dropdown__content--search">
+							<form class="dropdown__search search" role="search">
+								<input class="search__style form-style " id="search-field" type="search"
+									placeholder="Search movies..." aria-label="Search movies">
+								<button class="search__button button button--main" type="button">Search</button>
+							</form>
+						</div>
+					</div>
+
+					<button data-modal-button="open" data-modal-id="login-modal"
+						class="actions-header__button-modal button button--header -icon-user" type="button"
+						aria-label="Open login menu"></button>
+
+					<dialog data-modal id="login-modal" class="actions-header__item-modal modal">
+
+						<div class="modal__header">
+							<h2 class="modal__title">Sign In</h2>
+							<div class="modal__text">
+								<p>Continue watching where you left off</p>
+							</div>
+						</div>
+
+						<form class="modal__login-form login">
+							<div class="login__field">
+								<label class="login__label form-label" for="login-email">Email</label>
+
+								<div class="login__input">
+									<span class="login__icon login__icon--at"></span>
+									<input class="login__style form-style" id="login-email" type="email"
+										placeholder="Enter your Email" autocomplete="email" name="email" required>
+								</div>
+							</div>
+
+							<div class="login__field">
+								<label class="login__label form-label" for="login-password">Password</label>
+
+								<div class="login__input">
+									<span class="login__icon login__icon--lock"></span>
+									<input class="login__style form-style" id="login-password" type="password"
+										placeholder="Enter your Password" autocomplete="current-password" name="password"
+										required>
+								</div>
+							</div>
+
+							<div class="login__options options-login">
+								<div class="options-login__checkbox-wrapper">
+									<input class="options-login__checkbox form-checkbox" id="login-remember-me" type="checkbox">
+									<label class="options-login__checkbox-label" for="login-remember-me">
+										Remember me
+									</label>
+								</div>
+
+								<a class="options-login__link login-link" href="#">Forgot password?</a>
+
+							</div>
+
+							<button class="login__button button button--main" type="button">Sing In</button>
+
+							<div class="login__signup">
+								<p>
+									Don't have account?
+								</p>
+								<a class="login__signup-link login-link" href="#">Sign Up</a>
+							</div>
+						</form>
+
+						<button data-modal-button="close" class="modal__button-closed button -icon-plus"
+							aria-label="Close login menu" type="button"></button>
+					</dialog>
+
+					<div class="actions-header__icon-menu menu-icon">
+						<button class="menu-icon__button" type="button"
+							aria-label="Open navigation menu"><span></span></button>
+					</div>
+				</div>
+
+			</div>
+		</header>
+
+		<div data-main class="show-page">
+
+			<!--* hero - - - - - - - - - - - - -->
+			<section class="show-page__hero inner-hero inner-hero--padding-start">
+				<div class="inner-hero__container">
+
+					<div data-anim class="inner-hero__body animation animation--fade-up">
+						<div class="inner-hero__content">
+
+							<div class="inner-hero__header">
+								<h1 data-anim class="inner-hero__title title title--big animation animation--fade-up">Stranger
+									Things</h1>
+								<div data-anim class="inner-hero__text animation animation--fade-up">
+									<p>
+										When a young boy vanishes, a small town uncovers a mystery involving secret experiments,
+										terrifying supernatural forces and one strange little girl.
+									</p>
+								</div>
+							</div>
+
+							<div class="inner-hero__actions actions-inner-hero">
+								<div data-anim class="actions-inner-hero__button-wrapper animation animation--fade-up">
+									<a class="actions-inner-hero__button button button--main " href="movie.html">
+										<span class="-icon-play"></span>
+										Play Now
+									</a>
+								</div>
+
+								<div data-anim class="actions-inner-hero__buttons-group actions-group-button">
+									<div class="actions-group-button__item-wrapper">
+										<button class="actions-group-button__item button button--secondary -icon-plus" aria-label="Add to watchlist">
+										</button>
+									</div>
+
+									<div class="actions-group-button__item-wrapper">
+										<button class="actions-group-button__item button button--secondary -icon-like" aria-label="Like this movie">
+										</button>
+									</div>
+
+									<div class="actions-group-button__item-wrapper">
+										<button class="actions-group-button__item button button--secondary -icon-volume" aria-label="Unmute trailer">
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<img class="inner-hero__img" src="img/hero_components/stranger_things.webp"
+							alt="Avengers : Endgame poster">
+
+					</div>
+				</div>
+			</section>
+
+			<!--* main - - - - - - - - - - - - -->
+			<div class="show-page__body inner">
+				<div class="inner__container">
+
+					<!--* main - - - - - - - - - - - - -->
+					<main data-anim class="inner__main animation animation--fade-up">
+						<!--* seasons -->
+						<section class="inner__section">
+							<h2 class="inner__title">Seasons and Episodes</h2>
+
+							<ul class="inner__seasons">
+								<li class="inner__season">
+									<div class="inner__spoiler-season season-spoiler js-spoiler">
+										<details class="season-spoiler__details js-spoiler-details" data-spoiler="400" open>
+
+											<summary class="season-spoiler__summary js-spoiler-summary">
+												<span class="season-spoiler__title">
+													Season 01
+													<small>8 Episodes</small>
+												</span>
+
+												<span class="-icon-arrow-block"></span>
+											</summary>
+
+											<div class="season-spoiler__body js-spoiler-body">
+												<ul class="season-spoiler__list-episodes episodes-list">
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_1/1_1.webp"
+																	alt="episode 1 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter One: The Vanishing of Will Byers
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	47 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Joyce refuses to believe that the body found in the river is her son,
+																	as she recently spoke with him. Meanwhile, Eleven makes contact with
+																	Will, and Mike, Lucas, and Dustin begin their search. As preparations
+																	for Will’s funeral begin, Chief Hopper starts to suspect that
+																	something isn’t right.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_1/1_2.webp"
+																	alt="episode 2 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Two: The Weirdo on Maple Street
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	55 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Mike hides Eleven in his house while the boys try to learn more about
+																	her. Joyce becomes convinced that Will is communicating with her
+																	through strange electrical signals. Hopper investigates the
+																	laboratory, uncovering suspicious activity.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_1/1_3.webp"
+																	alt="episode 3 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Three: Holly, Jolly
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	51 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	An increasingly frantic Joyce uses Christmas lights to communicate
+																	with Will. Nancy searches for her missing friend Barb, while Eleven
+																	proves her powers by contacting Will. Hopper continues digging into
+																	the lab’s secrets.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_1/1_4.webp"
+																	alt="episode 4 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Four: The Body
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	49 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Will’s body is discovered, but Joyce refuses to accept that he is
+																	dead. Hopper grows more suspicious and decides to investigate
+																	further. The boys turn to their science teacher to understand the
+																	concept of alternate dimensions.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_1/1_5.webp"
+																	alt="episode 5 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Five: The Flea and the Acrobat
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	52 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Hopper breaks into the lab and discovers disturbing truths. The boys
+																	begin to understand the Upside Down. Nancy and Jonathan join forces
+																	to hunt the creature after realizing Barb’s fate.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_1/1_6.webp"
+																	alt="episode 6 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Six: The Monster
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	46 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Jonathan and Nancy prepare to confront the monster. Eleven reveals
+																	more about her past and the experiments at the lab. Hopper and Joyce
+																	team up to find a way to reach Will.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_1/1_7.webp"
+																	alt="episode 7 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Seven: The Bathtub
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	41 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Using a sensory deprivation tank, Eleven attempts to locate Will and
+																	Barb in the Upside Down. Hopper and Joyce uncover the truth about the
+																	lab’s experiments. The group prepares for a dangerous rescue mission.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_1/1_8.webp"
+																	alt="episode 8 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Eight: The Upside Down
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	54 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Hopper and Joyce enter the Upside Down to rescue Will. The boys and
+																	Eleven face the Demogorgon in a final confrontation. The season ends
+																	with Will’s return, but hints that the danger is not over.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+								</li>
+
+								<li class="inner__season">
+									<div class="inner__spoiler-season season-spoiler js-spoiler">
+										<details class="season-spoiler__details js-spoiler-details" data-spoiler="400">
+
+											<summary class="season-spoiler__summary js-spoiler-summary">
+												<span class="season-spoiler__title">
+													Season 02
+													<small>9 Episodes</small>
+												</span>
+
+												<span class="-icon-arrow-block"></span>
+											</summary>
+
+											<div class="season-spoiler__body js-spoiler-body">
+												<ul class="season-spoiler__list-episodes episodes-list">
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_2/2_1.webp"
+																	alt="episode 1 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter One: MADMAX
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	48 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	A mysterious new girl named Max catches the boys’ attention at the
+																	arcade. Meanwhile, Will struggles with disturbing visions of the
+																	Upside Down, and Hopper hides a secret in the woods.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_2/2_2.webp"
+																	alt="episode 2 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Two: Trick or Treat, Freak
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	56 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	On Halloween night, the boys go trick-or-treating dressed as
+																	Ghostbusters. Will’s visions intensify, revealing a terrifying shadow
+																	monster. Eleven struggles to adapt to her new life in hiding.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_2/2_3.webp"
+																	alt="episode 3 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Three: The Pollywog
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	51 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Dustin discovers a strange creature he names Dart. Will draws
+																	mysterious maps of tunnels beneath Hawkins. Hopper investigates the
+																	growing threat spreading underground.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_2/2_4.webp"
+																	alt="episode 4 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Four: Will the Wise
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	46 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Will shares information from his visions, becoming “Will the Wise” to
+																	help the group. Hopper explores the tunnels beneath Hawkins, while
+																	the threat from the Upside Down grows stronger.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_2/2_5.webp"
+																	alt="episode 5 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Five: Dig Dug
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	51 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Hopper gets trapped in the tunnels as the lab attempts to destroy
+																	them. Eleven begins to uncover more about her past and her connection
+																	to her mother.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_2/2_6.webp"
+																	alt="episode 6 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Six: The Spy
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	52 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Will’s connection to the shadow monster is revealed, turning him into
+																	a spy for the Mind Flayer. The lab goes into lockdown as the danger
+																	escalates.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_2/2_7.webp"
+																	alt="episode 7 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Seven: The Lost Sister
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	45 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Eleven travels to Chicago and meets Kali, another girl with powers.
+																	She explores her darker side while seeking revenge on those who hurt
+																	them.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_2/2_8.webp"
+																	alt="episode 8 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Eight: The Mind Flayer
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	47 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	The Mind Flayer launches a full attack on Hawkins Lab. The group
+																	fights to survive as the demodogs overrun the facility and the
+																	situation becomes critical.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_2/2_9.webp"
+																	alt="episode 1 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Nine: The Gate
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	62 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Eleven returns to close the gate to the Upside Down. The group unites
+																	for a final stand against the Mind Flayer. Peace seems restored—until
+																	a dark presence lingers.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+												</ul>
+											</div>
+										</details>
+									</div>
+								</li>
+
+								<li class="inner__season">
+									<div class="inner__spoiler-season season-spoiler js-spoiler">
+										<details class="season-spoiler__details js-spoiler-details" data-spoiler="400">
+
+											<summary class="season-spoiler__summary js-spoiler-summary">
+												<span class="season-spoiler__title">
+													Season 03
+													<small>8 Episodes</small>
+												</span>
+
+												<span class="-icon-arrow-block"></span>
+											</summary>
+
+											<div class="season-spoiler__body js-spoiler-body">
+												<ul class="season-spoiler__list-episodes episodes-list">
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_3/3_1.webp"
+																	alt="episode 1 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter One: Suzie, Do You Copy?
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	51 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Summer begins in Hawkins as relationships evolve and new tensions
+																	arise. Dustin returns from camp and tries to contact his girlfriend
+																	Suzie, while a strange Russian transmission is intercepted.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_3/3_2.webp"
+																	alt="episode 2 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Two: The Mall Rats
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	50 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	The group investigates the secret message and suspects the new
+																	Starcourt Mall. Nancy and Jonathan follow a disturbing lead, while
+																	Eleven and Max grow closer.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_3/3_3.webp"
+																	alt="episode 3 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Three: The Case of the Missing
+																	Lifeguard
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	49 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	A lifeguard mysteriously disappears, leading to growing suspicion.
+																	Billy begins to act strangely after a terrifying encounter, and the
+																	threat in Hawkins deepens.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_3/3_4.webp"
+																	alt="episode 4 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Four: The Sauna Test
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	52 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	The group tests whether Billy is possessed by trapping him in a
+																	sauna. Eleven uses her powers to uncover the growing danger connected
+																	to the Mind Flayer.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_3/3_5.webp"
+																	alt="episode 5 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Five: The Flayed
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	51 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	More townspeople fall under the control of the Mind Flayer. The group
+																	realizes the scale of the threat as a horrifying plan begins to take
+																	shape.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_3/3_6.webp"
+																	alt="episode 6 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Six: E Pluribus Unum
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	59 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Eleven searches for Billy’s memories to understand the enemy.
+																	Meanwhile, Hopper and Joyce uncover a hidden Russian base beneath
+																	Starcourt Mall.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_3/3_7.webp"
+																	alt="episode 7 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Seven: The Bite
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	55 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	Eleven is seriously injured during a brutal encounter. The group
+																	struggles to stay alive as the Mind Flayer grows stronger and closes
+																	in on them.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+
+													<li class="episodes-list__item episode">
+														<div class="episode__preview">
+															<span class="episode__number"></span>
+
+															<a class="episode__link-image" href="#">
+																<img class="episode__image"
+																	src="img/show_movie_page/episode__image/season_3/3_8.webp"
+																	alt="episode 8 image preview">
+															</a>
+														</div>
+
+														<div class="episode__content">
+															<div class="episode__header">
+																<h3 class="episode__title">Chapter Eight: The Battle of Starcourt
+																</h3>
+
+																<div class="episode__duration">
+																	<span class="-icon-time"></span>
+																	77 min
+																</div>
+															</div>
+
+															<div class="episode__text read-more">
+																<p class="read-more__content">
+																	In a final showdown at Starcourt Mall, the group faces the Mind
+																	Flayer and the Russian operation. Sacrifices are made, and the season
+																	ends with emotional goodbyes and an uncertain future.
+																</p>
+																<button class="read-more__button" type="button">Read More</button>
+															</div>
+
+														</div>
+
+													</li>
+												</ul>
+											</div>
+										</details>
+									</div>
+								</li>
+							</ul>
+						</section>
+
+						<!--* photos -->
+						<section class="inner__section">
+							<h2 class="inner__title ">Photos</h2>
+
+							<div class="inner__swiper-photos photos swiper js-swiper">
+								<ul class="photos__swiper-wrapper swiper-wrapper">
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/1.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/2.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/3.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/4.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/5.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/6.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/7.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/9.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/12.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/13.webp" alt="">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/show_photos/14.webp" alt="">
+									</li>
+
+								</ul>
+
+								<div class="photos__navigation section-bottom-navigation">
+									<div class="section-bottom-navigation__content">
+										<button
+											class="section-bottom-navigation__button button button--secondary -icon-arrow-left js-prev"
+											type="button"></button>
+										<div
+											class="section-bottom-navigation__scrollbar scrollbar scrollbar--component js-scrollbar">
+										</div>
+										<button
+											class="section-bottom-navigation__button button button--secondary -icon-arrow-right js-next"
+											type="button"></button>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!--* description -->
+						<section class="inner__section">
+							<h2 class="inner__title">Description</h2>
+							<div class="inner__text">
+								<p>
+									Stranger Things is a sci-fi mystery series set in the small town of Hawkins, Indiana, where a
+									group of kids uncover secret government experiments, supernatural forces, and a terrifying
+									parallel dimension known as the Upside Down. When a young boy suddenly disappears, his
+									friends, family, and the local police begin a search that leads them to a mysterious girl
+									with extraordinary powers. As strange events continue to unfold, the group must face
+									dangerous creatures, hidden conspiracies, and growing threats from another world. Across
+									multiple seasons, the characters grow up together while battling increasingly powerful forces
+									that threaten not only Hawkins, but the entire world.
+								</p>
+							</div>
+						</section>
+
+						<!--* cast -->
+						<section class="inner__section">
+							<div class="inner__header">
+								<h2 class="inner__title">Cast</h2>
+
+								<div class="inner__navigation">
+									<button
+										class="inner__navigation-button button button--secondary -icon-arrow-left js-prev"></button>
+									<button
+										class="inner__navigation-button button button--secondary -icon-arrow-right js-next "></button>
+								</div>
+							</div>
+
+							<div class="inner__swiper-cast cast swiper js-swiper">
+								<ul class="cast__swiper-wrapper swiper-wrapper">
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0000213/?ref_=tt_cst_t_3">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/1.webp"
+												alt="Actress Winona Ryder">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm1092086/?ref_=tt_cst_t_4">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/2.webp"
+												alt="Actor David Harbour">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm5611121/?ref_=tt_cst_t_1">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/3.webp"
+												alt="Actress Millie Bobby Brown">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm6016511/?ref_=tt_cst_t_2">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/4.webp"
+												alt="Actor Finn Wolfhard">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm7140802/?ref_=tt_cst_t_5">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/5.webp"
+												alt="Actor Gaten Matarazzo">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm6907855/?ref_=tt_cst_t_10">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/6.webp"
+												alt="Actor Noah Schnapp">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm5160895/?ref_=tt_cst_t_6">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/7.webp"
+												alt="Actor Caleb McLaughlin">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm5584750/?ref_=tt_cst_t_12">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/8.webp"
+												alt="Actress Sadie Sink">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm6564737/?ref_=tt_cst_t_9">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/9.webp"
+												alt="Actor Joe Keery">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm3034501/?ref_=tt_cst_t_7">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/10.webp"
+												alt="Actress Natalia Dyer">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm6390427/?ref_=tt_cst_t_8">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/11.webp"
+												alt="Actor Charlie Heaton">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm1638321/?ref_=tt_cst_t_14">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/12.webp"
+												alt="Actress Maya Hawke">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm4806449/?ref_=ttfc_fcr_3_34">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/13.webp"
+												alt="Actor Joseph Quinn">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm1443368/?ref_=tt_cst_t_15">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/14.webp"
+												alt="Actor Brett Gelman">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0120648/?ref_=tt_cst_t_11">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/15.webp"
+												alt="Actress Cara Buono">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm2570429/?ref_=ttfc_fcr_3_20">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/16.webp"
+												alt="Actor Jamie Campbell Bower">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0000546/?ref_=tt_cst_t_18">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/17.webp"
+												alt="Actor Matthew Modine">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm4223882/?ref_=tt_cst_t_17">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/18.webp"
+												alt="Actor Dacre Montgomery">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0001663/?ref_=ttfc_fcr_3_19">
+											<img class="cast__avatar" src="img/show_movie_page/cast/show/19.webp"
+												alt="Actor Paul Reiser">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</section>
+
+						<!--* reviews -->
+						<section class="inner__section">
+							<div class="inner__header">
+								<h2 class="inner__title">Reviews</h2>
+
+								<button class="inner__add-review-btn button button--main button--main-dark" type="button">
+									<span class="-icon-plus"></span>
+									Add Your Review
+								</button>
+							</div>
+
+							<div class="inner__swiper-reviews reviews swiper js-swiper">
+								<ul class="reviews__swiper-wrapper swiper-wrapper">
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Artem Boyko</h3>
+													<span class="review__location">From Ukraine</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">5</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													The 80s atmosphere is just incredible! As a fan of synthwave and mystery, I'm
+													obsessed with this show. Eleven's character development is peak storytelling.
+													Watching this from Kyiv and can't wait for the final season!
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Oliver Smith</h3>
+													<span class="review__location">From United Kingdom</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">4</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													Vecna is easily the best villain so far. The psychological horror aspects really
+													stepped up this time. A bit dark for younger viewers, but definitely the most
+													mature season yet. Justice for Eddie!
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Chloe Sutherland</h3>
+													<span class="review__location">From Australia</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">5</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													Running Up That Hill has been on repeat for weeks thanks to Max! This show is a
+													masterpiece of pop culture. The visual effects for the Upside Down are
+													terrifyingly beautiful. 11/10 stars!
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Sarah Jenkins</h3>
+													<span class="review__location">From USA</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">2</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													Season 4 was way too long. Why is every episode movie-length now? The horror
+													elements are cool, but I miss the simple vibes of the kids just riding bikes and
+													playing D&D in the basement.
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Emily Rousseau</h3>
+													<span class="review__location">From Canada</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">3</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													The nostalgia factor is what keeps me watching, but the plot is getting
+													repetitive. Eleven loses her powers, Eleven gets them back... we've seen this
+													three times already. Still, the acting is top-notch.
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Maximilian Krauss</h3>
+													<span class="review__location">From Germany</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">1</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													Too much screaming and too many plot holes. They keep adding new characters
+													instead of finishing the arcs of the original ones. It’s becoming a superhero
+													show rather than a supernatural mystery.
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+								<div class="reviews__navigation section-bottom-navigation">
+									<div class="section-bottom-navigation__content">
+										<button
+											class="section-bottom-navigation__button button button--secondary -icon-arrow-left js-prev"
+											type="button"></button>
+										<div
+											class="section-bottom-navigation__scrollbar scrollbar scrollbar--component js-scrollbar">
+										</div>
+										<button
+											class="section-bottom-navigation__button button button--secondary -icon-arrow-right js-next"
+											type="button"></button>
+									</div>
+								</div>
+							</div>
+						</section>
+					</main>
+
+					<!--* sidebar - - - - - - - - - - - - -->
+					<aside data-anim class="inner__sidebar sidebar animation animation--fade-right">
+						<!--* release -->
+						<div class="sidebar__section">
+							<div class="sidebar__label">
+								<p>Released Year</p>
+								<span class="-icon-release-year"></span>
+							</div>
+							<div class="sidebar__text">2016-2025</div>
+						</div>
+
+						<!--* language -->
+						<div class="sidebar__section">
+							<div class="sidebar__label">
+								<p>Available Languages</p>
+								<span class="-icon-language"></span>
+							</div>
+
+							<ul class="sidebar__tags tags">
+								<li class="tags__item">
+									<a href="#" class="tags__link">English</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Ukrainian</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Spanish</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">French</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">German</a>
+								</li>
+							</ul>
+						</div>
+
+						<!--* ratings -->
+						<div class="sidebar__section">
+							<div class="sidebar__label ">
+								<p>Ratings</p>
+								<span class="-icon-rating"></span>
+							</div>
+
+							<div class="sidebar__rating rating-sidebar">
+
+								<a class="rating-sidebar__item" href="https://www.imdb.com/title/tt4574334/ratings">
+									<div class="rating-sidebar__label">IMDb</div>
+
+									<div class="rating-sidebar__rating rating rating--big">
+
+										<div class="rating__body" role="img" aria-label="Rating: 4.5 out of 5">
+											<div class="rating__active"></div>
+											<div class="rating__items" aria-hidden="true">
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+											</div>
+										</div>
+
+										<div class="rating__value">4.5</div>
+									</div>
+								</a>
+
+								<a class="rating-sidebar__item" href="#">
+									<div class="rating-sidebar__label">Streamvibe</div>
+
+									<div class="rating-sidebar__rating rating rating--big">
+
+										<div class="rating__body" role="img" aria-label="Rating: 4 out of 5">
+											<div class="rating__active"></div>
+											<div class="rating__items" aria-hidden="true">
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+											</div>
+										</div>
+
+										<div class="rating__value">4</div>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<!--* genres -->
+						<div class="sidebar__section sidebar__section--border">
+							<div class="sidebar__label">
+								<p>Genres</p>
+								<span class="-icon-genres"></span>
+							</div>
+							<ul class="sidebar__tags tags">
+								<li class="tags__item">
+									<a href="#" class="tags__link">Sci-Fi</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Horror</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Mystery</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Adventure</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Drama</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Comedy</a>
+								</li>
+							</ul>
+						</div>
+
+						<!--* director -->
+						<div class="sidebar__section">
+							<div class="sidebar__label">Director</div>
+							<div class="sidebar__person person">
+
+								<div class="person__avatar">
+									<img src="img/show_movie_page/avatar/duffer_avatar.webp" alt="The Duffer Brothers Photo">
+								</div>
+
+								<div class="person__info">
+									<div class="person__name">The Duffer Brothers</div>
+									<div class="person__location">From USA</div>
+								</div>
+
+							</div>
+						</div>
+
+						<!--* music -->
+						<div class="sidebar__section">
+							<div class="sidebar__label">Music</div>
+
+							<div class="sidebar__person person">
+
+								<div class="person__avatar">
+									<img src="img/show_movie_page/avatar/kyle_dixon_avatar.webp" alt="Kyle Dixon Photo">
+								</div>
+
+								<div class="person__info">
+									<div class="person__name">Kyle Dixon</div>
+									<div class="person__location">From USA</div>
+								</div>
+
+							</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+
+			<!--* trial - - - - - - - - - - - - -->
+			<section data-anim class="show-page__trial trial animation animation--fade-right">
+				<div class="trial__container">
+
+					<div class="trial__content">
+						<div class="trial__header-section section-header">
+
+							<div class="section-header__content section-header__content--text-center">
+								<h2 class="section-header__title">Start your free trial today!</h2>
+								<div class="section-header__text">
+									<p>
+										This is a clear and concise call to action that encourages users to sign up for a free
+										trial
+										of StreamVibe.
+									</p>
+								</div>
+							</div>
+
+							<a class="section-header__button section-header__button--center button button--main"
+								href="subscriptions.html">
+								Start a Free Trail
+							</a>
+						</div>
+
+						<div class="trial__background">
+							<img class="trial__background-image" src="img/home_page/trial/background_img.webp"
+								alt="StreamVibe promotional banner with red Start a Free Trail button over a grid of movie posters."
+								loading="lazy">
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<!--* footer - - - - - - - - - - - -->
+		<footer data-anim class="footer">
+			<div class="footer__container">
+
+				<div class="footer__columns">
+					<div class="footer__column">
+						<h3 class="footer__column-title">Home</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Categories</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Devices</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Pricing</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">FAQ</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Movie</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Gernes</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Trending</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">New Release</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Popular</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Shows</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Gernes</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Trending</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">New Release</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Popular</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Support</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Subscription</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Plans</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Features</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Connect With Us</h3>
+
+						<ul class="footer__social">
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-facebook button button--social" href="#"
+									aria-label="Facebook"></a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-twitter button button--social" href="#"
+									aria-label="Twitter"></a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-linkedin button button--social" href="#"
+									aria-label="Linkedin"></a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__copyright copyright-footer">
+					<div class="copyright-footer__text">
+						<p>
+							@2026 streamvibe, All Rights Reserved
+						</p>
+					</div>
+
+					<ul class="copyright-footer__list">
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Terms of Use</a>
+						</li>
+
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Privacy Policy</a>
+						</li>
+
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Cookie Policy</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</footer>
+
+	</div>
+
+	<script src="swiper/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
