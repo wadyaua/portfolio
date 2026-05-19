@@ -274,7 +274,7 @@ function animateText(wrapper) {
 
 async function initPriceSwitcher() {
 
-	const response = await fetch('/streamVibe/json/plan.json');
+	const response = await fetch('./json/plan.json');
 	if (!response.ok) {
 		console.error('plan.json loading error');
 		return;
@@ -318,7 +318,7 @@ async function initPriceSwitcher() {
 
 async function initMobilePlanTable() {
 
-	const response = await fetch('/streamVibe/json/plans_features.json');
+	const response = await fetch('./json/plans_features.json');
 	if (!response.ok) {
 		console.error('plans_features.json loading error');
 		return;
