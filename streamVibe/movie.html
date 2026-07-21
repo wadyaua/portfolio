@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Movie Page - StreamVibe</title>
+
+	<meta name="description" content="Watch movies and TV shows online in high quality. Enjoy seamless streaming, personalized recommendations, and access anytime.">
+	<meta name="author" content="Vadym Sheveiko">
+	<meta name="theme-color" content="#141414">
+	<meta name="color-scheme" content="dark">
+
+	<meta property="og:title" content="StreamVibe">
+	<meta property="og:description" content="Movie streaming website concept">
+	<meta property="og:type" content="website">
+	
+	<meta property="og:image" content="https://wadyaua.github.io/portfolio/streamvibe/img/preview.webp">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="560">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/show-and-movie-page.css">
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<!--*  header - - - - - - - - - - - - -->
+		<header class="header">
+			<div class="header__container">
+
+				<a class="header__logo" href="index.html" id="id-logo">
+					<img fetchpriority="high" src="icons/logo/full-logo.svg" alt="StrimeVibe logo">
+				</a>
+
+				<nav class="header__menu menu">
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link " href="index.html">Home</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link menu__link--active" href="#">Movies & Shows</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link" href="support.html">Support</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link" href="subscriptions.html">Subscriptions</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__actions actions-header">
+					<div data-dropdown class="actions-header__item-dropdown dropdown">
+						<button data-dropdown-button aria-haspopup="true" aria-expanded="false"
+							aria-controls="dropdown-search" aria-label="Open search"
+							class="dropdown__button button button--header -icon-search" type="button"></button>
+
+						<div id="dropdown-search" class="dropdown__content dropdown__content--search">
+							<form class="dropdown__search search" role="search">
+								<input class="search__style form-style " id="search-field" type="search"
+									placeholder="Search movies..." aria-label="Search movies">
+								<button class="search__button button button--main" type="button">Search</button>
+							</form>
+						</div>
+					</div>
+
+					<button data-modal-button="open" data-modal-id="login-modal"
+						class="actions-header__button-modal button button--header -icon-user" type="button"
+						aria-label="Open login menu"></button>
+
+					<dialog data-modal id="login-modal" class="actions-header__item-modal modal">
+
+						<div class="modal__header">
+							<h2 class="modal__title">Sign In</h2>
+							<div class="modal__text">
+								<p>Continue watching where you left off</p>
+							</div>
+						</div>
+
+						<form class="modal__login-form login">
+							<div class="login__field">
+								<label class="login__label form-label" for="login-email">Email</label>
+
+								<div class="login__input">
+									<span class="login__icon login__icon--at"></span>
+									<input class="login__style form-style" id="login-email" type="email"
+										placeholder="Enter your Email" autocomplete="email" name="email" required>
+								</div>
+							</div>
+
+							<div class="login__field">
+								<label class="login__label form-label" for="login-password">Password</label>
+
+								<div class="login__input">
+									<span class="login__icon login__icon--lock"></span>
+									<input class="login__style form-style" id="login-password" type="password"
+										placeholder="Enter your Password" autocomplete="current-password" name="password"
+										required>
+								</div>
+							</div>
+
+							<div class="login__options options-login">
+								<div class="options-login__checkbox-wrapper">
+									<input class="options-login__checkbox form-checkbox" id="login-remember-me" type="checkbox">
+									<label class="options-login__checkbox-label" for="login-remember-me">
+										Remember me
+									</label>
+								</div>
+
+								<a class="options-login__link login-link" href="#">Forgot password?</a>
+
+							</div>
+
+							<button class="login__button button button--main" type="button">Sing In</button>
+
+							<div class="login__signup">
+								<p>
+									Don't have account?
+								</p>
+								<a class="login__signup-link login-link" href="#">Sign Up</a>
+							</div>
+						</form>
+
+						<button data-modal-button="close" aria-label="Close login menu"
+							class="modal__button-closed button -icon-plus" type="button"></button>
+					</dialog>
+
+					<div class="actions-header__icon-menu menu-icon">
+						<button class="menu-icon__button" type="button"
+							aria-label="Open navigation menu"><span></span></button>
+					</div>
+				</div>
+
+			</div>
+		</header>
+
+		<div data-main id="swup" class="movie-page transition-fade">
+
+			<!--* hero - - - - - - - - - - - - -->
+			<section class="movie-page__hero inner-hero inner-hero--padding-start">
+				<div class="inner-hero__container">
+
+					<div data-anim class="inner-hero__body animation animation--fade-up">
+						<div class="inner-hero__content">
+
+							<div class="inner-hero__header">
+								<h1 data-anim class="inner-hero__title title title--big animation animation--fade-up">John Wick:
+									Chapter 2</h1>
+								<div data-anim class="inner-hero__text animation animation--fade-up">
+									<p>
+										Legendary hitman John Wick is forced out of retirement when a former associate
+										seeks his help in taking control of an international assassins’ guild. Bound by a
+										blood oath, John travels to Rome where he faces the world’s most dangerous
+										killers in a relentless fight for survival.
+									</p>
+								</div>
+							</div>
+
+							<div class="inner-hero__actions actions-inner-hero">
+								<div data-anim class="actions-inner-hero__button-wrapper animation animation--fade-up">
+									<a class="actions-inner-hero__button button button--main " href="movie.html">
+										<span class="-icon-play"></span>
+										Play Now
+									</a>
+								</div>
+
+								<div data-anim class="actions-inner-hero__buttons-group actions-group-button">
+									<div class="actions-group-button__item-wrapper">
+										<button class="actions-group-button__item button button--secondary -icon-plus"
+											aria-label="Add to watchlist">
+										</button>
+									</div>
+
+									<div class="actions-group-button__item-wrapper">
+										<button class="actions-group-button__item button button--secondary -icon-like"
+											aria-label="Like this movie">
+										</button>
+									</div>
+
+									<div class="actions-group-button__item-wrapper">
+										<button class="actions-group-button__item button button--secondary -icon-volume"
+											aria-label="Unmute trailer">
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<img class="inner-hero__img" src="img/hero_components/john_wick_chapter_2.webp"
+							alt="John Wick chapter 2 poster">
+
+					</div>
+				</div>
+			</section>
+
+			<!--* main / sidebar - - - - - - - - - - - - -->
+			<div class="movie-page__body inner">
+				<div class="inner__container">
+
+					<!--* main - - - - - - - - - - - - -->
+					<main data-anim class="inner__main animation animation--fade-up">
+						<!--* photos -->
+						<section class="inner__section">
+							<h2 class="inner__title ">Photos</h2>
+
+							<div class="inner__swiper-photos photos swiper js-swiper">
+								<ul class="photos__swiper-wrapper swiper-wrapper">
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/movie_photos/1.webp"
+											alt="Keanu Reeves and Common in John Wick 2 (2017)">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/movie_photos/2.webp"
+											alt="Keanu Reeves and dog in John Wick 2 (2017)">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/movie_photos/3.webp" alt="Ruby Rose in John Wick 2 (2017)">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/movie_photos/4.webp"
+											alt="Keanu Reeves in John Wick 2 (2017)">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/movie_photos/5.webp"
+											alt="Riccardo Scamarcio in John Wick 2 (2017)">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/movie_photos/6.webp"
+											alt="Keanu Reeves in John Wick 2 (2017)">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/movie_photos/7.webp"
+											alt="Peter Serafinowicz in John Wick 2 (2017)">
+									</li>
+									<li class="photos__slide swiper-slide">
+										<img src="img/show_movie_page/movie_photos/8.webp"
+											alt="Laurence Fishburne in John Wick 2 (2017)">
+									</li>
+
+
+								</ul>
+
+								<div class="photos__navigation section-bottom-navigation">
+									<div class="section-bottom-navigation__content">
+										<button
+											class="section-bottom-navigation__button button button--secondary -icon-arrow-left js-prev"
+											type="button"></button>
+										<div
+											class="section-bottom-navigation__scrollbar scrollbar scrollbar--component js-scrollbar">
+										</div>
+										<button
+											class="section-bottom-navigation__button button button--secondary -icon-arrow-right js-next"
+											type="button"></button>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!--* description -->
+						<section class="inner__section">
+							<h2 class="inner__title">Description</h2>
+							<div class="inner__text">
+								<p>
+									John Wick is an action-packed thriller that follows a retired hitman who is forced back into
+									the criminal underworld he once left behind. After a brutal act of violence shatters the last
+									piece of peace in his life, John Wick sets out on a relentless path of vengeance. Known for
+									his unmatched skills and deadly precision, he quickly becomes the most feared target and
+									hunter at the same time. As he fights his way through waves of enemies, secrets of a hidden
+									assassin society begin to unfold, revealing a world bound by strict codes, loyalty, and
+									consequences.
+								</p>
+							</div>
+						</section>
+
+						<!--* cast -->
+						<section class="inner__section">
+							<div class="inner__header">
+								<h2 class="inner__title">Cast</h2>
+
+								<div class="inner__navigation">
+									<button
+										class="inner__navigation-button button button--secondary -icon-arrow-left js-prev"></button>
+									<button
+										class="inner__navigation-button button button--secondary -icon-arrow-right js-next "></button>
+								</div>
+							</div>
+
+							<div class="inner__swiper-cast cast swiper js-swiper">
+								<ul class="cast__swiper-wrapper swiper-wrapper">
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0000206/?ref_=tt_cst_i_1">
+											<img class="cast__avatar" src="img/show_movie_page/cast/movie/1.webp"
+												alt="Actor Keanu Reeves">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm1249052/?ref_=tt_cst_i_2">
+											<img class="cast__avatar" src="img/show_movie_page/cast/movie/2.webp"
+												alt="Actor Riccardo Scamarcio">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0574534/?ref_=tt_cst_i_3">
+											<img class="cast__avatar" src="img/show_movie_page/cast/movie/3.webp"
+												alt="Actor Ian McShane">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm3199307/?ref_=tt_cst_t_4">
+											<img class="cast__avatar" src="img/show_movie_page/cast/movie/4.webp"
+												alt="Actress Ruby Rose">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0996669/?ref_=tt_cst_t_5">
+											<img class="cast__avatar" src="img/show_movie_page/cast/movie/5.webp"
+												alt="Actor Common">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0000401/?ref_=tt_cst_t_8">
+											<img class="cast__avatar" src="img/show_movie_page/cast/movie/6.webp"
+												alt="Actor Laurence Fishburne">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0714698/?ref_=tt_cst_t_7">
+											<img class="cast__avatar" src="img/show_movie_page/cast/movie/7.webp"
+												alt="Actor Lance Reddick">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0784818/?ref_=tt_cst_t_18">
+											<img class="cast__avatar" src="img/show_movie_page/cast/movie/8.webp"
+												alt="Actor Peter Serafinowicz">
+										</a>
+									</li>
+
+									<li class="cast__slide swiper-slide">
+										<a class="cast__link" href="https://www.imdb.com/name/nm0000491/?ref_=tt_cst_t_10">
+											<img class="cast__avatar" src="img/show_movie_page/cast/movie/9.webp"
+												alt="Actor John Leguizamo">
+										</a>
+									</li>
+
+								</ul>
+							</div>
+						</section>
+
+						<!--* reviews -->
+						<section class="inner__section">
+							<div class="inner__header">
+								<h2 class="inner__title">Reviews</h2>
+
+								<button class="inner__add-review-btn button button--main button--main-dark" type="button">
+									<span class="-icon-plus"></span>
+									Add Your Review
+								</button>
+							</div>
+
+							<div class="inner__swiper-reviews reviews swiper js-swiper">
+								<ul class="reviews__swiper-wrapper swiper-wrapper">
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Denys Kovalenko</h3>
+													<span class="review__location">From Ukraine</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">5</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													Pure adrenaline! The choreography in the Rome sequence is like a ballet of
+													bullets. It’s rare for a sequel to surpass the original, but Chapter 2 does it
+													with style. Keanu Reeves is the ultimate action icon of our generation
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Marc Dubois</h3>
+													<span class="review__location">From France</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">2</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													At this point, it feels more like a video game than a movie. The 'gun-fu' is
+													impressive for the first 20 minutes, but then it becomes repetitive. He gets hit
+													by cars and shot at constantly, yet survives everything. It lacks the emotional
+													weight of the first film.
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Kenji Tanaka</h3>
+													<span class="review__location">From Japan</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">4</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													I love how they expanded the lore of the High Table and the Continental. The
+													world-building is fascinating, and the cinematography is breathtaking. The ending
+													left me wanting more—can’t wait to see how John survives being 'excommunicado'.
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Sarah Wilson</h3>
+													<span class="review__location">From Canada</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">1</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													Way too much violence for the sake of violence. There is barely any plot here,
+													just a body count that gets higher every minute. It’s exhausting to watch. If
+													you’re looking for a story with depth, this definitely isn't it.
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Elena Ricci</h3>
+													<span class="review__location">From Italy</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">5</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													The mirror room fight was a masterpiece! Seeing John Wick back in action in the
+													streets of Rome was incredible. The suits, the weapons, and the ‘Sommelier’
+													scene—everything was perfect. A must-watch for any action fan!
+												</p>
+											</div>
+										</div>
+									</li>
+
+									<li class="reviews__item review swiper-slide">
+										<div class="review__content">
+											<div class="review__header">
+
+												<div class="review__user-info">
+													<h3 class="review__name">Liam Walker</h3>
+													<span class="review__location">From Australia</span>
+												</div>
+
+												<div class="review__rating rating">
+													<div class="rating__body" role="img" aria-label="Rating: 4.7 out of 5">
+														<div class="rating__active"></div>
+														<div class="rating__items" aria-hidden="true">
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+															<div class="rating__item"></div>
+														</div>
+													</div>
+
+													<div class="rating__value">3</div>
+												</div>
+
+											</div>
+
+											<div class="review__text">
+												<p>
+													Technically, the movie is a masterpiece. The lighting and the choreography are
+													top-tier. However, I felt the world-building became a bit too 'comic-bookish'
+													compared to the grounded feel of the first one. It’s a great ride, but I prefer
+													the simplicity of the original revenge story
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+								<div class="reviews__navigation section-bottom-navigation">
+									<div class="section-bottom-navigation__content">
+										<button
+											class="section-bottom-navigation__button button button--secondary -icon-arrow-left js-prev"
+											type="button"></button>
+										<div
+											class="section-bottom-navigation__scrollbar scrollbar scrollbar--component js-scrollbar">
+										</div>
+										<button
+											class="section-bottom-navigation__button button button--secondary -icon-arrow-right js-next"
+											type="button"></button>
+									</div>
+								</div>
+							</div>
+						</section>
+					</main>
+
+					<!--* sidebar - - - - - - - - - - - - -->
+					<aside data-anim class="inner__sidebar sidebar animation animation--fade-right">
+						<!--* release -->
+						<div class="sidebar__section">
+							<div class="sidebar__label">
+								<p>Released Year</p>
+								<span class="-icon-release-year"></span>
+							</div>
+							<div class="sidebar__text">2017</div>
+						</div>
+
+						<!--* language -->
+						<div class="sidebar__section">
+							<div class="sidebar__label">
+								<p>Available Languages</p>
+								<span class="-icon-language"></span>
+							</div>
+
+							<ul class="sidebar__tags tags">
+								<li class="tags__item">
+									<a href="#" class="tags__link">English</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Ukrainian</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Spanish</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">French</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">German</a>
+								</li>
+							</ul>
+						</div>
+
+						<!--* ratings -->
+						<div class="sidebar__section">
+							<div class="sidebar__label ">
+								<p>Ratings</p>
+								<span class="-icon-rating"></span>
+							</div>
+
+							<div class="sidebar__rating rating-sidebar">
+
+								<a class="rating-sidebar__item"
+									href="https://www.imdb.com/title/tt4425200/ratings/?ref_=tt_ov_rat">
+									<div class="rating-sidebar__label">IMDb</div>
+
+									<div class="rating-sidebar__rating rating rating--big">
+
+										<div class="rating__body" role="img" aria-label="Rating: 4.5 out of 5">
+											<div class="rating__active"></div>
+											<div class="rating__items" aria-hidden="true">
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+											</div>
+										</div>
+
+										<div class="rating__value">3.8</div>
+									</div>
+								</a>
+
+								<a class="rating-sidebar__item" href="#">
+									<div class="rating-sidebar__label">Streamvibe</div>
+
+									<div class="rating-sidebar__rating rating rating--big">
+
+										<div class="rating__body" role="img" aria-label="Rating: 4 out of 5">
+											<div class="rating__active"></div>
+											<div class="rating__items" aria-hidden="true">
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+												<div class="rating__item"></div>
+											</div>
+										</div>
+
+										<div class="rating__value">4.4</div>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<!--* genres -->
+						<div class="sidebar__section sidebar__section--border">
+							<div class="sidebar__label">
+								<p>Genres</p>
+								<span class="-icon-genres"></span>
+							</div>
+							<ul class="sidebar__tags tags">
+								<li class="tags__item">
+									<a href="#" class="tags__link">Action</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Crime</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Thriller</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Neo-noir</a>
+								</li>
+
+								<li class="tags__item">
+									<a href="#" class="tags__link">Drama</a>
+								</li>
+							</ul>
+						</div>
+
+						<!--* director -->
+						<div class="sidebar__section">
+							<div class="sidebar__label">Director</div>
+							<div class="sidebar__person person">
+
+								<div class="person__avatar">
+									<img src="img/show_movie_page/avatar/movie/chad_stahelski.webp" alt="Chad Stahelski Photo">
+								</div>
+
+								<div class="person__info">
+									<div class="person__name">Chad Stahelski</div>
+									<div class="person__location">From USA</div>
+								</div>
+
+							</div>
+						</div>
+
+						<!--* music -->
+						<div class="sidebar__section">
+							<div class="sidebar__label">Music</div>
+
+							<div class="sidebar__person person">
+
+								<div class="person__avatar">
+									<img src="img/show_movie_page/avatar/movie/tyler_bates.webp" alt="Tyler Bates Photo">
+								</div>
+
+								<div class="person__info">
+									<div class="person__name">Tyler Bates</div>
+									<div class="person__location">From USA</div>
+								</div>
+
+							</div>
+						</div>
+					</aside>
+				</div>
+
+			</div>
+
+			<!--* trial - - - - - - - - - - - - -->
+			<section data-anim class="movie-page__trial trial animation animation--fade-right">
+				<div class="trial__container">
+
+					<div class="trial__content">
+						<div class="trial__header-section section-header">
+
+							<div class="section-header__content section-header__content--text-center">
+								<h2 class="section-header__title">Start your free trial today!</h2>
+								<div class="section-header__text">
+									<p>
+										This is a clear and concise call to action that encourages users to sign up for a free
+										trial
+										of StreamVibe.
+									</p>
+								</div>
+							</div>
+
+							<a class="section-header__button section-header__button--center button button--main"
+								href="subscriptions.html">
+								Start a Free Trail
+							</a>
+						</div>
+
+						<div class="trial__background">
+							<img class="trial__background-image" src="img/home_page/trial/background_img.webp"
+								alt="StreamVibe promotional banner with red Start a Free Trail button over a grid of movie posters."
+								loading="lazy">
+						</div>
+					</div>
+
+				</div>
+			</section>
+		</div>
+
+		<!--* footer - - - - - - - - - - - -->
+		<footer data-anim class="footer">
+			<div class="footer__container">
+
+				<div class="footer__columns">
+					<div class="footer__column">
+						<h3 class="footer__column-title">Home</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Categories</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Devices</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Pricing</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">FAQ</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Movie</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Gernes</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Trending</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">New Release</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Popular</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Shows</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Gernes</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Trending</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">New Release</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Popular</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Support</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Subscription</h3>
+
+						<ul class="footer__column-list">
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Plans</a>
+							</li>
+							<li class="footer__column-item">
+								<a class="footer__column-link" href="#">Features</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="footer__column">
+						<h3 class="footer__column-title">Connect With Us</h3>
+
+						<ul class="footer__social">
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-facebook button button--social" href="#"
+									aria-label="Facebook"></a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-twitter button button--social" href="#"
+									aria-label="Twitter"></a>
+							</li>
+							<li class="footer__social-item">
+								<a class="footer__social-link -icon-linkedin button button--social" href="#"
+									aria-label="Linkedin"></a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__copyright copyright-footer">
+					<div class="copyright-footer__text">
+						<p>
+							@2026 streamvibe, All Rights Reserved
+						</p>
+					</div>
+
+					<ul class="copyright-footer__list">
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Terms of Use</a>
+						</li>
+
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Privacy Policy</a>
+						</li>
+
+						<li class="copyright-footer__item">
+							<a class="copyright-footer__link" href="#">Cookie Policy</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</footer>
+
+	</div>
+	<script src="https://unpkg.com/swup@4"></script>
+	<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+	<script src="swiper/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
