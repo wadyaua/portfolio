@@ -1,0 +1,350 @@
+//* - - plan-switcher-component - - - - - - - - - - - - -
+.plan-switcher {
+	align-self: flex-end;
+	flex-shrink: 0;
+
+	padding: toRem(10);
+	background-color: var(--black-06);
+
+	display: inline-flex;
+	column-gap: toRem(8);
+
+	@include borderStyle(18, 1, var(--black-15));
+	// radius / border-width / color / style
+
+	@media (max-width: toEm(767.98)) {
+		align-self: flex-start;
+		border-radius: toRem(14);
+	}
+
+	@media (max-width: toEm(479.98)) {
+		inline-size: 100%;
+	}
+
+	@media (max-width: toEm(399.98)) {
+		flex-direction: column;
+		row-gap: toRem(8);
+	}
+
+	// .plan-switcher__button
+	&__button {
+		font-size: toRem(14);
+		font-weight: 500;
+		color: var(--white);
+
+		padding-block: toEm(14, 14);
+		padding-inline: toEm(24, 14);
+		border-radius: toEm(6, 14);
+
+		transition:
+			color 0.4s ease-out,
+			background-color 0.4s ease-out,
+			transform 0.05s ease-out;
+
+		@media (min-width: toEm(767.98)) and (max-width: toEm(1629.98)) {
+			font-size: toRem(16);
+			border-radius: toEm(8);
+		}
+
+		@media (min-width: toEm(1630)) {
+			font-size: toRem(18);
+			border-radius: toEm(10);
+		}
+
+		@media (max-width: toEm(479.98)) {
+			inline-size: 100%;
+		}
+
+		@media (any-hover: hover) {
+			&:hover:not(.plan-switcher__button--active) {
+				@include colorScheme(var(--white), var(--primary-color));
+				// color / background-color
+			}
+		}
+
+		&:active:not(.plan-switcher__button--active) {
+			transform: scale(0.96);
+			background-color: var(--primary-color-dark);
+			transition:
+				transform 0.001s ease-in,
+				background-color 0.001s ease-in;
+		}
+
+		&--active {
+			background-color: var(--black-12);
+
+			@media (min-width: toEm(767.98)) {
+				@media (any-hover: hover) {
+					&:hover {
+						color: var(--grey-75);
+						cursor: default;
+					}
+				}
+			}
+		}
+	}
+}
+
+//* - - payment-plan-component - - - - - - - - - - - - -
+.payment {
+	// .payment__grid
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: toRem(20);
+
+		@media (min-width: toEm(940.98)) {
+			grid-template-columns: repeat(3, 1fr);
+			column-gap: clamp(0.75rem, -0.556rem + 2.22vw, 1.875rem);
+			// viewport from 940 to 1750 / values from 12 to 30
+		}
+	}
+}
+
+.plan-item {
+	padding: toRem(24);
+
+	background-color: var(--black-10);
+	@include borderStyle(12, 1, var(--black-15));
+	// radius / border-width / color / style
+
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	row-gap: toRem(30);
+
+	transform: translateY(20%);
+	opacity: 0;
+
+	transition:
+		opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+		transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		// @for $i from 1 through 3 {
+		// 	$delay: $i * 0.1; // Крок затримки (0.2s, 0.4s, 0.6s і т.д.)
+
+		// 	&:nth-child(#{$i}) {
+		// 		transition-delay: #{$delay}s;
+		// 	}
+		// }
+
+	@include animation-delay-generator("incremental", 3, 0.1s);
+	// type incremental/custom / count / first-delay / next-delay
+
+	.animate & {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	@media (min-width: toEm(545.98)) and (max-width: toEm(940.98)) {
+		padding: clamp(1.5rem, 0.12rem + 4.05vw, 2.5rem);
+		// viewport from 940 to 545 / values from 40 to 24
+
+		flex-direction: row;
+		column-gap: clamp(0.938rem, -1.439rem + 6.91vw, 1.875rem);
+		// viewport from 767 to 550 / values from 30 to 15
+	}
+
+	@media (min-width: toEm(940.98)) {
+		padding: clamp(1.125rem, -1.196rem + 3.95vw, 3.125rem);
+		// viewport from 1750 to 940 / values from 50 to 18
+	}
+
+	// .plan-item__header
+	&__header {
+		@media (min-width: toEm(545.98)) and (max-width: toEm(940.98)) {
+			flex-basis: 50%;
+			align-self: center;
+		}
+	}
+	// .plan-item__title
+	&__title {
+		display: flex;
+		align-items: center;
+		column-gap: toRem(8);
+		flex-wrap: wrap;
+
+		color: var(--white);
+
+		font-size: toRem(18);
+		font-weight: 700;
+
+		&:not(:last-child) {
+			margin-block-end: toEm(10, 18);
+		}
+
+		@media (min-width: toEm(767.98)) and (max-width: toEm(1629.98)) {
+			font-size: toRem(20);
+		}
+
+		@media (min-width: toEm(1630)) {
+			font-size: toRem(26);
+		}
+		&-label {
+			padding: toRemValues(4 6);
+			border-radius: toRem(6);
+			background-color: var(--primary-color);
+			font-weight: 500;
+			font-size: toRem(14);
+
+			@media (min-width: toEm(767.98)) and (max-width: toEm(1629.98)) {
+				font-size: toRem(16);
+			}
+
+			@media (min-width: toEm(1630)) {
+				font-size: toRem(18);
+			}
+		}
+	}
+
+	// .plan-item__footer
+	&__footer {
+		@media (min-width: toEm(545.98)) and (max-width: toEm(940.98)) {
+			flex-basis: 50%;
+		}
+	}
+	// .plan-item__price
+	&__price {
+		transform: translateY(0);
+		transition:
+			opacity 0.25s ease-out,
+			transform 0.25s ease-out;
+
+		&.price--animate {
+			opacity: 0;
+			transform: translateY(6px);
+		}
+		&:not(:last-child) {
+			margin-block-end: toEm(30, 24);
+		}
+	}
+	// .plan-item__price-value
+	&__price-value {
+		color: var(--white);
+
+		font-size: toRem(24);
+		font-weight: 600;
+		line-height: 73%;
+
+		@media (min-width: toEm(767.98)) and (max-width: toEm(1629.98)) {
+			font-size: toRem(30);
+		}
+
+		@media (min-width: toEm(1630)) {
+			font-size: toRem(40);
+		}
+	}
+
+	// .plan-item__price-period
+	&__price-period {
+		color: var(--grey-60);
+
+		font-size: toRem(14);
+		font-weight: 500;
+		line-height: 73%;
+
+		@media (min-width: toEm(767.98)) and (max-width: toEm(1629.98)) {
+			font-size: toRem(16);
+		}
+
+		@media (min-width: toEm(1630)) {
+			font-size: toRem(18);
+		}
+	}
+
+	// .plan-item__buttons
+	&__buttons {
+		display: flex;
+		column-gap: clamp(0.5rem, -1.136rem + 2.18vw, 1.25rem);
+		// viewport from 1200 to 1750 / values from 8 to 20
+
+		@media (max-width: toEm(1166.98)) {
+			flex-direction: column;
+			row-gap: toRem(10);
+		}
+
+		@media (max-width: toEm(940.98)) {
+			flex-direction: row;
+		}
+		@media (max-width: toEm(767.98)) {
+			flex-direction: column;
+		}
+		@media (max-width: toEm(545.98)) {
+			flex-direction: row;
+		}
+		@media (max-width: toEm(399.98)) {
+			flex-direction: column;
+		}
+	}
+	// .plan-item__button
+	&__button {
+		flex: 1 1 auto;
+		// grow / shrink / basis
+
+		font-size: toRem(14);
+		font-weight: 600;
+		text-align: center;
+
+		padding-block: toEm(14, 14);
+		padding-inline: toRem(12);
+		border-radius: toRem(8);
+
+		color: var(--white);
+
+		will-change: transform;
+		transition:
+			color 0.3s ease,
+			background-color 0.3s ease,
+			transform 0.05s ease-out;
+
+		@media (min-width: toEm(767.98)) and (max-width: toEm(1629.98)) {
+			font-size: toRem(16);
+		}
+
+		@media (min-width: toEm(1630)) {
+			font-size: toRem(18);
+		}
+
+		&:active {
+			transform: scale(0.96);
+			transition:
+				transform 0.001s ease-in,
+				background-color 0.001s ease-in;
+		}
+
+		// .plan-item__button--trial
+		&--trial {
+			background-color: var(--black-08);
+			border: toRem(1) solid var(--black-15);
+
+			@media (min-width: toEm(767.98)) {
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: var(--black-20);
+					}
+				}
+			}
+
+			&:active {
+				background-color: var(--black-15);
+			}
+		}
+
+		// .plan-item__button--plan
+		&--plan {
+			background-color: var(--primary-color);
+
+			@media (min-width: toEm(767.98)) {
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: var(--primary-color-dark);
+					}
+				}
+			}
+
+			&:active {
+				background-color: var(--primary-color-dark);
+			}
+		}
+	}
+}
